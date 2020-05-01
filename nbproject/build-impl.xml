@@ -19,7 +19,7 @@ is divided into following sections:
   - cleanup
 
         -->
-<project xmlns:j2seproject1="http://www.netbeans.org/ns/j2se-project/1" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxrpc="http://www.netbeans.org/ns/j2se-project/jax-rpc" basedir=".." default="default" name="faia-impl">
+<project xmlns:j2seproject1="http://www.netbeans.org/ns/j2se-project/1" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxrpc="http://www.netbeans.org/ns/j2se-project/jax-rpc" basedir="../src" default="default" name="faia-impl">
     <fail message="Please build using Ant 1.7.1 or higher.">
         <condition>
             <not>
@@ -38,15 +38,15 @@ is divided into following sections:
         <!-- You can override this target in the ../build.xml file. -->
     </target>
     <target depends="-pre-init" name="-init-private">
-        <property file="nbproject/private/config.properties"/>
-        <property file="nbproject/private/configs/${config}.properties"/>
-        <property file="nbproject/private/private.properties"/>
+        <property file="/private/config.properties"/>
+        <property file="/private/configs/${config}.properties"/>
+        <property file="/private/private.properties"/>
     </target>
     <target depends="-pre-init,-init-private" name="-init-libraries">
         <property location="lib\nblibraries.properties" name="libraries.1.path"/>
         <dirname file="${libraries.1.path}" property="libraries.1.dir.nativedirsep"/>
         <pathconvert dirsep="/" property="libraries.1.dir">
-            <path path="${libraries.1.dir.nativedirsep}"/>
+            <path path="/src/ar.edu.utn.frsf.cidisi.faia"/>
         </pathconvert>
         <basename file="${libraries.1.path}" property="libraries.1.basename" suffix=".properties"/>
         <touch file="${libraries.1.dir}/${libraries.1.basename}-private.properties"/>
@@ -71,11 +71,11 @@ is divided into following sections:
         <property name="default.javac.target" value="1.4"/>
     </target>
     <target depends="-pre-init,-init-private,-init-libraries,-init-user" name="-init-project">
-        <property file="nbproject/configs/${config}.properties"/>
-        <property file="nbproject/project.properties"/>
+        <property file="/configs/${config}.properties"/>
+        <property file="roperties"/>
     </target>
     <target depends="-pre-init,-init-private,-init-libraries,-init-user,-init-project,-init-macrodef-property" name="-do-init">
-        <available file="${manifest.file}" property="manifest.available"/>
+        <available file="../../../manifest.mf" property="manifest.available"/>
         <condition property="manifest.available+main.class">
             <and>
                 <isset property="manifest.available"/>
@@ -96,7 +96,7 @@ is divided into following sections:
         </condition>
         <condition property="have.sources">
             <or>
-                <available file="${src.dir}"/>
+                <available file="../src/ar.edu.utn.frsf.cidisi.faia/src"/>
             </or>
         </condition>
         <condition property="netbeans.home+have.tests">
@@ -113,7 +113,7 @@ is divided into following sections:
         </condition>
         <property name="run.jvmargs" value=""/>
         <property name="javac.compilerargs" value=""/>
-        <property name="work.dir" value="${basedir}"/>
+        <property name="work.dir" value="/src/ar.edu.utn.frsf.cidisi.faia"/>
         <condition property="no.deps">
             <and>
                 <istrue value="${no.dependencies}"/>
@@ -141,7 +141,7 @@ is divided into following sections:
         <condition else="" property="javac.compilerargs.jaxws" value="-Djava.endorsed.dirs='${jaxws.endorsed.dir}'">
             <and>
                 <isset property="jaxws.endorsed.dir"/>
-                <available file="nbproject/jaxws-build.xml"/>
+                <available file="/jaxws-build.xml"/>
             </and>
         </condition>
     </target>
@@ -231,7 +231,7 @@ is divided into following sections:
             <attribute default="${excludes}" name="excludes"/>
             <attribute default="**" name="testincludes"/>
             <sequential>
-                <junit dir="${work.dir}" errorproperty="tests.failed" failureproperty="tests.failed" fork="true" showoutput="true">
+                <junit dir="../src/ar.edu.utn.frsf.cidisi.faia" errorproperty="tests.failed" failureproperty="tests.failed" fork="true" showoutput="true">
                     <batchtest todir="${build.test.results.dir}"/>
                     <classpath>
                         <path path="${run.test.classpath}"/>
@@ -297,7 +297,7 @@ is divided into following sections:
             <attribute default="${debug.classpath}" name="classpath"/>
             <element name="customize" optional="true"/>
             <sequential>
-                <java classname="@{classname}" dir="${work.dir}" fork="true">
+                <java classname="@{classname}" dir="../src/ar.edu.utn.frsf.cidisi.faia" fork="true">
                     <jvmarg line="${debug-args-line}"/>
                     <jvmarg value="-Xrunjdwp:transport=${debug-transport},address=${jpda.address}"/>
                     <jvmarg value="-Dfile.encoding=${source.encoding}"/>
@@ -321,7 +321,7 @@ is divided into following sections:
             <attribute default="${run.classpath}" name="classpath"/>
             <element name="customize" optional="true"/>
             <sequential>
-                <java classname="@{classname}" dir="${work.dir}" fork="true">
+                <java classname="@{classname}" dir="../src/ar.edu.utn.frsf.cidisi.faia" fork="true">
                     <jvmarg value="-Dfile.encoding=${source.encoding}"/>
                     <redirector errorencoding="${source.encoding}" inputencoding="${source.encoding}" outputencoding="${source.encoding}"/>
                     <jvmarg line="${run.jvmargs}"/>
@@ -376,7 +376,7 @@ is divided into following sections:
     <target depends="init,deps-jar,-pre-pre-compile,-pre-compile,-compile-depend" if="have.sources" name="-do-compile">
         <j2seproject3:javac gensrcdir="${build.generated.sources.dir}"/>
         <copy todir="${build.classes.dir}">
-            <fileset dir="${src.dir}" excludes="${build.classes.excludes},${excludes}" includes="${includes}"/>
+            <fileset dir="../src/ar.edu.utn.frsf.cidisi.faia/src" excludes="${build.classes.excludes},${excludes}" includes="${includes}"/>
         </copy>
     </target>
     <target name="-post-compile">
@@ -405,7 +405,7 @@ is divided into following sections:
             -->
     <target depends="init" name="-pre-pre-jar">
         <dirname file="${dist.jar}" property="dist.jar.dir"/>
-        <mkdir dir="${dist.jar.dir}"/>
+        <mkdir dir="/src/ar.edu.utn.frsf.cidisi.faia"/>
     </target>
     <target name="-pre-jar">
         <!-- Empty placeholder for easier customization. -->
@@ -415,10 +415,10 @@ is divided into following sections:
         <j2seproject1:jar/>
     </target>
     <target depends="init,compile,-pre-pre-jar,-pre-jar" if="manifest.available" name="-do-jar-with-manifest" unless="manifest.available+main.class">
-        <j2seproject1:jar manifest="${manifest.file}"/>
+        <j2seproject1:jar manifest="../../../manifest.mf"/>
     </target>
     <target depends="init,compile,-pre-pre-jar,-pre-jar" if="manifest.available+main.class" name="-do-jar-with-mainclass" unless="manifest.available+main.class+mkdist.available">
-        <j2seproject1:jar manifest="${manifest.file}">
+        <j2seproject1:jar manifest="../../../manifest.mf">
             <j2seproject1:manifest>
                 <j2seproject1:attribute name="Main-Class" value="${main.class}"/>
             </j2seproject1:manifest>
@@ -439,7 +439,7 @@ is divided into following sections:
             <map from="${build.classes.dir.resolved}" to=""/>
         </pathconvert>
         <pathconvert pathsep=" " property="jar.classpath">
-            <path path="${run.classpath.without.build.classes.dir}"/>
+            <path path="build-impl.xml"/>
             <chainedmapper>
                 <flattenmapper/>
                 <globmapper from="*" to="lib/*"/>
@@ -464,7 +464,7 @@ is divided into following sections:
             <map from="${build.classes.dir.resolved}" to=""/>
         </pathconvert>
         <pathconvert pathsep=" " property="jar.classpath">
-            <path path="${run.classpath.without.build.classes.dir}"/>
+            <path path="build-impl.xml"/>
             <chainedmapper>
                 <flattenmapper/>
                 <globmapper from="*" to="lib/*"/>
@@ -555,7 +555,7 @@ is divided into following sections:
             <classpath>
                 <path path="${javac.classpath}"/>
             </classpath>
-            <fileset dir="${src.dir}" excludes="${excludes}" includes="${includes}">
+            <fileset dir="../src/ar.edu.utn.frsf.cidisi.faia/src" excludes="${excludes}" includes="${includes}">
                 <filename name="**/*.java"/>
             </fileset>
             <fileset dir="${build.generated.sources.dir}" erroronmissingdir="false">
