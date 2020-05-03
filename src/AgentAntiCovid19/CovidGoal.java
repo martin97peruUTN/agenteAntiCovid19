@@ -9,12 +9,16 @@ import frsf.cidisi.faia.state.AgentState;
 public class CovidGoal extends GoalTest {
 
 
-    @Override
-    public boolean isGoalState(AgentState agentState) {
-        if(((CovidAgentState)))agentState).getSickPersonsList().isEmpty()){
+    public boolean isGoalState(CovidAgentState agentState) {
+        if (agentState.getSickPersonsList().isEmpty()){
             return true;
         }
 
+        return false;
+    }
+
+    @Override
+    public boolean isGoalState(AgentState agentState) {
         return false;
     }
 }
