@@ -14,4 +14,28 @@ public class CovidAgentState extends SearchBasedAgentState{
     private ArrayList<SickPerson> sickPersonsList = new ArrayList<SickPerson>();
 
 
+    @Override
+    public boolean equals(Object obj) {
+        return false;
+    }
+
+    @Override
+    public SearchBasedAgentState clone() {
+        return null;
+    }
+
+    @Override
+    public void updateState(Perception p) {
+
+    }
+
+    @Override
+    public void initState() {
+
+    }
+
+    @Override
+    public String toString() {
+        return null;
+    }
 }
