@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        html { height: 100% }
+        body { height: 100%; margin: 0px; padding: 0px }
+        #map_canvas { height: 100%; background-color: #666970; }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyAXJzJS2fi6FIFHDgUzdeOoZ2KbX7VpK6s&sensor=false" defer>
+    </script>
+</head>
+<body onload="initialize()">
+<div id="map_canvas" style="width:100%; height:100%">
+   <script type="text/javascript">
+        function initialize() {
+            var placeIdArray = [];
+            var snappedCoordinates = [];
+            var markersList = new Array();
+            var polylineCoord = new Array();
+            var polylineList = new Array();
+            var latlng = new google.maps.LatLng(-31.6089607, -60.6708908);
+            var myOptions = {
+                zoom: 16,
+                center: latlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                mapTypeControl: false,
+                navigationControl: false,
+                streetViewControl: false,
+                backgroundColor: "#666970",
+                disableDefaultUI: true
+            };
+            document.geocoder = new google.maps.Geocoder();
+            document.map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
+
+            document.marker = function(lat, lng) {
+                var latlng = new google.maps.LatLng(lat, lng);
+                var marker = new google.maps.Marker({
+                    position: latlng
+                });
+                marker.setMap(document.map);
+
+                markersList.push(marker);
+
+            }
+
+            document.removeMarker = function(){
+                for (var i=0; i<markersList.length;i++){
+                    markersList[i].setMap(null);
+                }
+                markersList = new Array();
+            }
+
+            document.addPolylineCoord = function(lat, lng){
+                var str = lat + "," + lng;
+                polylineCoord.push(str);
+            }
+
+            // Snap a user-created polyline to roads and draw the snapped path
+            document.runSnapToRoad = function() {
+                /**
+                 *@JQuery
+                 */
+                $.get('https://roads.googleapis.com/v1/snapToRoads', {
+                    interpolate: true,
+                    key: 'AIzaSyA2F6-rjvu18tBtDtdGq9XzmxcZllLYYHY',
+                    path: polylineCoord.join('|')
+                }, function(data) {
+                    processSnapToRoadResponse(data);
+                    drawSnappedPolyline();
+                });
+            }
+
+            // Store snapped polyline returned by the snap-to-road service.
+            function processSnapToRoadResponse(data) {
+                snappedCoordinates = [];
+                placeIdArray = [];
+                for (var i = 0; i < data.snappedPoints.length; i++) {
+                    var latlng = new google.maps.LatLng(
+                        data.snappedPoints[i].location.latitude,
+                        data.snappedPoints[i].location.longitude);
+                    snappedCoordinates.push(latlng);
+                    placeIdArray.push(data.snappedPoints[i].placeId);
+                }
+            }
+
+            // Draws the snapped polyline (after processing snap-to-road response).
+            function drawSnappedPolyline() {
+                var snappedPolyline = new google.maps.Polyline({
+                    path: snappedCoordinates,
+                    strokeColor: 'FF0000',
+                    strokeWeight: 2.5
+                });
+                polylineList.push(snappedPolyline);
+                snappedPolyline.setMap(document.map);
+            }
+            function eraseAllPolylines(){
+                for (var i = 0; i < polylineList.length; i++){
+                    polylineList[i].setMap(null);
+                }
+                polylineList = new Array();
+            }
+
+            document.goToLocation = function goToLocation(searchString) {
+                document.geocoder.geocode( {'address': searchString}, function(results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        document.map.setCenter(results[0].geometry.location);
+                    } else {
+                        alert("Geocode was not successful for the following reason: " + status);
+                    }
+                });
+            }
+
+        }
+    </script>
+</div>
+</body>
+</html>
