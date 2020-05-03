@@ -10,9 +10,18 @@ import java.util.ArrayList;
  */
 
 public class CovidAgentState extends SearchBasedAgentState{
-    private String position;
+    private String posX;
+    private String posY;
     private ArrayList<SickPerson> sickPersonsList = new ArrayList<SickPerson>();
+    private ArrayList<String[]> nodes;
 
+    public ArrayList<SickPerson> getSickPersonsList() {
+        return sickPersonsList;
+    }
+
+    public void setSickPersonsList(ArrayList<SickPerson> sickPersonsList) {
+        this.sickPersonsList = sickPersonsList;
+    }
 
     @Override
     public boolean equals(Object obj) {
