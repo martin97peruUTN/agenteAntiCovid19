@@ -8,7 +8,6 @@ import java.util.HashMap;
 
 public class CovidEnvironmentState extends EnvironmentState {
     private HashMap<String, Collection<String>> map;
-    private ArrayList<SickPerson> sickPersonsList = new ArrayList<SickPerson>;
     private ArrayList<SickPerson> sickPersonsList = new ArrayList<SickPerson>();
     private String agentPosition="";
 
