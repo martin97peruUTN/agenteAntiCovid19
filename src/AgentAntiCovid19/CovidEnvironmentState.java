@@ -9,13 +9,15 @@ import java.util.HashMap;
 public class CovidEnvironmentState extends EnvironmentState {
     private HashMap<String, Collection<String>> map;
     private ArrayList<SickPerson> sickPersonsList = new ArrayList<SickPerson>;
+    private ArrayList<SickPerson> sickPersonsList = new ArrayList<SickPerson>();
     private String agentPosition="";
 
-    public RobotEnvironmentState() {this.initState();}
+    public CovidEnvironmentState() {this.initState();}
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        return map.clone();
+        return null;
+        //map.clone();
     }
 
     @Override
@@ -32,5 +34,10 @@ public class CovidEnvironmentState extends EnvironmentState {
             for(int j=0; j<)
         }
 
+    }
+
+    @Override
+    public String toString() {
+        return null;
     }
 }
