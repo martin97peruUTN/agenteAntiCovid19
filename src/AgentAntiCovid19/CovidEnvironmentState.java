@@ -29,10 +29,10 @@ public class CovidEnvironmentState extends EnvironmentState {
 
         map = new HashMap<String, Collection<String>>();
 
-        for(int i=0;i<nodes.size();i++){
-            ArrayList<String> succesors = new ArrayList<String>();
-            for(int j=0; j<)
-        }
+        //for(int i=0;i<nodes.size();i++){
+        //    ArrayList<String> succesors = new ArrayList<String>();
+        //    for(int j=0; j<)
+        //}
 
     }
 
