@@ -30,4 +30,5 @@ public class GoNorth extends SearchAction {
     public String toString() {
         return null;
     }
+
 }
