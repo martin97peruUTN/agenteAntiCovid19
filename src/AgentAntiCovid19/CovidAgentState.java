@@ -30,6 +30,7 @@ public class CovidAgentState extends SearchBasedAgentState{
 
     @Override
     public SearchBasedAgentState clone() {
+
         return null;
     }
 

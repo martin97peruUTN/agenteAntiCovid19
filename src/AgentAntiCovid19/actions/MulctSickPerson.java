@@ -5,9 +5,9 @@ import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
 
-public class IrNorte extends SearchAction {
+public class MulctSickPerson extends SearchAction {
 
-    public IrNorte(){
+    public MulctSickPerson(){
 
     }
 

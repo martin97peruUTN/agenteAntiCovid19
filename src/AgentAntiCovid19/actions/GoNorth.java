@@ -5,9 +5,9 @@ import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
 
-public class MultarEnfermo extends SearchAction {
+public class GoNorth extends SearchAction {
 
-    public MultarEnfermo(){
+    public GoNorth(){
 
     }
 

@@ -5,13 +5,11 @@ import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
 
+public class GoWest extends SearchAction {
 
-public class IrSur extends SearchAction {
-
-    public IrSur(){
+    public GoWest(){
 
     }
-
     @Override
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
         return null;
