@@ -15,14 +15,8 @@ public class CovidEnvironmentState extends EnvironmentState {
     public CovidEnvironmentState() {this.initState();}
 
     @Override
-<<<<<<< HEAD
-    protected Object clone() throws CloneNotSupportedException {
-        return null;
-        //return map.clone();
-=======
     public Object clone() {
        return map.clone();
->>>>>>> a3b33d231e1565a145a3f50f888ebbf6432ec943
     }
 
     @Override
