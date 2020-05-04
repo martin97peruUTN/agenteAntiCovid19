@@ -10,7 +10,7 @@ public class Node {
     private String streets;
     private double x, y;
 
-    public Node(String id, String streets, String x, String y){
+    public Node(String id, String streets, String y, String x){
         this.id = id;
         this.streets = streets;
         this.x = Double.valueOf(x);
