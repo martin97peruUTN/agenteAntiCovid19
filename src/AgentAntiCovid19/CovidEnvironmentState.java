@@ -10,7 +10,8 @@ public class CovidEnvironmentState extends EnvironmentState {
     private HashMap<String, Collection<String>> map;
     private ArrayList<SickPerson> sickPersonsList = new ArrayList<SickPerson>();
     private ArrayList<Sensor>  sensorsList = new ArrayList<Sensor>();
-    private String agentPosition="";
+    private Node agentPosition = new Node("A8","PEDRO DE VEGA Y ECHAGUE","-31.615826","-60.673291");
+    // Le pusimos esta posición al nodo inicial del agente porque es el que definimos en la etapa 1.
 
     public CovidEnvironmentState() {this.initState();}
 
@@ -53,8 +54,20 @@ public class CovidEnvironmentState extends EnvironmentState {
         }
 
         /**
-         * Inicializar
+         * Inicializar lista de sensores con el archivo SENSORES.csv
          */
+        path = "SENSORES.csv";
+        converter = new CSVToMatrix(';');
+        ArrayList<String[]> sensors = converter.fileToMatrix(path);
+        for(int i=0;i<sensors.size();i++){
+            sensorsList.add(new Sensor(sensors.get(i)[0], sensors.get(i)[1], sensors.get(i)[2], sensors.get(i)[3]));
+        }
+
+        /**
+         * Inicializar lista de enfermos con el archivo ENFERMOS.csvv
+         */
+
+
 
     }
 
