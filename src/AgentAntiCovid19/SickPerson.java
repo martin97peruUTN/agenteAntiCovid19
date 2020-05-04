@@ -5,10 +5,19 @@ package AgentAntiCovid19;
  */
 
 public class SickPerson {
+    private String id;
     private double actualPosX;
     private double actualPosY;
     private double homePosX;
     private double homePosY;
+
+    public SickPerson(String id, String actualPosY, String actualPosX, String homePosY, String homePosX){
+        this.id = id;
+        this.actualPosX = Double.valueOf(actualPosX);
+        this.actualPosY = Double.valueOf(actualPosY);
+        this.homePosX = Double.valueOf(homePosX);
+        this.homePosY = Double.valueOf(homePosY);
+    }
 
     public double getActualPosX() {
         return actualPosX;
