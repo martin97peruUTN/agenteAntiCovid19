@@ -11,7 +11,7 @@ public class CovidEnvironmentState extends EnvironmentState {
     private ArrayList<SickPerson> sickPersonsList = new ArrayList<SickPerson>();
     private ArrayList<Sensor>  sensorsList = new ArrayList<Sensor>();
     private Node agentPosition = new Node("A8","PEDRO DE VEGA Y ECHAGUE","-31.615826","-60.673291");
-    // Le pusimos esta posición al nodo inicial del agente porque es el que definimos en la etapa 1.
+    //Le pusimos esta posición al nodo inicial del agente porque es el que definimos en la etapa 1.
 
     public CovidEnvironmentState() {this.initState();}
 
@@ -73,11 +73,28 @@ public class CovidEnvironmentState extends EnvironmentState {
             sickPersonsList.add(new SickPerson(sickPersons.get(i)[0], sickPersons.get(i)[1], sickPersons.get(i)[2], sickPersons.get(i)[3], sickPersons.get(i)[4]));
         }
 
-
     }
 
     @Override
     public String toString() {
-        return null;
+        String str = "";
+        str = str + "[ \n";
+        for (String point : map.keySet()) {
+            str = str + "[ " + point + " --> ";
+            Collection<String> successors = map.get(point);
+            if (successors != null) {
+                for (String successor : successors) {
+                    str = str + successor + " ";
+                }
+            }
+            str = str + " ]\n";
+        }
+        str = str + " ]";
+        return str;
     }
+
+    public boolean equals(Object obj){
+        return true;
+    }
+
 }
