@@ -53,8 +53,15 @@ public class CovidEnvironmentState extends EnvironmentState {
         }
 
         /**
-         * Inicializar
+         * Inicializar lista de sensores
          */
+        path = "SENSORES.csv";
+        converter = new CSVToMatrix(';');
+        ArrayList<String[]> sensors = converter.fileToMatrix(path);
+        for(int i=0;i<sensors.size();i++){
+            sensorsList.add(new Sensor(sensors.get(i)[0], sensors.get(i)[1], sensors.get(i)[2], sensors.get(i)[3]));
+        }
+
 
     }
 
