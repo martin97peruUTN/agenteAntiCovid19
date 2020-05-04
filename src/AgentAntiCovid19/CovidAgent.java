@@ -6,7 +6,6 @@ import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.Problem;
 import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgent;
-import frsf.cidisi.faia.solver.search.BreathFirstSearch;
 import frsf.cidisi.faia.solver.search.DepthFirstSearch;
 import frsf.cidisi.faia.solver.search.Search;
 
@@ -27,11 +26,11 @@ public class CovidAgent extends SearchBasedAgent {
         // Acciones del agente
         Vector<SearchAction> actions = new Vector<SearchAction>();
 
-        actions.addElement(new IrNorte());
-        actions.addElement(new IrSur());
-        actions.addElement(new IrEste());
-        actions.addElement(new IrOeste());
-        actions.addElement(new MultarEnfermo());
+        actions.addElement(new GoNorth());
+        actions.addElement(new GoSouth());
+        actions.addElement(new GoEast());
+        actions.addElement(new GoWest());
+        actions.addElement(new MulctSickPerson());
 
         // Problema a resolver del agente
         Problem problem = new Problem(goal, agentState, actions);

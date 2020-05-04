@@ -5,9 +5,9 @@ import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
 
-public class IrEste extends SearchAction {
+public class GoEast extends SearchAction {
 
-    public IrEste(){
+    public GoEast(){
 
     }
 
