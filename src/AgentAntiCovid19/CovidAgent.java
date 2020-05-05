@@ -9,21 +9,28 @@ import frsf.cidisi.faia.agent.search.SearchBasedAgent;
 import frsf.cidisi.faia.solver.search.DepthFirstSearch;
 import frsf.cidisi.faia.solver.search.Search;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class CovidAgent extends SearchBasedAgent {
+    private String searchMethod;
 
-    public CovidAgent(){
-        // Meta del agente
+    public CovidAgent(HashMap<String, Collection<String>> map, ArrayList<SickPerson> sickPersonsList, String position, String searchMethod){
+        // Inicializo el método de búsqueda elegido.
+        this.searchMethod = searchMethod;
+
+        // Inicializo la meta del agente.
         CovidGoal goal = new CovidGoal();
 
-        // Estado del agente
+        // Inicializo el estado del agente.
         CovidAgentState agentState = new CovidAgentState();
         this.setAgentState(agentState);
 
-        // Acciones del agente
+        // Inicializo las acciones del agente.
         Vector<SearchAction> actions = new Vector<SearchAction>();
 
         actions.addElement(new GoNorth());
