@@ -10,6 +10,7 @@ public class SickPerson {
     private double actualPosY;
     private double homePosX;
     private double homePosY;
+    private Integer cantMultas;
 
     public SickPerson(String id, String actualPosY, String actualPosX, String homePosY, String homePosX){
         this.id = id;
@@ -17,6 +18,7 @@ public class SickPerson {
         this.actualPosY = Double.valueOf(actualPosY);
         this.homePosX = Double.valueOf(homePosX);
         this.homePosY = Double.valueOf(homePosY);
+        this.cantMultas = 0;
     }
 
     public double getActualPosX() {
@@ -50,4 +52,21 @@ public class SickPerson {
     public void setHomePosY(double homePosY) {
         this.homePosY = homePosY;
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Integer getCantMultas() {
+        return cantMultas;
+    }
+
+    public void setCantMultas(Integer cantMultas) {
+        this.cantMultas = cantMultas;
+    }
+
 }
