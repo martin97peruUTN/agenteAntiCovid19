@@ -126,6 +126,7 @@ public class CovidAgentState extends SearchBasedAgentState{
 
     @Override
     public String toString() {
-        return null;
+        String str = "Nodo: " + position;
+        return str;
     }
 }
