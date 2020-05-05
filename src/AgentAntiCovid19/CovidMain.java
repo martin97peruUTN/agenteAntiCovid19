@@ -12,7 +12,7 @@ public class CovidMain {
 
         CovidEnvironmentState environmentState = (CovidEnvironmentState) environment.getEnvironmentState();
 
-        CovidAgent agent = new CovidAgent();
+        CovidAgent agent = new CovidAgent(environmentState.getMap(), environmentState.getSickPersonsList(), environmentState.getSensorsList(), environmentState.getAgentPosition(), args[0]);
 
 
     }

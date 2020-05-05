@@ -29,7 +29,7 @@ public class Go extends SearchAction {
 
 
 
-
+        return null;
     }
 
     @Override
@@ -46,7 +46,5 @@ public class Go extends SearchAction {
     public String toString() {
         return null;
     }
-
-    o
 
 }

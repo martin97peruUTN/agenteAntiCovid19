@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 public class CovidAgent extends SearchBasedAgent {
     private String searchMethod;
 
-    public CovidAgent(HashMap<String, Collection<String>> map, ArrayList<SickPerson> sickPersonsList, String position, String searchMethod){
+    public CovidAgent(HashMap<String, Collection<String>> map, ArrayList<SickPerson> sickPersonsList, ArrayList<Sensor> sensorslist, String position, String searchMethod){
         // Inicializo el método de búsqueda elegido.
         this.searchMethod = searchMethod;
 
@@ -27,7 +27,7 @@ public class CovidAgent extends SearchBasedAgent {
         CovidGoal goal = new CovidGoal();
 
         // Inicializo el estado del agente.
-        CovidAgentState agentState = new CovidAgentState();
+        CovidAgentState agentState = new CovidAgentState(map, sickPersonsList, sensorslist);
         this.setAgentState(agentState);
 
         // Inicializo las acciones del agente.

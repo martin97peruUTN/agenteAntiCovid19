@@ -1,18 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="UserInterface.ApplicationController"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserInterface.ApplicationController">
     <children>
-        <VBox layoutX="474.0" layoutY="33.0" prefHeight="278.0" prefWidth="400.0"
+        <VBox layoutX="474.0" layoutY="33.0" prefHeight="278.0" prefWidth="400.0" style="-fx-background-color: #A3E4D7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #EBF5FB;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Agente Anti COVID19" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="Calibri Bold Italic" size="48.0" />
+                     </font>
+                  </Label>
+               </children></HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Nodo Inicial del Agente:" fx:id="lblPosition">
+                     <font>
+                        <Font name="Calibri Italic" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Seleccionar Método de Búsqueda ">
+                     <font>
+                        <Font name="Calibri Italic" size="22.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="methodSel" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button contentDisplay="TOP" mnemonicParsing="false" text="Comenzar" textAlignment="CENTER" />
+               </children>
+            </HBox>
+         </children></VBox>
     </children>
 
 </AnchorPane>

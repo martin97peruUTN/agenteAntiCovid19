@@ -97,4 +97,35 @@ public class CovidEnvironmentState extends EnvironmentState {
         return true;
     }
 
+    public HashMap<String, Collection<String>> getMap() {
+        return map;
+    }
+
+    public void setMap(HashMap<String, Collection<String>> map) {
+        this.map = map;
+    }
+
+    public ArrayList<SickPerson> getSickPersonsList() {
+        return sickPersonsList;
+    }
+
+    public void setSickPersonsList(ArrayList<SickPerson> sickPersonsList) {
+        this.sickPersonsList = sickPersonsList;
+    }
+
+    public ArrayList<Sensor> getSensorsList() {
+        return sensorsList;
+    }
+
+    public void setSensorsList(ArrayList<Sensor> sensorsList) {
+        this.sensorsList = sensorsList;
+    }
+
+    public Node getAgentPosition() {
+        return agentPosition;
+    }
+
+    public void setAgentPosition(Node agentPosition) {
+        this.agentPosition = agentPosition;
+    }
 }
