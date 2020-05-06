@@ -10,7 +10,7 @@ public class CovidEnvironmentState extends EnvironmentState {
     private HashMap<String, Collection<String>> map;
     private ArrayList<SickPerson> sickPersonsList = new ArrayList<SickPerson>();
     private ArrayList<Sensor>  sensorsList = new ArrayList<Sensor>();
-    private Node agentPosition = new Node("A8","PEDRO DE VEGA Y ECHAGUE","-31.615826","-60.673291");
+    private String agentPosition = "A8";
     //Le pusimos esta posición al nodo inicial del agente porque es el que definimos en la etapa 1.
 
     public CovidEnvironmentState() {this.initState();}
@@ -122,10 +122,10 @@ public class CovidEnvironmentState extends EnvironmentState {
     }
 
     public String getAgentPosition() {
-        return agentPosition.getId();
+        return agentPosition;
     }
 
-    public void setAgentPosition(Node agentPosition) {
+    public void setAgentPosition(String agentPosition) {
         this.agentPosition = agentPosition;
     }
 }
