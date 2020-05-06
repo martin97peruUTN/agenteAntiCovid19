@@ -121,8 +121,8 @@ public class CovidEnvironmentState extends EnvironmentState {
         this.sensorsList = sensorsList;
     }
 
-    public Node getAgentPosition() {
-        return agentPosition;
+    public String getAgentPosition() {
+        return agentPosition.getId();
     }
 
     public void setAgentPosition(Node agentPosition) {

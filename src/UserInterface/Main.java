@@ -11,7 +11,7 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         Parent app = FXMLLoader.load(getClass().getResource("application.fxml"));
         stage.setTitle("AntiCOVID19");
-        stage.setScene(new Scene(app, 400, 250));
+        stage.setScene(new Scene(app, 600, 400));
         stage.show();
     }
 
