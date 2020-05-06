@@ -27,7 +27,7 @@ public class Go extends SearchAction {
 
         ArrayList<String> succesors = new ArrayList<String>();
         succesors.addAll(agentState.getSuccesors());
-        if (succesors != null){
+        if (agentState.getSuccesors() != null){
             int i = succesors.indexOf(this.objetiveNode);
             if (i>=0){
                 agentState.setPosition(this.objetiveNode);

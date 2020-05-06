@@ -27,19 +27,27 @@ public class CovidAgent extends SearchBasedAgent {
         CovidGoal goal = new CovidGoal();
 
         // Inicializo el estado del agente.
-        CovidAgentState agentState = new CovidAgentState(map, sickPersonsList, sensorslist);
+        CovidAgentState agentState = new CovidAgentState(map, sickPersonsList, sensorslist, "A8");
+        agentState.initState();
         this.setAgentState(agentState);
 
         // Inicializo las acciones del agente.
         Vector<SearchAction> actions = new Vector<SearchAction>();
 
-        actions.addElement(new GoNorth());
-        actions.addElement(new GoSouth());
-        actions.addElement(new GoEast());
-        actions.addElement(new GoWest());
+        // Cargo las acciones Go del archivo NODOS-Mapa.csv
+        CSVToMatrix converter;
+        String path = "NODOS-Mapa.csv";
+        converter = new CSVToMatrix(';');
+        ArrayList<String[]> nodes = converter.fileToMatrix(path);
+
+        for (int i = 0; i < nodes.size(); i++) {
+            actions.addElement(new Go(nodes.get(i)[0]));
+        }
+
+        //Agrego la acción MulctSickPerson (multar enfermo).
         actions.addElement(new MulctSickPerson());
 
-        // Problema a resolver del agente
+        //Seteo problema a resolver del agente.
         Problem problem = new Problem(goal, agentState, actions);
         this.setProblem(problem);
 
