@@ -26,7 +26,7 @@ public class CovidAgent extends SearchBasedAgent {
         CovidGoal goal = new CovidGoal();
 
         // Inicializo el estado del agente.
-        CovidAgentState agentState = new CovidAgentState(map, sickPersonsList, sensorslist, "A8");
+        CovidAgentState agentState = new CovidAgentState(map,sensorslist, sickPersonsList,"A8");
         agentState.initState();
         this.setAgentState(agentState);
 

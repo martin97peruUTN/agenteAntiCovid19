@@ -10,8 +10,7 @@ public class CovidEnvironmentState extends EnvironmentState {
     private HashMap<String, Collection<String>> map;
     private ArrayList<SickPerson> sickPersonsList = new ArrayList<SickPerson>();
     private ArrayList<Sensor>  sensorsList = new ArrayList<Sensor>();
-    private String agentPosition = "A8";
-    //Le pusimos esta posición al nodo inicial del agente porque es el que definimos en la etapa 1.
+    private String agentPosition = "";
 
     public CovidEnvironmentState() {this.initState();}
 
@@ -31,9 +30,7 @@ public class CovidEnvironmentState extends EnvironmentState {
 
         map = new HashMap<String, Collection<String>>();
 
-        /**
-         * Inicializar mapa con los nodos del archivo NODOS-Mapa.csv
-         */
+        //Inicializar mapa con los nodos del archivo NODOS-Mapa.csv
         for(int i=0;i<nodes.size();i++){
             ArrayList<String> succesors = new ArrayList<String>();
             for(int j=0;j<nodesSuccesors.size();j++){
@@ -53,9 +50,7 @@ public class CovidEnvironmentState extends EnvironmentState {
             map.put(nodes.get(i)[0], succesors);
         }
 
-        /**
-         * Inicializar lista de sensores con el archivo SENSORES.csv
-         */
+        //Inicializar lista de sensores con el archivo SENSORES.csv
         path = "SENSORES.csv";
         converter = new CSVToMatrix(';');
         ArrayList<String[]> sensors = converter.fileToMatrix(path);
@@ -63,9 +58,7 @@ public class CovidEnvironmentState extends EnvironmentState {
             sensorsList.add(new Sensor(sensors.get(i)[0], sensors.get(i)[1], sensors.get(i)[2], sensors.get(i)[3]));
         }
 
-        /**
-         * Inicializar lista de enfermos con el archivo ENFERMOS.csv
-         */
+        //Inicializar lista de enfermos con el archivo ENFERMOS.csv
         path = "ENFERMOS.csv";
         converter = new CSVToMatrix(';');
         ArrayList<String[]> sickPersons = converter.fileToMatrix(path);
@@ -92,6 +85,12 @@ public class CovidEnvironmentState extends EnvironmentState {
         str = str + " ]";
         return str;
     }
+
+    //public void sendPerception(CovidPerception cp){
+    //    if(cp.getType()=="ACC"){
+
+    //    }
+    //}
 
     public boolean equals(Object obj){
         return true;

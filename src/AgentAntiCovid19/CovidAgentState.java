@@ -10,17 +10,17 @@ import java.util.HashMap;
 
 public class CovidAgentState extends SearchBasedAgentState{
     private String position;
-    private ArrayList<SickPerson> sickPersonsList = new ArrayList<SickPerson>();
     private ArrayList<Sensor> sensorsList = new ArrayList<Sensor>();
+    private ArrayList<SickPerson> sickPersonsList = new ArrayList<SickPerson>();
     private ArrayList<Node> nodesList = new ArrayList<Node>();
     private HashMap<String, Collection<String>> knownMap;
     private ArrayList<String> visitedPositions;
     private Integer totalOfGoRealized = 0;
 
-    public CovidAgentState(HashMap<String, Collection<String>> map, ArrayList<SickPerson> sickPersonsList, ArrayList<Sensor> sensorsList, String position){
+    public CovidAgentState(HashMap<String, Collection<String>> map, ArrayList<Sensor> sensorsList, ArrayList<SickPerson> sickPersonsList, String position){
         this.knownMap = (HashMap<String, Collection<String>>) map.clone();
-        this.sensorsList = (ArrayList<Sensor>) sensorsList;
-        this.sickPersonsList = (ArrayList<SickPerson>) sickPersonsList;
+        this.sickPersonsList = (ArrayList<SickPerson>) sickPersonsList.clone();
+        this.sensorsList = (ArrayList<Sensor>) sensorsList.clone();
         this.position = position;
     }
 
@@ -41,13 +41,6 @@ public class CovidAgentState extends SearchBasedAgentState{
 
         //Inicializo la lista de nodos visitados.
         visitedPositions = new ArrayList<String>();
-
-        //Inicializo la lista de sensores.
-        path="SENSORES.csv";
-        ArrayList<String[]> sensors = converter.fileToMatrix(path);
-        for(int i=0;i<sensors.size();i++){
-            sensorsList.add(new Sensor(sensors.get(i)[0], sensors.get(i)[1], sensors.get(i)[2], sensors.get(i)[3]));
-        }
 
         //Inicializo la lista de enfermos.
         path="ENFERMOS.csv";
@@ -71,14 +64,6 @@ public class CovidAgentState extends SearchBasedAgentState{
 
     public void setPosition(String position) {
         this.position = position;
-    }
-
-    public ArrayList<Sensor> getSensorsList() {
-        return sensorsList;
-    }
-
-    public void setSensorsList(ArrayList<Sensor> sensorsList) {
-        this.sensorsList = sensorsList;
     }
 
     public ArrayList<Node> getNodesList() {
@@ -119,7 +104,13 @@ public class CovidAgentState extends SearchBasedAgentState{
 
     @Override
     public SearchBasedAgentState clone() {
-        return null;
+        CovidAgentState newState = new CovidAgentState(knownMap, sensorsList, sickPersonsList, position);
+        newState.setTotalOfGoRealized(totalOfGoRealized);
+        newState.setVisitedPositions((ArrayList<String>) visitedPositions.clone());
+        newState.setNodesList((ArrayList<Node>) nodesList.clone());
+        newState.setSensorsList((ArrayList<Sensor>) sensorsList.clone());
+        newState.setSickPersonsList((ArrayList<SickPerson>) sickPersonsList.clone());
+        return newState;
     }
 
     @Override
@@ -133,6 +124,14 @@ public class CovidAgentState extends SearchBasedAgentState{
 
     public void setTotalOfGoRealized(Integer totalOfGoRealized) {
         this.totalOfGoRealized = totalOfGoRealized;
+    }
+
+    public ArrayList<Sensor> getSensorsList() {
+        return sensorsList;
+    }
+
+    public void setSensorsList(ArrayList<Sensor> sensorsList) {
+        this.sensorsList = sensorsList;
     }
 
     @Override

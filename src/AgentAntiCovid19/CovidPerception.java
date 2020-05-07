@@ -12,4 +12,12 @@ public class CovidPerception extends Perception {
     public void initPerception(Agent agent, Environment environment) {
 
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 }
