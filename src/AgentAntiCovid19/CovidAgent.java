@@ -6,8 +6,7 @@ import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.Problem;
 import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgent;
-import frsf.cidisi.faia.solver.search.DepthFirstSearch;
-import frsf.cidisi.faia.solver.search.Search;
+import frsf.cidisi.faia.solver.search.*;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -19,7 +18,7 @@ import java.util.logging.Logger;
 public class CovidAgent extends SearchBasedAgent {
     private String searchMethod;
 
-    public CovidAgent(HashMap<String, Collection<String>> map, ArrayList<SickPerson> sickPersonsList, ArrayList<Sensor> sensorslist, String position, String searchMethod){
+    public CovidAgent(HashMap<String, Collection<String>> map, ArrayList<SickPerson> sickPersonsList, ArrayList<Sensor> sensorslist, String searchMethod){
         // Inicializo el método de búsqueda elegido.
         this.searchMethod = searchMethod;
 
@@ -54,36 +53,70 @@ public class CovidAgent extends SearchBasedAgent {
     }
 
 
-    //metodo que se utiliza para percibir sobre el ambiente
+    //Este método es usado para percibir el ambiente
     @Override
     public void see(Perception percepcion) {
         this.getAgentState().updateState(percepcion);
     }
 
-    //Este metodo es para decidir que accion tomar segun el metodo de busqueda
+    //Acá en este método se decide qué acción tomar según el método de búsqueda elegido en la interfaz
     @Override
     public Action selectAction() {
-        //Metodos de busqueda
-        //BreathFirstSearch searchStrategy = new BreathFirstSearch();
-        DepthFirstSearch searchStrategy = new DepthFirstSearch();
 
-        Search searchSolver = new Search(searchStrategy);
+        if(this.searchMethod=="Depth First Search"){
+            //Método de búsqueda en profundidad
+            DepthFirstSearch depthFirstSearch = new DepthFirstSearch();
+            Search dfsSolver = new Search(depthFirstSearch);
+            dfsSolver.setVisibleTree(Search.XML_TREE);
+            //Seteo el search solver
+            this.setSolver(dfsSolver);
+        }
+        if(this.searchMethod=="Breath First Search"){
+            //Método de búsqueda en anchura
+            BreathFirstSearch breathFirstSearch = new BreathFirstSearch();
+            Search bfsSolver = new Search(breathFirstSearch);
+            bfsSolver.setVisibleTree(Search.XML_TREE);
+            //Seteo el search solver
+            this.setSolver(bfsSolver);
+        }
+        if(this.searchMethod=="A* Search"){
+            //Método de búsqueda A*
+            IStepCostFunction aCostFunction = new CovidCostFunction();
+            IEstimatedCostFunction heuristicAStar = new CovidHeuristic();
+            AStarSearch aStarSearch = new AStarSearch(aCostFunction, heuristicAStar);
+            Search sasSolver = new Search(aStarSearch);
+            sasSolver.setVisibleTree(Search.XML_TREE);
+            //Seteo el search solver
+            this.setSolver(sasSolver);
+        }
+        if(this.searchMethod=="Uniform Cost Search"){
+            //Método de búsqueda de costo uniforme
+            IStepCostFunction uniCostFunction = new CovidCostFunction();
+            UniformCostSearch uniCostSearch = new UniformCostSearch(uniCostFunction);
+            Search uniCostSolver = new Search(uniCostSearch);
+            uniCostSolver.setVisibleTree(Search.XML_TREE);
+            //Seteo el search solver
+            this.setSolver(uniCostSolver);
+        }
+        if(this.searchMethod=="Greedy Search"){
+            //Método de búsqueda ávara
+            IEstimatedCostFunction gHeuristicFunction = new CovidHeuristic();
+            GreedySearch gSearch = new GreedySearch(gHeuristicFunction);
+            Search gsSolver = new Search(gSearch);
+            gsSolver.setVisibleTree(Search.XML_TREE);
+            //Seteo el search solver
+            this.setSolver(gsSolver);
+        }
 
-        // Usando el graphviz que manda el arvol a un archivo xml y se puede mostrar de forma gráfica
-        searchSolver.setVisibleTree(Search.GRAPHVIZ_TREE);
-
-        // Setear como se va a resolver el problema con busqueda
-        this.setSolver(searchSolver);
-
-        // Buscar las acciones para pasar al arbol de busqueda
+        //Buscar las acciones para pasar al árbol de búsqueda
         Action selectedAction = null;
         try {
             selectedAction = this.getSolver().solve(new Object[]{this.getProblem()});
         } catch (Exception ex) {
             Logger.getLogger(CovidAgent.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-        // regresar la accion definida
+        //Regresar la acción definida
         return selectedAction;
     }
+
 }
