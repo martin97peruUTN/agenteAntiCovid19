@@ -1,22 +1,93 @@
 package AgentAntiCovid19;
 
+import com.sun.scenario.animation.shared.SingleLoopClipEnvelope;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 
 import java.util.ArrayList;
-
-/**
- * @author Leandro
- */
+import java.util.Collection;
+import java.util.HashMap;
 
 public class CovidAgentState extends SearchBasedAgentState{
-    private String posX;
-    private String posY;
+    private String position;
+    private ArrayList<Sensor> sensorsList = new ArrayList<Sensor>();
     private ArrayList<SickPerson> sickPersonsList = new ArrayList<SickPerson>();
-    private ArrayList<String[]> nodes;
+    private ArrayList<Node> nodesList = new ArrayList<Node>();
+    private HashMap<String, Collection<String>> knownMap;
+    private ArrayList<String> visitedPositions;
+    private Integer totalOfGoRealized = 0;
+
+    public CovidAgentState(HashMap<String, Collection<String>> map, ArrayList<Sensor> sensorsList, ArrayList<SickPerson> sickPersonsList, String position){
+        this.knownMap = (HashMap<String, Collection<String>>) map.clone();
+        this.sickPersonsList = (ArrayList<SickPerson>) sickPersonsList.clone();
+        this.sensorsList = (ArrayList<Sensor>) sensorsList.clone();
+        this.position = position;
+    }
+
+    @Override
+    public void initState() {
+
+        position = "A8";    //Posición inicial del agente: Nodo: A8, Calles: Pedro de Vega y Echague.
+
+        //Inicializo el mapa del agente y la lista de nodos.
+        CSVToMatrix converter = new CSVToMatrix(';');
+        String path = "NODOS-Mapa.csv";
+        ArrayList<String[]> nodes = converter.fileToMatrix(path);
+        path = "NODOS-Sucesores.csv";
+        ArrayList<String[]> nodesSuccesors = converter.fileToMatrix(path);
+        for(int i=0;i<nodes.size();i++){
+            nodesList.add(new Node(nodes.get(i)[0], nodes.get(i)[1], nodes.get(i)[2], nodes.get(i)[3]));
+        }
+
+        //Inicializo la lista de nodos visitados.
+        visitedPositions = new ArrayList<String>();
+
+        //Inicializo la lista de enfermos.
+        path="ENFERMOS.csv";
+        ArrayList<String[]> sickPersons = converter.fileToMatrix(path);
+        for(int i=0;i<sickPersons.size();i++){
+            sickPersonsList.add(new SickPerson(sickPersons.get(i)[0], sickPersons.get(i)[1], sickPersons.get(i)[2]));
+        }
+    }
 
     public ArrayList<SickPerson> getSickPersonsList() {
         return sickPersonsList;
+    }
+
+    public Collection<String> getSuccesors(){
+        return knownMap.get(position);
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public ArrayList<Node> getNodesList() {
+        return nodesList;
+    }
+
+    public void setNodesList(ArrayList<Node> nodesList) {
+        this.nodesList = nodesList;
+    }
+
+    public HashMap<String, Collection<String>> getKnownMap() {
+        return knownMap;
+    }
+
+    public void setKnownMap(HashMap<String, Collection<String>> knownMap) {
+        this.knownMap = knownMap;
+    }
+
+    public ArrayList<String> getVisitedPositions() {
+        return visitedPositions;
+    }
+
+    public void setVisitedPositions(ArrayList<String> visitedPositions) {
+        this.visitedPositions = visitedPositions;
     }
 
     public void setSickPersonsList(ArrayList<SickPerson> sickPersonsList) {
@@ -25,13 +96,21 @@ public class CovidAgentState extends SearchBasedAgentState{
 
     @Override
     public boolean equals(Object obj) {
-        return false;
+        if(!(obj instanceof CovidAgentState)){
+            return false;
+        }
+        return (position.equals(((CovidAgentState) obj).getPosition()) && (sickPersonsList.size() == ((CovidAgentState) obj).getSickPersonsList().size()));
     }
 
     @Override
     public SearchBasedAgentState clone() {
-
-        return null;
+        CovidAgentState newState = new CovidAgentState(knownMap, sensorsList, sickPersonsList, position);
+        newState.setTotalOfGoRealized(totalOfGoRealized);
+        newState.setVisitedPositions((ArrayList<String>) visitedPositions.clone());
+        newState.setNodesList((ArrayList<Node>) nodesList.clone());
+        newState.setSensorsList((ArrayList<Sensor>) sensorsList.clone());
+        newState.setSickPersonsList((ArrayList<SickPerson>) sickPersonsList.clone());
+        return newState;
     }
 
     @Override
@@ -39,13 +118,25 @@ public class CovidAgentState extends SearchBasedAgentState{
 
     }
 
-    @Override
-    public void initState() {
+    public Integer getTotalOfGoRealized() {
+        return totalOfGoRealized;
+    }
 
+    public void setTotalOfGoRealized(Integer totalOfGoRealized) {
+        this.totalOfGoRealized = totalOfGoRealized;
+    }
+
+    public ArrayList<Sensor> getSensorsList() {
+        return sensorsList;
+    }
+
+    public void setSensorsList(ArrayList<Sensor> sensorsList) {
+        this.sensorsList = sensorsList;
     }
 
     @Override
     public String toString() {
-        return null;
+        String str = "Nodo: " + position;
+        return str;
     }
 }

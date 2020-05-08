@@ -10,8 +10,7 @@ public class CovidEnvironmentState extends EnvironmentState {
     private HashMap<String, Collection<String>> map;
     private ArrayList<SickPerson> sickPersonsList = new ArrayList<SickPerson>();
     private ArrayList<Sensor>  sensorsList = new ArrayList<Sensor>();
-    private Node agentPosition = new Node("A8","PEDRO DE VEGA Y ECHAGUE","-31.615826","-60.673291");
-    // Le pusimos esta posición al nodo inicial del agente porque es el que definimos en la etapa 1.
+    private String agentPosition = "";
 
     public CovidEnvironmentState() {this.initState();}
 
@@ -31,9 +30,7 @@ public class CovidEnvironmentState extends EnvironmentState {
 
         map = new HashMap<String, Collection<String>>();
 
-        /**
-         * Inicializar mapa con los nodos del archivo NODOS-Mapa.csv
-         */
+        //Inicializar mapa con los nodos del archivo NODOS-Mapa.csv
         for(int i=0;i<nodes.size();i++){
             ArrayList<String> succesors = new ArrayList<String>();
             for(int j=0;j<nodesSuccesors.size();j++){
@@ -53,9 +50,7 @@ public class CovidEnvironmentState extends EnvironmentState {
             map.put(nodes.get(i)[0], succesors);
         }
 
-        /**
-         * Inicializar lista de sensores con el archivo SENSORES.csv
-         */
+        //Inicializar lista de sensores con el archivo SENSORES.csv
         path = "SENSORES.csv";
         converter = new CSVToMatrix(';');
         ArrayList<String[]> sensors = converter.fileToMatrix(path);
@@ -63,21 +58,105 @@ public class CovidEnvironmentState extends EnvironmentState {
             sensorsList.add(new Sensor(sensors.get(i)[0], sensors.get(i)[1], sensors.get(i)[2], sensors.get(i)[3]));
         }
 
-        /**
-         * Inicializar lista de enfermos con el archivo ENFERMOS.csv
-         */
+        //Inicializar lista de enfermos con el archivo ENFERMOS.csv
         path = "ENFERMOS.csv";
         converter = new CSVToMatrix(';');
         ArrayList<String[]> sickPersons = converter.fileToMatrix(path);
         for(int i=0;i<sensors.size();i++){
-            sickPersonsList.add(new SickPerson(sickPersons.get(i)[0], sickPersons.get(i)[1], sickPersons.get(i)[2], sickPersons.get(i)[3], sickPersons.get(i)[4]));
+            sickPersonsList.add(new SickPerson(sickPersons.get(i)[0], sickPersons.get(i)[1], sickPersons.get(i)[2]));
         }
 
+    }
 
+    public void sendPerception(CovidPerception cp){
+        //Percepción de aparición de nuevo enfermo, agrego a la lista de enfermos un nuevo enfermo.
+        if(cp.getTipo()=="ANE"){
+            sickPersonsList.add(new SickPerson(cp.getEstado(), cp.getNodo1(), cp.getNodo2()));
+            for(Sensor s: sensorsList){
+                if(s.getId()==cp.getNodo1()){
+                    s.setHasSickPerson(true);
+                }
+            }
+        }
+        //Percepción de corte de calle: si la calle está cortada le quito a la lista de sucesores de nodo1 el nodo2.
+        //Si la calle no está cortada le agrego a la lista de sucesores de nodo1 el nodo2.
+        if(cp.getTipo()=="ACC"){
+            if(Boolean.valueOf(cp.getEstado())){
+                map.get(cp.getNodo1()).remove(cp.getNodo2());
+            }
+            else{
+                if(!map.get(cp.getNodo1()).contains(cp.getNodo2())){
+                    map.get(cp.getNodo1()).add(cp.getNodo2());
+                }
+            }
+        }
+        //Percepción de aparición de enfermo en el mapa: busco el enfermo en la lista de enfermos y le cambio la posición actual.
+        if(cp.getTipo()=="AEM"){
+            for(SickPerson sp: sickPersonsList){
+                if(sp.getId()==cp.getEstado()){
+                    sp.setActualPosition(cp.getNodo1());
+                }
+            }
+        }
     }
 
     @Override
     public String toString() {
-        return null;
+        String str = "";
+        str = str + "[ \n";
+        for (String point : map.keySet()) {
+            str = str + "[ " + point + " --> ";
+            Collection<String> successors = map.get(point);
+            if (successors != null) {
+                for (String successor : successors) {
+                    str = str + successor + " ";
+                }
+            }
+            str = str + " ]\n";
+        }
+        str = str + " ]";
+        return str;
+    }
+
+    //public void sendPerception(CovidPerception cp){
+    //    if(cp.getType()=="ACC"){
+
+    //    }
+    //}
+
+    public boolean equals(Object obj){
+        return true;
+    }
+
+    public HashMap<String, Collection<String>> getMap() {
+        return map;
+    }
+
+    public void setMap(HashMap<String, Collection<String>> map) {
+        this.map = map;
+    }
+
+    public ArrayList<SickPerson> getSickPersonsList() {
+        return sickPersonsList;
+    }
+
+    public void setSickPersonsList(ArrayList<SickPerson> sickPersonsList) {
+        this.sickPersonsList = sickPersonsList;
+    }
+
+    public ArrayList<Sensor> getSensorsList() {
+        return sensorsList;
+    }
+
+    public void setSensorsList(ArrayList<Sensor> sensorsList) {
+        this.sensorsList = sensorsList;
+    }
+
+    public String getAgentPosition() {
+        return agentPosition;
+    }
+
+    public void setAgentPosition(String agentPosition) {
+        this.agentPosition = agentPosition;
     }
 }

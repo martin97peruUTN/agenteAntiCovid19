@@ -5,49 +5,48 @@ package AgentAntiCovid19;
  */
 
 public class SickPerson {
-    private String id;
-    private double actualPosX;
-    private double actualPosY;
-    private double homePosX;
-    private double homePosY;
+    private String id; //0
+    private String actualPosition; //1
+    private String homePosition; //2
+    private Integer cantMultas;
 
-    public SickPerson(String id, String actualPosY, String actualPosX, String homePosY, String homePosX){
+    public SickPerson(String id, String actualPosition, String homePosition){
         this.id = id;
-        this.actualPosX = Double.valueOf(actualPosX);
-        this.actualPosY = Double.valueOf(actualPosY);
-        this.homePosX = Double.valueOf(homePosX);
-        this.homePosY = Double.valueOf(homePosY);
+        this.actualPosition = actualPosition;
+        this.homePosition = homePosition;
+        this.cantMultas = 0;
     }
 
-    public double getActualPosX() {
-        return actualPosX;
+    public String getActualPosition() {
+        return actualPosition;
     }
 
-    public void setActualPosX(double actualPosX) {
-        this.actualPosX = actualPosX;
+    public void setActualPosition(String actualPosition) {
+        this.actualPosition = actualPosition;
     }
 
-    public double getActualPosY() {
-        return actualPosY;
+    public String getHomePosition() {
+        return homePosition;
     }
 
-    public void setActualPosY(double actualPosY) {
-        this.actualPosY = actualPosY;
+    public void setHomePosition(String homePosition) {
+        this.homePosition = homePosition;
     }
 
-    public double getHomePosX() {
-        return homePosX;
+    public String getId() {
+        return id;
     }
 
-    public void setHomePosX(double homePosX) {
-        this.homePosX = homePosX;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public double getHomePosY() {
-        return homePosY;
+    public Integer getCantMultas() {
+        return cantMultas;
     }
 
-    public void setHomePosY(double homePosY) {
-        this.homePosY = homePosY;
+    public void setCantMultas(Integer cantMultas) {
+        this.cantMultas = cantMultas;
     }
+
 }
