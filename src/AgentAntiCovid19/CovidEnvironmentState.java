@@ -72,6 +72,11 @@ public class CovidEnvironmentState extends EnvironmentState {
         //Percepción de aparición de nuevo enfermo, agrego a la lista de enfermos un nuevo enfermo.
         if(cp.getTipo()=="ANE"){
             sickPersonsList.add(new SickPerson(cp.getEstado(), cp.getNodo1(), cp.getNodo2()));
+            for(Sensor s: sensorsList){
+                if(s.getId()==cp.getNodo1()){
+                    s.setHasSickPerson(true);
+                }
+            }
         }
         //Percepción de corte de calle: si la calle está cortada le quito a la lista de sucesores de nodo1 el nodo2.
         //Si la calle no está cortada le agrego a la lista de sucesores de nodo1 el nodo2.
