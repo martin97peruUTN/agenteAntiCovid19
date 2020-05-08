@@ -5,10 +5,17 @@ import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.environment.Environment;
 
 public class CovidPerception extends Perception {
-    private String tipo;
-    private String nodo1;
-    private String nodo2;
-    private String estado;
+    private String tipo; //1
+    private String nodo1; //2
+    private String nodo2; //3
+    private String estado; //4
+
+    public CovidPerception(String tipo, String nodo1, String nodo2, String estado){
+        this.tipo = tipo;
+        this.nodo1 = nodo1;
+        this.nodo2 = nodo2;
+        this.estado = estado;
+    }
 
     @Override
     public void initPerception(Agent agent, Environment environment) {
