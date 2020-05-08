@@ -46,7 +46,7 @@ public class CovidAgentState extends SearchBasedAgentState{
         path="ENFERMOS.csv";
         ArrayList<String[]> sickPersons = converter.fileToMatrix(path);
         for(int i=0;i<sickPersons.size();i++){
-            sickPersonsList.add(new SickPerson(sickPersons.get(i)[0], sickPersons.get(i)[1], sickPersons.get(i)[2], sickPersons.get(i)[3], sickPersons.get(i)[4]));
+            sickPersonsList.add(new SickPerson(sickPersons.get(i)[0], sickPersons.get(i)[1], sickPersons.get(i)[2]));
         }
     }
 

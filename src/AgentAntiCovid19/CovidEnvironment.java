@@ -34,7 +34,6 @@ public class CovidEnvironment extends Environment {
                 perceptionsList.put(k, new CovidPerception(perceptions.get(i)[1], perceptions.get(i)[2], perceptions.get(i)[3], perceptions.get(i)[4]));
             }
         }
-
     }
 
     @Override
