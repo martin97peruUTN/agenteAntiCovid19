@@ -1,5 +1,8 @@
 package AgentAntiCovid19.actions;
 
+import AgentAntiCovid19.CovidAgentState;
+import AgentAntiCovid19.CovidEnvironmentState;
+import AgentAntiCovid19.SickPerson;
 import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;
@@ -14,6 +17,40 @@ public class MulctSickPerson extends SearchAction {
 
     @Override
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
+        CovidAgentState covidAgentState = (CovidAgentState) s;
+        String position = covidAgentState.getPosition();
+
+        for(SickPerson p: covidAgentState.getSickPersonsList()){
+            if(p.getActualPosition().equals(position) && !p.getActualPosition().equals(p.getHomePosition())){
+                p.setActualPosition(p.getHomePosition());
+                p.setCantMultas(p.getCantMultas()+1);
+                return covidAgentState;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public EnvironmentState execute(AgentState ast, EnvironmentState est) {
+        CovidAgentState covidAgentState = (CovidAgentState) ast;
+        CovidEnvironmentState covidEnvironmentState = (CovidEnvironmentState) est;
+
+        String position = ((CovidEnvironmentState) est).getAgentPosition();
+        for(SickPerson p: covidEnvironmentState.getSickPersonsList()){
+            if(p.getActualPosition().equals(position) && !p.getActualPosition().equals(p.getHomePosition())){
+                //Actualizo el estado del ambiente.
+                p.setActualPosition(p.getHomePosition());
+                p.setCantMultas(p.getCantMultas()+1);
+                //Actualizo el estado del agente.
+                for(SickPerson sp: covidAgentState.getSickPersonsList()){
+                    if (sp.equals(p)){
+                        sp.setActualPosition(sp.getHomePosition());
+                        sp.setCantMultas(sp.getCantMultas()+1);
+                        return covidEnvironmentState;
+                    }
+                }
+            }
+        }
         return null;
     }
 
@@ -22,10 +59,6 @@ public class MulctSickPerson extends SearchAction {
         return this.cost;
     }
 
-    @Override
-    public EnvironmentState execute(AgentState ast, EnvironmentState est) {
-        return null;
-    }
 
     @Override
     public String toString() {
