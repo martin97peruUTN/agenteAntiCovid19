@@ -6,6 +6,7 @@ import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
 
 public class MulctSickPerson extends SearchAction {
+    private Double cost = 2.0;
 
     public MulctSickPerson(){
 
@@ -18,7 +19,7 @@ public class MulctSickPerson extends SearchAction {
 
     @Override
     public Double getCost() {
-        return null;
+        return this.cost;
     }
 
     @Override
