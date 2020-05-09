@@ -13,6 +13,14 @@ public class VisitedNode {
         this.lng = lng;
     }
 
+    public String getStreets() {
+        return streets;
+    }
+
+    public void setStreets(String streets) {
+        this.streets = streets;
+    }
+
     public String getId() {
         return id;
     }
