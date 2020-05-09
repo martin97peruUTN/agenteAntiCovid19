@@ -96,7 +96,6 @@ public class CovidAgentState extends SearchBasedAgentState{
     }
 
 
-
     @Override
     public boolean equals(Object obj) {
         if(!(obj instanceof CovidAgentState)){
