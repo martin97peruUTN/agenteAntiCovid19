@@ -133,6 +133,7 @@ public class CovidAgentState extends SearchBasedAgentState{
     public SearchBasedAgentState clone() {
         CovidAgentState newState = new CovidAgentState(knownMap, sensorsList, sickPersonsList, position);
         newState.setTotalOfGoRealized(totalOfGoRealized);
+        newState.setTotalOfMulctRealized(totalOfMulctRealized);
         newState.setVisitedPositions((ArrayList<String>) visitedPositions.clone());
         newState.setNodesList((ArrayList<Node>) nodesList.clone());
         newState.setSensorsList((ArrayList<Sensor>) sensorsList.clone());
