@@ -94,15 +94,13 @@ public class CovidAgentState extends SearchBasedAgentState{
         this.sickPersonsList = sickPersonsList;
     }
 
-    public ArrayList<SickPerson> getSickPersonList (){return this.sickPersonsList;}
-
     @Override
     public boolean equals(Object obj) {
         if(!(obj instanceof CovidAgentState)){
             return false;
         }
         CovidAgentState auxCompare = (CovidAgentState) obj;
-        Boolean boolsickPerList = sickPersonsList.equals(auxCompare.getSickPersonList());
+        Boolean boolsickPerList = sickPersonsList.equals(auxCompare.getSickPersonsList());
         Boolean boolVisitedPositions = visitedPositions.equals(auxCompare.getVisitedPositions());
         /* Hecho con for comparando elemento por elemento
         for(int i=0;i<sickPersonsList.size();i++){
@@ -125,7 +123,6 @@ public class CovidAgentState extends SearchBasedAgentState{
         }*/
         Boolean comparing = (position.equals(((CovidAgentState) obj).getPosition()) && (sickPersonsList.size() == ((CovidAgentState) obj).getSickPersonsList().size()) && boolsickPerList && boolVisitedPositions);
         return comparing;
-
     }
 
     @Override
