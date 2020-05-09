@@ -1,5 +1,7 @@
 package UserInterface;
 
+import AgentAntiCovid19.CovidMain;
+import frsf.cidisi.faia.exceptions.PrologConnectorException;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -16,6 +18,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class ApplicationController implements Initializable {
@@ -45,6 +48,16 @@ public class ApplicationController implements Initializable {
     @FXML
     private void changeScene(Event event){
         if(method!=null) {
+            String args[] = {method};
+            ArrayList<String> resultados = new ArrayList<>();
+            /*try{
+                resultados = CovidMain.main(args);
+            }
+            catch (PrologConnectorException e){
+                e.printStackTrace();
+            }*/
+
+
             Parent parent = null;
             GMapController controller;
             try {
@@ -61,7 +74,8 @@ public class ApplicationController implements Initializable {
                 window.setHeight(720);
                 window.setScene(scene);
                 window.show();
-            } catch (IOException e) {
+            }
+            catch (IOException e) {
                 e.printStackTrace();
             }
         }
