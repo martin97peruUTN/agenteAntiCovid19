@@ -16,6 +16,7 @@ public class CovidAgentState extends SearchBasedAgentState{
     private HashMap<String, Collection<String>> knownMap;
     private ArrayList<String> visitedPositions;
     private Integer totalOfGoRealized = 0;
+    private Integer totalOfMulctRealized = 0;
 
     public CovidAgentState(HashMap<String, Collection<String>> map, ArrayList<Sensor> sensorsList, ArrayList<SickPerson> sickPersonsList, String position){
         this.knownMap = (HashMap<String, Collection<String>>) map.clone();
@@ -150,6 +151,14 @@ public class CovidAgentState extends SearchBasedAgentState{
 
     public void setTotalOfGoRealized(Integer totalOfGoRealized) {
         this.totalOfGoRealized = totalOfGoRealized;
+    }
+
+    public Integer getTotalOfMulctRealized() {
+        return totalOfMulctRealized;
+    }
+
+    public void setTotalOfMulctRealized(Integer totalOfMulctRealized) {
+        this.totalOfMulctRealized = totalOfMulctRealized;
     }
 
     public ArrayList<Sensor> getSensorsList() {
