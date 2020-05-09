@@ -18,6 +18,7 @@ import java.util.logging.Logger;
 public class CovidAgent extends SearchBasedAgent {
     private String searchMethod;
 
+    //Constructor
     public CovidAgent(HashMap<String, Collection<String>> map, ArrayList<SickPerson> sickPersonsList, ArrayList<Sensor> sensorslist, String searchMethod){
         // Inicializo el método de búsqueda elegido.
         this.searchMethod = searchMethod;

@@ -118,12 +118,6 @@ public class CovidEnvironmentState extends EnvironmentState {
         return str;
     }
 
-    //public void sendPerception(CovidPerception cp){
-    //    if(cp.getType()=="ACC"){
-
-    //    }
-    //}
-
     public boolean equals(Object obj){
         return true;
     }
