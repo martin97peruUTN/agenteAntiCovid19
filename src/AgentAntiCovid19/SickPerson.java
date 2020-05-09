@@ -1,8 +1,5 @@
 package AgentAntiCovid19;
 
-/**
- * @author Leandro
- */
 
 public class SickPerson {
     private String id; //0

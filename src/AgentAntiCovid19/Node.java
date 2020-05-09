@@ -1,8 +1,6 @@
 package AgentAntiCovid19;
 
-/**
- * @author Leandro
- */
+
 
 public class Node {
 

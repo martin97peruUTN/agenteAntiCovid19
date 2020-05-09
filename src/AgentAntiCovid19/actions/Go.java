@@ -53,7 +53,7 @@ public class Go extends SearchAction {
 
     @Override
     public String toString() {
-        return null;
+        return "Go " + objetiveNode;
     }
 
 }

@@ -99,6 +99,8 @@ public class CovidAgentState extends SearchBasedAgentState{
         if(!(obj instanceof CovidAgentState)){
             return false;
         }
+        CovidAgent auxCompare = (CovidAgent) obj;
+        Boolean sickPerList
         return (position.equals(((CovidAgentState) obj).getPosition()) && (sickPersonsList.size() == ((CovidAgentState) obj).getSickPersonsList().size()));
     }
 
