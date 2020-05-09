@@ -27,7 +27,6 @@ public class CovidAgentState extends SearchBasedAgentState{
 
     @Override
     public void initState() {
-
         position = "A8";    //Posición inicial del agente: Nodo: A8, Calles: Pedro de Vega y Echague.
 
         //Inicializo el mapa del agente y la lista de nodos.
@@ -103,7 +102,7 @@ public class CovidAgentState extends SearchBasedAgentState{
             return false;
         }
         CovidAgentState auxCompare = (CovidAgentState) obj;
-        Boolean boolsickPerList = sickPersonsList.equals(auxCompare.getSickPersonsList());
+        Boolean boolSickPerList = sickPersonsList.equals(auxCompare.getSickPersonsList());
         Boolean boolVisitedPositions = visitedPositions.equals(auxCompare.getVisitedPositions());
         /* Hecho con for comparando elemento por elemento
         for(int i=0;i<sickPersonsList.size();i++){
@@ -124,7 +123,7 @@ public class CovidAgentState extends SearchBasedAgentState{
                 break;
             }
         }*/
-        Boolean comparing = (position.equals(((CovidAgentState) obj).getPosition()) && (sickPersonsList.size() == ((CovidAgentState) obj).getSickPersonsList().size()) && boolsickPerList && boolVisitedPositions);
+        Boolean comparing = (position.equals(((CovidAgentState) obj).getPosition()) && (sickPersonsList.size() == ((CovidAgentState) obj).getSickPersonsList().size()) && boolSickPerList && boolVisitedPositions);
         return comparing;
     }
 
