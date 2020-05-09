@@ -50,9 +50,6 @@ public class CovidAgentState extends SearchBasedAgentState{
         }
     }
 
-    public ArrayList<SickPerson> getSickPersonsList() {
-        return sickPersonsList;
-    }
 
     public Collection<String> getSuccesors(){
         return knownMap.get(position);
@@ -94,7 +91,10 @@ public class CovidAgentState extends SearchBasedAgentState{
         this.sickPersonsList = sickPersonsList;
     }
 
-    public ArrayList<SickPerson> getSickPersonList (){return this.sickPersonsList;}
+    public ArrayList<SickPerson> getSickPersonsList() {
+        return sickPersonsList;
+    }
+
 
     @Override
     public boolean equals(Object obj) {
@@ -102,7 +102,7 @@ public class CovidAgentState extends SearchBasedAgentState{
             return false;
         }
         CovidAgentState auxCompare = (CovidAgentState) obj;
-        Boolean boolsickPerList = sickPersonsList.equals(auxCompare.getSickPersonList());
+        Boolean boolsickPerList = sickPersonsList.equals(auxCompare.getSickPersonsList());
         Boolean boolVisitedPositions = visitedPositions.equals(auxCompare.getVisitedPositions());
         /* Hecho con for comparando elemento por elemento
         for(int i=0;i<sickPersonsList.size();i++){
