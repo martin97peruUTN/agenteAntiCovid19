@@ -63,41 +63,20 @@ public class CovidEnvironmentState extends EnvironmentState {
         converter = new CSVToMatrix(';');
         ArrayList<String[]> sickPersons = converter.fileToMatrix(path);
         for(int i=0;i<sensors.size();i++){
-            sickPersonsList.add(new SickPerson(sickPersons.get(i)[0], sickPersons.get(i)[1], sickPersons.get(i)[2]));
+            sickPersonsList.add(new SickPerson(Integer.valueOf(sickPersons.get(i)[0]), sickPersons.get(i)[1], sickPersons.get(i)[2]));
         }
 
     }
 
     public void sendPerception(CovidPerception cp){
+        //TODO Completar estos metodos
         //Percepción de aparición de nuevo enfermo, agrego a la lista de enfermos un nuevo enfermo.
-        if(cp.getTipo()=="ANE"){
-            sickPersonsList.add(new SickPerson(cp.getEstado(), cp.getNodo1(), cp.getNodo2()));
-            for(Sensor s: sensorsList){
-                if(s.getId()==cp.getNodo1()){
-                    s.setHasSickPerson(true);
-                }
-            }
-        }
+
         //Percepción de corte de calle: si la calle está cortada le quito a la lista de sucesores de nodo1 el nodo2.
         //Si la calle no está cortada le agrego a la lista de sucesores de nodo1 el nodo2.
-        if(cp.getTipo()=="ACC"){
-            if(Boolean.valueOf(cp.getEstado())){
-                map.get(cp.getNodo1()).remove(cp.getNodo2());
-            }
-            else{
-                if(!map.get(cp.getNodo1()).contains(cp.getNodo2())){
-                    map.get(cp.getNodo1()).add(cp.getNodo2());
-                }
-            }
-        }
+
         //Percepción de aparición de enfermo en el mapa: busco el enfermo en la lista de enfermos y le cambio la posición actual.
-        if(cp.getTipo()=="AEM"){
-            for(SickPerson sp: sickPersonsList){
-                if(sp.getId()==cp.getEstado()){
-                    sp.setActualPosition(cp.getNodo1());
-                }
-            }
-        }
+
     }
 
     @Override

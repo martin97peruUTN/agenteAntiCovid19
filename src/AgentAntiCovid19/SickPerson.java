@@ -2,12 +2,12 @@ package AgentAntiCovid19;
 
 
 public class SickPerson {
-    private String id; //0
+    private Integer id; //0
     private String actualPosition; //1
     private String homePosition; //2
     private Integer cantMultas;
 
-    public SickPerson(String id, String actualPosition, String homePosition){
+    public SickPerson(Integer id, String actualPosition, String homePosition){
         this.id = id;
         this.actualPosition = actualPosition;
         this.homePosition = homePosition;
@@ -30,11 +30,11 @@ public class SickPerson {
         this.homePosition = homePosition;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
