@@ -1,15 +1,25 @@
 package UserInterface;
 
 import AgentAntiCovid19.CSVToMatrix;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.concurrent.Worker;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -59,6 +69,28 @@ public class GMapController implements Initializable {
             }
         }
 
+        //Acá mostramos los nodos visitados en la consola.
+        System.out.println("Nodos visitados por el agente: ");
+        for(int i=0;i<listaDeNodosVisitados.size();i++){
+            System.out.println(listaDeNodosVisitados.get(i).getStreets());
+            System.out.println("");
+        }
+
+        //Acá seteo la ListView de la ventana con el mapa, para mostrar los nodos visitados.
+        /*ObservableList<VisitedNode> observableList = FXCollections.observableList(listaDeNodosVisitados);
+        nodesListView.setItems(observableList);
+        nodesListView.getSelectionModel().selectedItemProperty().addListener(((observableValue, visitedNode, t1) -> {
+            String lat = nodesListView.getSelectionModel().getSelectedItem().getLat();
+            String lng = nodesListView.getSelectionModel().getSelectedItem().getLng();
+            addMarker(lat,lng);
+        }));*/
+
+        backBtn.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                changeScene(mouseEvent);
+            }
+        });
 
 
     }
@@ -78,4 +110,23 @@ public class GMapController implements Initializable {
         }
         webEngine.executeScript("document.runSnapToRoad()");
     }
+
+    public void changeScene(MouseEvent event){
+        Parent parent = null;
+        try{
+            parent = FXMLLoader.load(getClass().getResource("application.fxml"));
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+        Scene scene = new Scene(parent, 600, 400);
+
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setTitle("AntiCOVID19");
+        window.setWidth(600);
+        window.setHeight(400);
+        window.setScene(scene);
+        window.show();
+    }
+
 }

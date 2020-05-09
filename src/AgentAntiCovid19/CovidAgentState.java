@@ -96,6 +96,7 @@ public class CovidAgentState extends SearchBasedAgentState{
     }
 
 
+
     @Override
     public boolean equals(Object obj) {
         if(!(obj instanceof CovidAgentState)){
@@ -125,7 +126,6 @@ public class CovidAgentState extends SearchBasedAgentState{
         }*/
         Boolean comparing = (position.equals(((CovidAgentState) obj).getPosition()) && (sickPersonsList.size() == ((CovidAgentState) obj).getSickPersonsList().size()) && boolsickPerList && boolVisitedPositions);
         return comparing;
-
     }
 
     @Override
