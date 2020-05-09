@@ -94,8 +94,6 @@ public class CovidAgentState extends SearchBasedAgentState{
         this.sickPersonsList = sickPersonsList;
     }
 
-    public ArrayList<SickPerson> getSickPersonList (){return this.sickPersonsList;}
-
     @Override
     public boolean equals(Object obj) {
         if(!(obj instanceof CovidAgentState)){
