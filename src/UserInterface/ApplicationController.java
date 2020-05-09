@@ -26,7 +26,7 @@ public class ApplicationController implements Initializable {
     @FXML
     private Button startBtn = new Button();
 
-    private String position="A1", method;
+    private String position="A8", method;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -44,27 +44,30 @@ public class ApplicationController implements Initializable {
 
     @FXML
     private void changeScene(Event event){
-        Parent parent = null;
-        GMapController controller;
-        try {
-            FXMLLoader loader = new FXMLLoader();
-            Pane p = loader.load(getClass().getResource("guadalupeMap.fxml").openStream());
-            controller = loader.getController();
-            loader.setController(controller);
+        if(method!=null) {
+            Parent parent = null;
+            GMapController controller;
+            try {
+                FXMLLoader loader = new FXMLLoader();
+                Pane p = loader.load(getClass().getResource("guadalupeMap.fxml").openStream());
+                controller = loader.getController();
+                loader.setController(controller);
 
-            Scene scene = new Scene(p, 1280,720);
+                Scene scene = new Scene(p, 1280, 720);
 
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setTitle("GuadalupeMap");
-            window.setWidth(1280);
-            window.setHeight(720);
-            window.setScene(scene);
-            window.show();
+                Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                window.setTitle("GuadalupeMap");
+                window.setWidth(1280);
+                window.setHeight(720);
+                window.setScene(scene);
+                window.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-        catch (IOException e) {
-            e.printStackTrace();
+        else{
+            System.out.println("No ha seleccionado un método de búsqueda.");
         }
     }
-
 }
 
