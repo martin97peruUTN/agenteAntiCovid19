@@ -49,9 +49,9 @@ public class ApplicationController implements Initializable {
     private void changeScene(Event event){
         if(method!=null) {
             String args[] = {method};
-            ArrayList<String> resultados = new ArrayList<>();
+            ArrayList<String> displayInfo = new ArrayList<>();
             /*try{
-                resultados = CovidMain.main(args);
+                displayInfo = CovidMain.main(args);
             }
             catch (PrologConnectorException e){
                 e.printStackTrace();
@@ -66,12 +66,22 @@ public class ApplicationController implements Initializable {
                 controller = loader.getController();
                 loader.setController(controller);
 
-                Scene scene = new Scene(p, 1280, 720);
+                /*controller.setVisitedNodesLbl(displayInfo.get(0));
+                controller.setTotalGoLbl(displayInfo.get(1));
+                controller.setCantOfMucltsLbl(displayInfo.get(2));
+                controller.setTotalSPHLbl(displayInfo.get(3));*/
+
+                controller.setVisitedNodesLbl("15");
+                controller.setTotalGoLbl("20");
+                controller.setCantOfMucltsLbl("5");
+                controller.setTotalSPHLbl("1");
+
+                Scene scene = new Scene(p, 1280, 768);
 
                 Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 window.setTitle("GuadalupeMap");
                 window.setWidth(1280);
-                window.setHeight(720);
+                window.setHeight(768);
                 window.setScene(scene);
                 window.show();
             }

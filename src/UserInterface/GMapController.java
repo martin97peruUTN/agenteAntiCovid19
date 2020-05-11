@@ -44,7 +44,7 @@ public class GMapController implements Initializable {
     @FXML
     private Label totalGoLbl;
     @FXML
-    private Label totalSPMLbl;
+    private Label totalSPHLbl;
 
     private ArrayList<VisitedNode> listaDeNodosVisitados;
 
@@ -144,7 +144,7 @@ public class GMapController implements Initializable {
     }
 
     public void setTotalGoLbl(String cantGoRealizados){
-        totalGoLbl.setText(cantGoRealizados + " Nodos.");
+        totalGoLbl.setText(cantGoRealizados + " Cuadras.");
         totalGoLbl.setVisible(true);
     }
 
@@ -153,8 +153,8 @@ public class GMapController implements Initializable {
         cantOfMucltsLbl.setVisible(true);
     }
 
-    public void setTotalSPMLbl(String cantEnfermosMultados){
-        totalSPMLbl.setText(cantEnfermosMultados + " Enfermos.");
-        totalSPMLbl.setVisible(true);
+    public void setTotalSPHLbl(String cantEnfermosCurados){
+        totalSPHLbl.setText(cantEnfermosCurados + " Enfermos.");
+        totalSPHLbl.setVisible(true);
     }
 }

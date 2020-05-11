@@ -24,6 +24,7 @@ public class MulctSickPerson extends SearchAction {
             if(p.getActualPosition().equals(position) && !p.getActualPosition().equals(p.getHomePosition())){
                 if((p.getCantMultas()+1)>3){
                     covidAgentState.getSickPersonsList().remove(p);
+                    covidAgentState.setTotalOfSickPersonHealted(covidAgentState.getTotalOfSickPersonHealted()+1);
                 }
                 else {
                     p.setActualPosition(p.getHomePosition());

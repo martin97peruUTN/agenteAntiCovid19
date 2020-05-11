@@ -49,13 +49,17 @@ public class CovidMain {
         }
 
         System.out.println("Cantidad de nodos visitados por el agente: "+String.valueOf(((CovidAgentState) agent.getAgentState()).getVisitedPositions().size()));
+        System.out.println("Cantidad de cuadras recorridas por el agente: "+String.valueOf(((CovidAgentState) agent.getAgentState()).getTotalOfGoRealized()));
         System.out.println("Cantidad de multas realizadas por el agente: "+String.valueOf(((CovidAgentState) agent.getAgentState()).getTotalOfMulctRealized()));
+        System.out.println("Cantidad de enfermos curados: "+String.valueOf(((CovidAgentState) agent.getAgentState()).getTotalOfSickPersonHealted()));
 
-        ArrayList<String> resultados = new ArrayList<String>();
-        resultados.add(String.valueOf(((CovidAgentState) agent.getAgentState()).getVisitedPositions().size()));
-        resultados.add(String.valueOf(((CovidAgentState) agent.getAgentState()).getTotalOfMulctRealized()));
+        ArrayList<String> displayInfo = new ArrayList<String>();
+        displayInfo.add(String.valueOf(((CovidAgentState) agent.getAgentState()).getVisitedPositions().size())); //0
+        displayInfo.add(String.valueOf(((CovidAgentState) agent.getAgentState()).getTotalOfGoRealized())); //1
+        displayInfo.add(String.valueOf(((CovidAgentState) agent.getAgentState()).getTotalOfMulctRealized())); //2
+        displayInfo.add(String.valueOf(((CovidAgentState) agent.getAgentState()).getTotalOfSickPersonHealted())); //3
 
-        return resultados;
+        return displayInfo;
     }
 
 }

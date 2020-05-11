@@ -51,32 +51,32 @@
                                           <Font name="Calibri Bold Italic" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Cantidad de Enfermos Multados:" GridPane.rowIndex="2">
+                                    <Label text="Cantidad de Enfermos Curados:" GridPane.rowIndex="2">
                                        <font>
                                           <Font name="Calibri Bold Italic" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Cantidad de Cuadras Recorridas:" GridPane.rowIndex="1">
+                                    <Label  text="Cantidad de Cuadras Recorridas:" GridPane.rowIndex="1">
                                        <font>
                                           <Font name="Calibri Bold Italic" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Label" GridPane.columnIndex="1">
+                                    <Label fx:id="visitedNodesLbl" text="Label" GridPane.columnIndex="1">
                                        <font>
                                           <Font name="Calibri" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <Label fx:id="totalGoLbl" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <font>
                                           <Font name="Calibri" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <Label fx:id="totalSPHLbl" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                        <font>
                                           <Font name="Calibri" size="18.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <Label fx:id="cantOfMucltsLbl" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                        <font>
                                           <Font name="Calibri" size="18.0" />
                                        </font>
