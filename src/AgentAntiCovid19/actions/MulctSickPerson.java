@@ -4,6 +4,7 @@ import AgentAntiCovid19.CovidAgentState;
 import AgentAntiCovid19.CovidEnvironmentState;
 import AgentAntiCovid19.SickPerson;
 import frsf.cidisi.faia.agent.search.SearchAction;
+import frsf.cidisi.faia.agent.search.SearchBasedAgent;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
@@ -38,7 +39,7 @@ public class MulctSickPerson extends SearchAction {
 
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
-        CovidAgentState covidAgentState = (CovidAgentState) ast;
+        /*CovidAgentState covidAgentState = (CovidAgentState) ast;
         CovidEnvironmentState covidEnvironmentState = (CovidEnvironmentState) est;
         String position = ((CovidEnvironmentState) est).getAgentPosition();
         for(SickPerson p: covidEnvironmentState.getSickPersonsList()){
@@ -66,7 +67,10 @@ public class MulctSickPerson extends SearchAction {
                 }
             }
         }
-        return null;
+        return null;*/
+        this.execute((SearchBasedAgentState) ast);
+        return est;
+
     }
 
     @Override
