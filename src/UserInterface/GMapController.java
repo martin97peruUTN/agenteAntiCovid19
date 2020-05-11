@@ -12,6 +12,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
@@ -36,6 +37,14 @@ public class GMapController implements Initializable {
     private ListView<VisitedNode> nodesListView;
     @FXML
     private Button backBtn = new Button();
+    @FXML
+    private Label visitedNodesLbl;
+    @FXML
+    private Label cantOfMucltsLbl;
+    @FXML
+    private Label totalGoLbl;
+    @FXML
+    private Label totalSPMLbl;
 
     private ArrayList<VisitedNode> listaDeNodosVisitados;
 
@@ -129,4 +138,23 @@ public class GMapController implements Initializable {
         window.show();
     }
 
+    public void setVisitedNodesLbl(String cantNodosVisitados) {
+        visitedNodesLbl.setText(cantNodosVisitados + " Nodos.");
+        visitedNodesLbl.setVisible(true);
+    }
+
+    public void setTotalGoLbl(String cantGoRealizados){
+        totalGoLbl.setText(cantGoRealizados + " Nodos.");
+        totalGoLbl.setVisible(true);
+    }
+
+    public void setCantOfMucltsLbl(String cantMultasRealizadas) {
+        cantOfMucltsLbl.setText(cantMultasRealizadas + " Multas.");
+        cantOfMucltsLbl.setVisible(true);
+    }
+
+    public void setTotalSPMLbl(String cantEnfermosMultados){
+        totalSPMLbl.setText(cantEnfermosMultados + " Enfermos.");
+        totalSPMLbl.setVisible(true);
+    }
 }
