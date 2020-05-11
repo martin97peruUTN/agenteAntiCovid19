@@ -6,13 +6,13 @@ public class VisualMapNode {
 
     private String id;
     private String streets;
-    private double x, y;
+    private Double x, y;
 
     public VisualMapNode(String id, String streets, String y, String x){
         this.id = id;
         this.streets = streets;
-        this.x = Double.parseDouble(x);
-        this.y = Double.parseDouble(y);
+        this.x = Double.valueOf(x);
+        this.y = Double.valueOf(y);
     }
 
     public String getId() {
