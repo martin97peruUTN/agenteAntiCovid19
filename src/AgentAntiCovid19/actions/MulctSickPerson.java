@@ -9,7 +9,7 @@ import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
 
 public class MulctSickPerson extends SearchAction {
-    private Double cost = 2.0;
+    private Double cost = 1.0;
 
     public MulctSickPerson(){
 
@@ -40,7 +40,8 @@ public class MulctSickPerson extends SearchAction {
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
         CovidAgentState covidAgentState = (CovidAgentState) ast;
         CovidEnvironmentState covidEnvironmentState = (CovidEnvironmentState) est;
-
+        /*CovidAgentState covidAgentState = (CovidAgentState) ast;
+        CovidEnvironmentState covidEnvironmentState = (CovidEnvironmentState) est;
         String position = ((CovidEnvironmentState) est).getAgentPosition();
         for(SickPerson p: covidEnvironmentState.getSickPersonsList()){
             if(p.getActualPosition().equals(position) && !p.getActualPosition().equals(p.getHomePosition())){
@@ -51,6 +52,7 @@ public class MulctSickPerson extends SearchAction {
                 else{
                     p.setActualPosition(p.getHomePosition());
                     p.setCantMultas(p.getCantMultas() +1 );
+                    p.setCantMultas(p.getCantMultas()+1);
                 }
                 //Actualizo el estado del agente.
                 for(SickPerson sp: covidAgentState.getSickPersonsList()){
@@ -68,7 +70,9 @@ public class MulctSickPerson extends SearchAction {
                 }
             }
         }
-        return null;
+        return null;*/
+        this.execute((SearchBasedAgentState) ast);
+        return est;
     }
 
     @Override
