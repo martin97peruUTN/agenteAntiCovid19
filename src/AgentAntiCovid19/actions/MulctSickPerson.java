@@ -4,7 +4,6 @@ import AgentAntiCovid19.CovidAgentState;
 import AgentAntiCovid19.CovidEnvironmentState;
 import AgentAntiCovid19.SickPerson;
 import frsf.cidisi.faia.agent.search.SearchAction;
-import frsf.cidisi.faia.agent.search.SearchBasedAgent;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
@@ -39,8 +38,37 @@ public class MulctSickPerson extends SearchAction {
 
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
-        this.execute((SearchBasedAgentState) ast);
-        return est;
+        CovidAgentState covidAgentState = (CovidAgentState) ast;
+        CovidEnvironmentState covidEnvironmentState = (CovidEnvironmentState) est;
+
+        String position = ((CovidEnvironmentState) est).getAgentPosition();
+        for(SickPerson p: covidEnvironmentState.getSickPersonsList()){
+            if(p.getActualPosition().equals(position) && !p.getActualPosition().equals(p.getHomePosition())){
+                //Actualizo el estado del ambiente.
+                if((p.getCantMultas()+1)>3){
+                    covidEnvironmentState.getSickPersonsList().remove(p);
+                }
+                else{
+                    p.setActualPosition(p.getHomePosition());
+                    p.setCantMultas(p.getCantMultas() +1 );
+                }
+                //Actualizo el estado del agente.
+                for(SickPerson sp: covidAgentState.getSickPersonsList()){
+                    if (sp.equals(p)){
+                        if((sp.getCantMultas()+1)>3) {
+                            covidEnvironmentState.getSickPersonsList().remove(p);
+                            covidAgentState.setTotalOfSickPersonHealted(covidAgentState.getTotalOfSickPersonHealted()+1);
+                        }
+                        else{
+                            sp.setActualPosition(sp.getHomePosition());
+                            sp.setCantMultas(sp.getCantMultas() + 1);
+                        }
+                        return covidEnvironmentState;
+                    }
+                }
+            }
+        }
+        return null;
     }
 
     @Override
