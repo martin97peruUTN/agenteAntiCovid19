@@ -38,7 +38,7 @@ public class CovidEnvironment extends Environment {
         for (SickPerson p: ((CovidEnvironmentState)this.getEnvironmentState()).getSickPersonsList()){
             randomNumber = rand.nextInt(100);
             if(randomNumber<MOVIMIENTO_ENFERMO){
-                //TODO todo este metodo
+                //TODO
             }
         }
 
