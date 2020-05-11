@@ -29,4 +29,9 @@ public class TramoCalle {
     public void setFinalNode(String finalNode) {
         this.finalNode = finalNode;
     }
+
+    @Override
+    public String toString() {
+        return "El corte va de la esquina del nodo "+initialNode+" y la esquina del nodo "+finalNode+")\n";
+    }
 }

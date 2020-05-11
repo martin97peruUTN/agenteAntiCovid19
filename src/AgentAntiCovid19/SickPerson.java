@@ -46,4 +46,8 @@ public class SickPerson {
         this.cantMultas = cantMultas;
     }
 
+    @Override
+    public String toString() {
+        return "ID: "+id+"\n"+"Posicion actual: "+actualPosition+"\n"+"Posicion de su casa: "+homePosition+"\n";
+    }
 }

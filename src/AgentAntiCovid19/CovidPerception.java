@@ -60,7 +60,18 @@ public class CovidPerception extends Perception {
     @Override
     public String toString() {
         String cp = "";
-        //TODO terminar esto
+        cp+="Nuevos enfermos: \n\n";
+        for(SickPerson s: nuevosEnfermos){
+            cp+=s.toString();
+        }
+        cp+="\nMovimientos de enfermos: \n\n";
+        for(SickPerson s:movimientosEnfermos){
+            cp+="Enfermo con ID "+s.getId()+" se movio hasta el nodo "+s.getActualPosition();
+        }
+        cp+="\nMovimientos de enfermos: ";
+        for(TramoCalle t:corteDeCalles){
+            cp+=t.toString();
+        }
         return cp;
     }
 }
