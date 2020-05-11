@@ -19,7 +19,6 @@ public class MulctSickPerson extends SearchAction {
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
         CovidAgentState covidAgentState = (CovidAgentState) s;
         String position = covidAgentState.getPosition();
-
         for(SickPerson p: covidAgentState.getSickPersonsList()){
             if(p.getActualPosition().equals(position) && !p.getActualPosition().equals(p.getHomePosition())){
                 if((p.getCantMultas()+1)>3){
@@ -43,6 +42,7 @@ public class MulctSickPerson extends SearchAction {
         String position = ((CovidEnvironmentState) est).getAgentPosition();
         for(SickPerson p: covidEnvironmentState.getSickPersonsList()){
             if(p.getActualPosition().equals(position) && !p.getActualPosition().equals(p.getHomePosition())){
+                covidAgentState.setSeeSickPerson(false); //acá actualiza que el enfermo está en ese nodo
                 //Actualizo el estado del ambiente.
                 if((p.getCantMultas()+1)>3){
                     covidEnvironmentState.getSickPersonsList().remove(p);

@@ -2,6 +2,7 @@ package AgentAntiCovid19.actions;
 
 import AgentAntiCovid19.CovidAgentState;
 import AgentAntiCovid19.CovidEnvironmentState;
+import AgentAntiCovid19.SickPerson;
 import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;
@@ -28,6 +29,12 @@ public class Go extends SearchAction {
         ArrayList<String> succesors = new ArrayList<String>();
         succesors.addAll(agentState.getSuccesors());
         if (agentState.getSuccesors() != null){
+            for(SickPerson p:agentState.getSickPersonsList()){
+                if(p.getActualPosition()==objetiveNode){
+                    agentState.setSeeSickPerson(true);
+                    break;
+                }
+            }
             int i = succesors.indexOf(this.objetiveNode);
             if (i>=0){
                 agentState.setPosition(this.objetiveNode);

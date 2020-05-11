@@ -15,7 +15,7 @@ public class CovidAgentState extends SearchBasedAgentState{
     private ArrayList<Node> nodesList = new ArrayList<Node>();
     private HashMap<String, Collection<String>> knownMap;
     private ArrayList<String> visitedPositions;
-    private Boolean seeSickPerson = false; //Esto nos sirve para
+    private Boolean seeSickPerson = false; //Esto nos sirve para saber si en el nodo donde está el agente vio un enfermo
     private Integer totalOfGoRealized = 0;
     private Integer totalOfMulctRealized = 0;
     private Integer totalOfSickPersonHealted = 0;
