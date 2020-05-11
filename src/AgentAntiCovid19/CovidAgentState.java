@@ -15,6 +15,7 @@ public class CovidAgentState extends SearchBasedAgentState{
     private ArrayList<Node> nodesList = new ArrayList<Node>();
     private HashMap<String, Collection<String>> knownMap;
     private ArrayList<String> visitedPositions;
+    private Boolean seeSickPerson = false; //Esto nos sirve para
     private Integer totalOfGoRealized = 0;
     private Integer totalOfMulctRealized = 0;
     private Integer totalOfSickPersonHealted = 0;
@@ -96,6 +97,9 @@ public class CovidAgentState extends SearchBasedAgentState{
         return sickPersonsList;
     }
 
+    public Boolean getSeeSickPerson(){return seeSickPerson;}
+
+    public void setSeeSickPerson(Boolean seeSickPerson) { this.seeSickPerson = seeSickPerson; }
 
     @Override
     public boolean equals(Object obj) {
@@ -138,11 +142,13 @@ public class CovidAgentState extends SearchBasedAgentState{
         newState.setSensorsList((ArrayList<Sensor>) sensorsList.clone());
         newState.setSickPersonsList((ArrayList<SickPerson>) sickPersonsList.clone());
         newState.setTotalOfSickPersonHealted(totalOfSickPersonHealted);
+        newState.setSeeSickPerson(seeSickPerson);
         return newState;
     }
 
     @Override
     public void updateState(Perception p) {
+        /* TODO */
 
     }
 
