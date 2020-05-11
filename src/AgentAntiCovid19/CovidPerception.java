@@ -36,6 +36,10 @@ public class CovidPerception extends Perception {
         this.movimientosEnfermos = movimientosEnfermos;
     }
 
+    public void setMovimientosEnfermos(SickPerson s){
+        movimientosEnfermos.add(s);
+    }
+
     public ArrayList<TramoCalle> getCorteDeCalles() {
         return corteDeCalles;
     }

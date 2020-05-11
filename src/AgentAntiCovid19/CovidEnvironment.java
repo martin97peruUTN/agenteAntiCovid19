@@ -38,7 +38,12 @@ public class CovidEnvironment extends Environment {
         for (SickPerson p: ((CovidEnvironmentState)this.getEnvironmentState()).getSickPersonsList()){
             randomNumber = rand.nextInt(100);
             if(randomNumber<MOVIMIENTO_ENFERMO){
-                //TODO
+                SickPerson personaParaAgregarALaPercepcion = p;
+                int cantNodosSucesores = (((CovidEnvironmentState)this.getEnvironmentState()).getMap()).get(personaParaAgregarALaPercepcion.getActualPosition()).size();
+                randomNumber = rand.nextInt(cantNodosSucesores);
+                ArrayList sucesores = (ArrayList)(((CovidEnvironmentState)this.getEnvironmentState()).getMap()).get(personaParaAgregarALaPercepcion.getActualPosition());
+                personaParaAgregarALaPercepcion.setActualPosition((String) sucesores.get(randomNumber));
+                actualPerception.setMovimientosEnfermos(personaParaAgregarALaPercepcion);
             }
         }
 
@@ -90,4 +95,5 @@ public class CovidEnvironment extends Environment {
         }while(!((CovidEnvironmentState)this.getEnvironmentState()).getMap().containsKey(nodoCasa));
         return nodoCasa;
     }
+
 }
