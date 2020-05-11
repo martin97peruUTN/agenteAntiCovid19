@@ -69,14 +69,27 @@ public class CovidEnvironmentState extends EnvironmentState {
     }
 
     public void sendPerception(CovidPerception cp){
-        //TODO Completar estos metodos
-        //Percepción de aparición de nuevo enfermo, agrego a la lista de enfermos un nuevo enfermo.
-
-        //Percepción de corte de calle: si la calle está cortada le quito a la lista de sucesores de nodo1 el nodo2.
-        //Si la calle no está cortada le agrego a la lista de sucesores de nodo1 el nodo2.
-
-        //Percepción de aparición de enfermo en el mapa: busco el enfermo en la lista de enfermos y le cambio la posición actual.
-
+        if(cp!=null){
+            if(cp.getNuevosEnfermos()!=null){//Si la lista de enfermos nuevos de la percepción no está vacía agrego todos los enfermos a la lista de enfermos.
+                for(SickPerson p1: cp.getNuevosEnfermos()){
+                    sickPersonsList.add(p1);
+                }
+            }
+            if(cp.getCorteDeCalles()!=null){//Si la lista de cortes de calles no está vacía saco el nodoFinal de los sucesores del nodoInicial.
+                for(TramoCalle t: cp.getCorteDeCalles()){
+                    map.get(t.getInitialNode()).remove(t.getFinalNode());
+                }
+            }
+            if(cp.getMovimientosEnfermos()!=null){//Si la lista de movimientos de enfermos no está vacía actualizo las posiciones de los enfermos que se movieron.
+                for(SickPerson sp: cp.getMovimientosEnfermos()){
+                    for(SickPerson pe: sickPersonsList){
+                        if(sp.getId()==pe.getId()){
+                            pe.setActualPosition(sp.getActualPosition());
+                        }
+                    }
+                }
+            }
+        }
     }
 
     @Override
