@@ -50,12 +50,12 @@ public class ApplicationController implements Initializable {
         if(method!=null) {
             String args[] = {method};
             ArrayList<String> displayInfo = new ArrayList<>();
-            /*try{
+            try{
                 displayInfo = CovidMain.main(args);
             }
             catch (PrologConnectorException e){
                 e.printStackTrace();
-            }*/
+            }
 
 
             Parent parent = null;
@@ -66,15 +66,15 @@ public class ApplicationController implements Initializable {
                 controller = loader.getController();
                 loader.setController(controller);
 
-                /*controller.setVisitedNodesLbl(displayInfo.get(0));
+                controller.setVisitedNodesLbl(displayInfo.get(0));
                 controller.setTotalGoLbl(displayInfo.get(1));
                 controller.setCantOfMucltsLbl(displayInfo.get(2));
-                controller.setTotalSPHLbl(displayInfo.get(3));*/
+                controller.setTotalSPHLbl(displayInfo.get(3));
 
-                controller.setVisitedNodesLbl("15");
+                /*controller.setVisitedNodesLbl("15");
                 controller.setTotalGoLbl("20");
                 controller.setCantOfMucltsLbl("5");
-                controller.setTotalSPHLbl("1");
+                controller.setTotalSPHLbl("1");*/
 
                 Scene scene = new Scene(p, 1024, 700);
 

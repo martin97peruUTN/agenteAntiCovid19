@@ -11,8 +11,8 @@ public class VisualMapNode {
     public VisualMapNode(String id, String streets, String y, String x){
         this.id = id;
         this.streets = streets;
-        this.x = Double.valueOf(x);
-        this.y = Double.valueOf(y);
+        this.x = Double.parseDouble(x);
+        this.y = Double.parseDouble(y);
     }
 
     public String getId() {
