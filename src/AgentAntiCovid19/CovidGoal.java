@@ -15,7 +15,7 @@ public class CovidGoal extends GoalTest {
                 flagSp = false;
             }
         }
-        return (flagSp && ((CovidAgentState) agentState).getSensorsList().isEmpty());
+        return (flagSp || ((CovidAgentState) agentState).getSensorsList().isEmpty());
     }
 
 }
