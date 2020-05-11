@@ -6,6 +6,7 @@ import frsf.cidisi.faia.environment.Environment;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
+import java.util.Vector;
 
 public class CovidEnvironment extends Environment {
     //Constantes de probabilidad para las percepciones
@@ -65,7 +66,15 @@ public class CovidEnvironment extends Environment {
         //Corte de calle
         randomNumber = rand.nextInt(100);
         if(randomNumber<CALLE_CORTADA){
-            //TODO Todo este metodo
+
+            TramoCalle nuevoCorte = new TramoCalle();
+            String nombreNodoInicio = generateRandomNode(ALPHABET_AUX,NUM_NODOS);
+            nuevoCorte.setInitialNode(nombreNodoInicio);
+
+            int cantSucesores = (((CovidEnvironmentState)this.getEnvironmentState()).getMap()).get(nombreNodoInicio).size();
+            randomNumber = rand.nextInt(cantSucesores);
+            ArrayList sucesores = (ArrayList)(((CovidEnvironmentState)this.getEnvironmentState()).getMap()).get(nombreNodoInicio);
+            nuevoCorte.setFinalNode((String) sucesores.get(randomNumber));
         }
 
         return actualPerception;

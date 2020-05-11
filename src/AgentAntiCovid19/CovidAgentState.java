@@ -1,6 +1,5 @@
 package AgentAntiCovid19;
 
-import com.sun.scenario.animation.shared.SingleLoopClipEnvelope;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 
@@ -12,7 +11,7 @@ public class CovidAgentState extends SearchBasedAgentState{
     private String position;
     private ArrayList<Sensor> sensorsList = new ArrayList<Sensor>();
     private ArrayList<SickPerson> sickPersonsList = new ArrayList<SickPerson>();
-    private ArrayList<Node> nodesList = new ArrayList<Node>();
+    private ArrayList<VisualMapNode> nodesList = new ArrayList<VisualMapNode>();
     private HashMap<String, Collection<String>> knownMap;
     private ArrayList<String> visitedPositions;
     private Boolean seeSickPerson = false; //Esto nos sirve para
@@ -38,7 +37,7 @@ public class CovidAgentState extends SearchBasedAgentState{
         path = "NODOS-Sucesores.csv";
         ArrayList<String[]> nodesSuccesors = converter.fileToMatrix(path);
         for(int i=0;i<nodes.size();i++){
-            nodesList.add(new Node(nodes.get(i)[0], nodes.get(i)[1], nodes.get(i)[2], nodes.get(i)[3]));
+            nodesList.add(new VisualMapNode(nodes.get(i)[0], nodes.get(i)[1], nodes.get(i)[2], nodes.get(i)[3]));
         }
 
         //Inicializo la lista de nodos visitados.
@@ -65,11 +64,11 @@ public class CovidAgentState extends SearchBasedAgentState{
         this.position = position;
     }
 
-    public ArrayList<Node> getNodesList() {
+    public ArrayList<VisualMapNode> getNodesList() {
         return nodesList;
     }
 
-    public void setNodesList(ArrayList<Node> nodesList) {
+    public void setNodesList(ArrayList<VisualMapNode> nodesList) {
         this.nodesList = nodesList;
     }
 
@@ -138,7 +137,7 @@ public class CovidAgentState extends SearchBasedAgentState{
         newState.setTotalOfGoRealized(totalOfGoRealized);
         newState.setTotalOfMulctRealized(totalOfMulctRealized);
         newState.setVisitedPositions((ArrayList<String>) visitedPositions.clone());
-        newState.setNodesList((ArrayList<Node>) nodesList.clone());
+        newState.setNodesList((ArrayList<VisualMapNode>) nodesList.clone());
         newState.setSensorsList((ArrayList<Sensor>) sensorsList.clone());
         newState.setSickPersonsList((ArrayList<SickPerson>) sickPersonsList.clone());
         newState.setTotalOfSickPersonHealted(totalOfSickPersonHealted);
