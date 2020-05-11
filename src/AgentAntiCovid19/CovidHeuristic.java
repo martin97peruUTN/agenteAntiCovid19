@@ -25,7 +25,6 @@ public class CovidHeuristic implements IEstimatedCostFunction {
         }else{
              cost = distance;
         }
-
         return cost;
     }
 }

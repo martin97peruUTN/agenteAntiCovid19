@@ -40,8 +40,6 @@ public class MulctSickPerson extends SearchAction {
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
         CovidAgentState covidAgentState = (CovidAgentState) ast;
         CovidEnvironmentState covidEnvironmentState = (CovidEnvironmentState) est;
-        /*CovidAgentState covidAgentState = (CovidAgentState) ast;
-        CovidEnvironmentState covidEnvironmentState = (CovidEnvironmentState) est;
         String position = ((CovidEnvironmentState) est).getAgentPosition();
         for(SickPerson p: covidEnvironmentState.getSickPersonsList()){
             if(p.getActualPosition().equals(position) && !p.getActualPosition().equals(p.getHomePosition())){
@@ -70,9 +68,7 @@ public class MulctSickPerson extends SearchAction {
                 }
             }
         }
-        return null;*/
-        this.execute((SearchBasedAgentState) ast);
-        return est;
+        return null;
     }
 
     @Override
