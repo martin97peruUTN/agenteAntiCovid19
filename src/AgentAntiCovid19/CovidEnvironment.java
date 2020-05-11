@@ -22,12 +22,16 @@ public class CovidEnvironment extends Environment {
 
     @Override
     public Perception getPercept() {
+        String ALPHABET_AUX = "ABCDEFGHIJKLMNOPQR";
+        //Estas son todas las posibles letras para los nodos que tenemos
+        Integer NUM_NODOS = 12;
+        //Numero maximo para los nodos que tenemos
+        int randomNumber;
+
+        Random rand = new Random();
 
         CovidPerception actualPerception = new CovidPerception();
 
-        Random rand = new Random();
-        int randomNumber;
-        Integer id=0;
 
         //Movimientos de enfermos
         for (SickPerson p: ((CovidEnvironmentState)this.getEnvironmentState()).getSickPersonsList()){
@@ -41,18 +45,13 @@ public class CovidEnvironment extends Environment {
         randomNumber = rand.nextInt(100);
         if(randomNumber<NUEVO_ENFERMO){
             String nodoCasa = "";
-            String alphabetAux = "ABCDEFGHIJKLMNOPQR";
-            char letraNodo;
+            Integer id=0;
 
             randomNumber = rand.nextInt(((CovidEnvironmentState)this.getEnvironmentState()).getSensorsList().size());
 
             String nodoSensorActual = ((CovidEnvironmentState)this.getEnvironmentState()).getSensorsList().get(randomNumber).getId();
 
-            do{
-                randomNumber = 3+rand.nextInt(7);
-                letraNodo = alphabetAux.charAt(rand.nextInt(alphabetAux.length()));
-                nodoCasa = letraNodo+String.valueOf(randomNumber);
-            }while(!((CovidEnvironmentState)this.getEnvironmentState()).getMap().containsKey(nodoCasa));
+            nodoCasa = generateRandomNode(ALPHABET_AUX,NUM_NODOS);
 
             for(SickPerson p: ((CovidEnvironmentState)this.getEnvironmentState()).getSickPersonsList()){
                 if(id<p.getId()){
@@ -70,5 +69,14 @@ public class CovidEnvironment extends Environment {
         }
 
         return actualPerception;
+    }
+
+    private String generateRandomNode(String alphabetAux, Integer numNodos){
+        String nodoCasa = "";
+        Random rand = new Random();
+        do{
+            nodoCasa = alphabetAux.charAt(rand.nextInt(alphabetAux.length()))+String.valueOf(rand.nextInt(numNodos));
+        }while(!((CovidEnvironmentState)this.getEnvironmentState()).getMap().containsKey(nodoCasa));
+        return nodoCasa;
     }
 }
