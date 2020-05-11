@@ -75,6 +75,8 @@ public class CovidEnvironment extends Environment {
             randomNumber = rand.nextInt(cantSucesores);
             ArrayList sucesores = (ArrayList)(((CovidEnvironmentState)this.getEnvironmentState()).getMap()).get(nombreNodoInicio);
             nuevoCorte.setFinalNode((String) sucesores.get(randomNumber));
+
+            actualPerception.setCorteDeCalles(nuevoCorte);
         }
 
         return actualPerception;
