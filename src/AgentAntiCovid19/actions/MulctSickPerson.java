@@ -45,8 +45,13 @@ public class MulctSickPerson extends SearchAction {
         for(SickPerson p: covidEnvironmentState.getSickPersonsList()){
             if(p.getActualPosition().equals(position) && !p.getActualPosition().equals(p.getHomePosition())){
                 //Actualizo el estado del ambiente.
-                p.setActualPosition(p.getHomePosition());
-                p.setCantMultas(p.getCantMultas()+1);
+                if((p.getCantMultas()+1)>3){
+                    covidEnvironmentState.getSickPersonsList().remove(p);
+                }
+                else{
+                    p.setActualPosition(p.getHomePosition());
+                    p.setCantMultas(p.getCantMultas()+1);
+                }
                 //Actualizo el estado del agente.
                 for(SickPerson sp: covidAgentState.getSickPersonsList()){
                     if (sp.equals(p)){
