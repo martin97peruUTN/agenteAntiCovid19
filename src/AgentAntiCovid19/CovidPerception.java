@@ -60,7 +60,7 @@ public class CovidPerception extends Perception {
     @Override
     public String toString() {
         String cp = "";
-        //TODO terminar esto jaja
+        //TODO terminar esto
         return cp;
     }
 }
