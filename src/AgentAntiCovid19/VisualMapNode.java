@@ -2,13 +2,13 @@ package AgentAntiCovid19;
 
 
 
-public class Node {
+public class VisualMapNode {
 
     private String id;
     private String streets;
     private double x, y;
 
-    public Node(String id, String streets, String y, String x){
+    public VisualMapNode(String id, String streets, String y, String x){
         this.id = id;
         this.streets = streets;
         this.x = Double.valueOf(x);

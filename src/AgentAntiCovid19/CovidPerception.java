@@ -44,6 +44,10 @@ public class CovidPerception extends Perception {
         this.corteDeCalles = corteDeCalles;
     }
 
+    public void setCorteDeCalles(TramoCalle tramo) {
+        this.corteDeCalles.add(tramo);
+    }
+
     @Override
     public void initPerception(Agent agent, Environment environment) {
 

@@ -7,34 +7,34 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserInterface.ApplicationController">
     <children>
-        <VBox layoutX="87.0" layoutY="33.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #A3E4D7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox layoutX="87.0" layoutY="33.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #67B877;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox alignment="CENTER" fillHeight="false" prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: #EBF5FB;">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" text="Agente Anti COVID19" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="52.0" prefWidth="541.0" text="AGENTE ANTICOVID19" textAlignment="CENTER" textFill="#006106" textOverrun="CENTER_ELLIPSIS">
                      <font>
-                        <Font name="Calibri Bold Italic" size="48.0" />
+                        <Font name="MATRIX" size="36.0" />
                      </font>
                   </Label>
                </children></HBox>
             <Pane prefHeight="100.0" prefWidth="600.0">
                <children>
-                  <Label layoutX="110.0" layoutY="37.0" text="Nodo Inicial:">
+                  <Label layoutX="66.0" layoutY="37.0" text="Nodo Inicial:">
                      <font>
-                        <Font name="Calibri Italic" size="22.0" />
+                        <Font name="Calibri Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lblPosition" layoutX="245.0" layoutY="37.0" text="Label">
+                  <Label fx:id="lblPosition" layoutX="189.0" layoutY="37.0" text="Label" textFill="#055e08">
                      <font>
-                        <Font name="Calibri Bold Italic" size="22.0" />
+                        <Font name="Calibri Italic" size="22.0" />
                      </font>
                   </Label>
                </children></Pane>
             <HBox alignment="CENTER" fillHeight="false" prefHeight="100.0" prefWidth="600.0">
                <children>
-                  <Label text="Seleccionar Método de Búsqueda ">
+                  <Label text="Seleccionar Metodo de Busqueda ">
                      <font>
-                        <Font name="Calibri Italic" size="22.0" />
+                        <Font name="Calibri Bold" size="22.0" />
                      </font>
                   </Label>
                   <ChoiceBox fx:id="methodSel" prefWidth="150.0" />
@@ -42,16 +42,26 @@
             </HBox>
             <Pane prefHeight="100.0" prefWidth="600.0">
                <children>
-                  <Button fx:id="startBtn" layoutX="401.0" layoutY="33.0" mnemonicParsing="false" onMouseClicked="#changeScene" text="Comenzar">
+                  <Button fx:id="startBtn" layoutX="432.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#changeScene" text="Comenzar">
                      <font>
                         <Font name="Calibri" size="18.0" />
                      </font>
                   </Button>
-                  <ImageView fitHeight="82.0" fitWidth="98.0" layoutX="188.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="82.0" fitWidth="98.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../covid19.png" />
                      </image>
                   </ImageView>
+                  <ImageView fitHeight="81.0" fitWidth="83.0" layoutX="289.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Police.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="162.0" layoutY="31.0" text="I.A." textFill="#02220b">
+                     <font>
+                        <Font name="MATRIX" size="36.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
          </children></VBox>

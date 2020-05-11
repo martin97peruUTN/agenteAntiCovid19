@@ -1,10 +1,12 @@
 package AgentAntiCovid19;
 
-public class TramoCalle {
-    private Node initialNode;
-    private Node finalNode;
+import com.sun.javafx.binding.StringConstant;
 
-    public TramoCalle(Node initialNode, Node finalNode) {
+public class TramoCalle {
+    private String initialNode;
+    private String finalNode;
+
+    public TramoCalle(String initialNode, String finalNode) {
         this.initialNode = initialNode;
         this.finalNode = finalNode;
     }
@@ -12,19 +14,19 @@ public class TramoCalle {
     public TramoCalle() {
     }
 
-    public Node getInitialNode() {
+    public String getInitialNode() {
         return initialNode;
     }
 
-    public void setInitialNode(Node initialNode) {
+    public void setInitialNode(String initialNode) {
         this.initialNode = initialNode;
     }
 
-    public Node getFinalNode() {
+    public String getFinalNode() {
         return finalNode;
     }
 
-    public void setFinalNode(Node finalNode) {
+    public void setFinalNode(String finalNode) {
         this.finalNode = finalNode;
     }
 }
