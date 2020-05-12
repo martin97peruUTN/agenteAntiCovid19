@@ -34,7 +34,7 @@ public class GMapController implements Initializable {
     @FXML
     private ScrollPane mapPanel;
     @FXML
-    private ListView<VisitedNode> nodesListView;
+    private ListView<visitedNodes> nodesListView;
     @FXML
     private Button backBtn = new Button();
     @FXML
@@ -46,8 +46,39 @@ public class GMapController implements Initializable {
     @FXML
     private Label totalSPHLbl;
 
-    private ArrayList<VisitedNode> listaDeNodosVisitados;
+    private ArrayList<visitedNodes> listaDeNodosVisitados;
 
+    class visitedNodes {
+        String id, streets, lat, lng;
+
+        visitedNodes(String id, String streets, String lat, String lng) {
+            this.id = id;
+            this.streets = streets;
+            this.lat = lat;
+            this.lng = lng;
+        }
+
+        String getId() {
+            return this.id;
+        }
+
+        String getStreets() {
+            return this.streets;
+        }
+
+        String getLat() {
+            return this.lat;
+        }
+
+        String getLng() {
+            return this.lng;
+        }
+
+        @Override
+        public String toString() {
+            return this.streets;
+        }
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -61,19 +92,19 @@ public class GMapController implements Initializable {
         })));
         //Tomo los nodos del archivo .csv de nodos.
         CSVToMatrix converter = new CSVToMatrix(';');
-        String path = "NODOS-Mapa.csv";
+        String path = "mapita.csv";
         ArrayList<String[]> nodes = converter.fileToMatrix(path);
         //Tomo los nodos visitados del archivo generado .csv de nodos visitados. Este .csv se genera con la ejecución del agente.
         path = "NODOS-Visitados.csv";
         ArrayList<String[]> nodosVisitados = converter.fileToMatrix(path);
 
-        listaDeNodosVisitados = new ArrayList<VisitedNode>();
+        listaDeNodosVisitados = new ArrayList<visitedNodes>();
 
         //Acá convierto los nodos visitados de String a objetos VisitedNode
         for(int i=0;i<nodosVisitados.size();i++){
             for(int j=0;j<nodes.size();j++){
                 if(nodosVisitados.get(i)[0].equals(nodes.get(j)[0])){
-                    listaDeNodosVisitados.add(new VisitedNode(nodes.get(j)[0], nodes.get(j)[1], nodes.get(j)[2], nodes.get(j)[3]));
+                    listaDeNodosVisitados.add(new visitedNodes(nodes.get(j)[0], nodes.get(j)[1], nodes.get(j)[2], nodes.get(j)[3]));
                 }
             }
         }
@@ -86,13 +117,13 @@ public class GMapController implements Initializable {
         }
 
         //Acá seteo la ListView de la ventana con el mapa, para mostrar los nodos visitados.
-        /*ObservableList<VisitedNode> observableList = FXCollections.observableList(listaDeNodosVisitados);
+        ObservableList<visitedNodes> observableList = FXCollections.observableList(listaDeNodosVisitados);
         nodesListView.setItems(observableList);
-        nodesListView.getSelectionModel().selectedItemProperty().addListener(((observableValue, visitedNode, t1) -> {
+        nodesListView.getSelectionModel().selectedItemProperty().addListener(((observableValue, visitedNodes1, t1) -> {
             String lat = nodesListView.getSelectionModel().getSelectedItem().getLat();
             String lng = nodesListView.getSelectionModel().getSelectedItem().getLng();
             addMarker(lat,lng);
-        }));*/
+        }));
 
         backBtn.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override

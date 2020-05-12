@@ -2,15 +2,25 @@ package AgentAntiCovid19;
 
 public class Sensor {
     private String id;
+    private String node;
     private double posX;
     private double posY;
     private boolean hasSickPerson;
 
-    public Sensor (String id, String y, String x, String hasSickPerson){
+    public Sensor (String id, String node, String y, String x, String hasSickPerson){
         this.id = id;
+        this.node = node;
         this.posX = Double.valueOf(x);
         this.posY = Double.valueOf(y);
         this.hasSickPerson = Boolean.valueOf(hasSickPerson);
+    }
+
+    public String getNode() {
+        return node;
+    }
+
+    public void setNode(String node) {
+        this.node = node;
     }
 
     public String getId() {

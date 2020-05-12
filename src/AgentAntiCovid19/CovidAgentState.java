@@ -11,44 +11,44 @@ public class CovidAgentState extends SearchBasedAgentState{
     private String position;
     private ArrayList<Sensor> sensorsList = new ArrayList<Sensor>();
     private ArrayList<SickPerson> sickPersonsList = new ArrayList<SickPerson>();
-    private ArrayList<VisualMapNode> nodesList = new ArrayList<VisualMapNode>();
+    //private ArrayList<VisualMapNode> nodesList = new ArrayList<VisualMapNode>();
     private HashMap<String, Collection<String>> knownMap;
     private ArrayList<String> visitedPositions;
-    private Boolean seeSickPerson = false; //Esto nos sirve para saber si en el nodo donde está el agente vio un enfermo
+    //private Boolean seeSickPerson = false; //Esto nos sirve para saber si en el nodo donde está el agente vio un enfermo
     private Integer totalOfGoRealized = 0;
     private Integer totalOfMulctRealized = 0;
     private Integer totalOfSickPersonHealted = 0;
 
     public CovidAgentState(HashMap<String, Collection<String>> map, ArrayList<Sensor> sensorsList, ArrayList<SickPerson> sickPersonsList, String position){
+        this.position = position;
         this.knownMap = (HashMap<String, Collection<String>>) map.clone();
         this.sickPersonsList = (ArrayList<SickPerson>) sickPersonsList.clone();
         this.sensorsList = (ArrayList<Sensor>) sensorsList.clone();
-        this.position = position;
     }
 
     @Override
     public void initState() {
-        position = "A8";    //Posición inicial del agente: Nodo: A8, Calles: Pedro de Vega y Echague.
-
-        //Inicializo el mapa del agente y la lista de nodos.
-        CSVToMatrix converter = new CSVToMatrix(';');
-        String path = "NODOS-Mapa.csv";
-        ArrayList<String[]> nodes = converter.fileToMatrix(path);
-        path = "NODOS-Sucesores.csv";
-        ArrayList<String[]> nodesSuccesors = converter.fileToMatrix(path);
-        for(int i=0;i<nodes.size();i++){
-            nodesList.add(new VisualMapNode(nodes.get(i)[0], nodes.get(i)[1], nodes.get(i)[2], nodes.get(i)[3]));
-        }
-
+        //position = this.position;    //Posición inicial del agente: Nodo: 008, Calles: Pedro de Vega y Echague.
         //Inicializo la lista de nodos visitados.
         visitedPositions = new ArrayList<String>();
 
-        //Inicializo la lista de enfermos.
-        path="ENFERMOS.csv";
+        /*//Inicializo la lista de nodos.
+        CSVToMatrix converter = new CSVToMatrix(';');
+        String path = "mapita.csv";
+        ArrayList<String[]> nodes = converter.fileToMatrix(path);
+        path = "sucesoritos.csv";
+        ArrayList<String[]> nodesSuccesors = converter.fileToMatrix(path);
+        for(int i=0;i<nodes.size();i++){
+            nodesList.add(new VisualMapNode(nodes.get(i)[0], nodes.get(i)[1], nodes.get(i)[2], nodes.get(i)[3]));
+        }*/
+
+        /*Inicializo la lista de enfermos.
+        path="enfermitos.csv";
         ArrayList<String[]> sickPersons = converter.fileToMatrix(path);
         for(int i=0;i<sickPersons.size();i++){
-            sickPersonsList.add(new SickPerson(Integer.valueOf(sickPersons.get(i)[0]), sickPersons.get(i)[1], sickPersons.get(i)[2]));
-        }
+            sickPersonsList.add(new SickPerson(Integer.valueOf(sickPersons.get(i)[0]), sickPersons.get(i)[1], sickPersons.get(i)[2], sickPersons.get(i)[3]));
+        }*/
+
     }
 
 
@@ -64,13 +64,13 @@ public class CovidAgentState extends SearchBasedAgentState{
         this.position = position;
     }
 
-    public ArrayList<VisualMapNode> getNodesList() {
+    /*public ArrayList<VisualMapNode> getNodesList() {
         return nodesList;
-    }
+    }*/
 
-    public void setNodesList(ArrayList<VisualMapNode> nodesList) {
+    /*public void setNodesList(ArrayList<VisualMapNode> nodesList) {
         this.nodesList = nodesList;
-    }
+    }*/
 
     public HashMap<String, Collection<String>> getKnownMap() {
         return knownMap;
@@ -96,9 +96,9 @@ public class CovidAgentState extends SearchBasedAgentState{
         return sickPersonsList;
     }
 
-    public Boolean getSeeSickPerson(){return seeSickPerson;}
+    /*public Boolean getSeeSickPerson(){return seeSickPerson;}
 
-    public void setSeeSickPerson(Boolean seeSickPerson) { this.seeSickPerson = seeSickPerson; }
+    public void setSeeSickPerson(Boolean seeSickPerson) { this.seeSickPerson = seeSickPerson; }*/
 
     @Override
     public boolean equals(Object obj) {
@@ -127,8 +127,9 @@ public class CovidAgentState extends SearchBasedAgentState{
                 break;
             }
         }*/
-        Boolean comparing = (position.equals(((CovidAgentState) obj).getPosition()) && (sickPersonsList.size() == ((CovidAgentState) obj).getSickPersonsList().size()) && boolSickPerList && boolVisitedPositions);
-        return comparing;
+        //Boolean comparing = (position.equals(((CovidAgentState) obj).getPosition()) && (sickPersonsList.size() == ((CovidAgentState) obj).getSickPersonsList().size()) && boolSickPerList && boolVisitedPositions);
+        //return comparing;
+        return (this.position.contentEquals(auxCompare.getPosition()) && (this.getSickPersonsList().size()==auxCompare.getSickPersonsList().size()));
     }
 
     @Override
@@ -137,37 +138,46 @@ public class CovidAgentState extends SearchBasedAgentState{
         newState.setTotalOfGoRealized(totalOfGoRealized);
         newState.setTotalOfMulctRealized(totalOfMulctRealized);
         newState.setVisitedPositions((ArrayList<String>) visitedPositions.clone());
-        newState.setNodesList((ArrayList<VisualMapNode>) nodesList.clone());
+        //newState.setNodesList((ArrayList<VisualMapNode>) nodesList.clone());
         newState.setSensorsList((ArrayList<Sensor>) sensorsList.clone());
         newState.setSickPersonsList((ArrayList<SickPerson>) sickPersonsList.clone());
         newState.setTotalOfSickPersonHealted(totalOfSickPersonHealted);
-        newState.setSeeSickPerson(seeSickPerson);
+        //newState.setSeeSickPerson(seeSickPerson);
         return newState;
     }
 
     @Override
     public void updateState(Perception p) {
         visitedPositions.add(position);
-        if(p!=null){
+        if(p!=null) {
             CovidPerception cp = (CovidPerception) p;
-            if(cp.getNuevosEnfermos()!=null){//Si la lista de enfermos nuevos de la percepción no está vacía agrego todos los enfermos a la lista de enfermos.
-                for(SickPerson p1: cp.getNuevosEnfermos()){
-                    sickPersonsList.add(p1);
-                }
-            }
-            if(cp.getCorteDeCalles()!=null){//Si la lista de cortes de calles no está vacía saco el nodoFinal de los sucesores del nodoInicial.
-                for(TramoCalle t: cp.getCorteDeCalles()){
-                    knownMap.get(t.getInitialNode()).remove(t.getFinalNode());
-                }
-            }
-            if(cp.getMovimientosEnfermos()!=null){//Si la lista de movimientos de enfermos no está vacía actualizo las posiciones de los enfermos que se movieron.
-                for(SickPerson sp: cp.getMovimientosEnfermos()){
-                    for(SickPerson pe: sickPersonsList){
-                        if(sp.getId()==pe.getId()){
-                            pe.setActualPosition(sp.getActualPosition());
+            switch (cp.getTipo()) {
+                //Percepción de aparición de nuevo enfermo, agrego a la lista de enfermos un nuevo enfermo.
+                case "ANE":
+                    sickPersonsList.add(new SickPerson(Integer.valueOf(cp.getEstado()), cp.getNodo1(), cp.getNodo2(), "0"));
+                    break;
+                //Percepción de corte de calle: si la calle está cortada le quito a la lista de sucesores de nodo1 el nodo2.
+                //Si la calle no está cortada le agrego a la lista de sucesores de nodo1 el nodo2.
+                case "ACC":
+                    if (Boolean.valueOf(cp.getEstado())) {
+                        knownMap.get(cp.getNodo1()).remove(cp.getNodo2());
+                    } else {
+                        if (!knownMap.get(cp.getNodo1()).contains(cp.getNodo2())) {
+                            knownMap.get(cp.getNodo1()).add(cp.getNodo2());
                         }
                     }
-                }
+                    break;
+                //Percepción de aparición de enfermo en el mapa: busco el enfermo en la lista de enfermos y le cambio la posición actual.
+                case "AEM":
+                    for (SickPerson sp : sickPersonsList) {
+                        if (sp.getId() == Integer.valueOf(cp.getEstado())) {
+                            sp.setActualPosition(cp.getNodo1());
+                            break;
+                        }
+                    }
+                    break;
+                default:
+                    break;
             }
         }
     }
@@ -206,7 +216,10 @@ public class CovidAgentState extends SearchBasedAgentState{
 
     @Override
     public String toString() {
-        String str = "Nodo: " + position;
+        String str = "Nodo: " + position + " Enfermos: ";
+        for(SickPerson sp: sickPersonsList){
+            str+="{"+"id:"+sp.getId()+","+"actualPos:"+sp.getActualPosition()+","+"homePos:"+sp.getHomePosition()+","+"cantMultas:"+sp.getCantMultas()+"}";
+        }
         return str;
     }
 }

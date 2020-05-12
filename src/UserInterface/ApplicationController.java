@@ -29,7 +29,7 @@ public class ApplicationController implements Initializable {
     @FXML
     private Button startBtn = new Button();
 
-    private String position="A8", method;
+    private String position="008 - Pedro de Vega y Echagüe.", method;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

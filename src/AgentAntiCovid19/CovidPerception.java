@@ -7,49 +7,48 @@ import frsf.cidisi.faia.environment.Environment;
 import java.util.ArrayList;
 
 public class CovidPerception extends Perception {
-    private ArrayList<SickPerson> nuevosEnfermos;
-    private ArrayList<SickPerson> movimientosEnfermos;
-    private ArrayList<TramoCalle> corteDeCalles;
+    private String tipo;
+    private String nodo1;
+    private String nodo2;
+    private String estado;
 
-    public CovidPerception(ArrayList<SickPerson> nuevosEnfermos, ArrayList<SickPerson> movimientosEnfermos, ArrayList<TramoCalle> corteDeCalles) {
-        this.nuevosEnfermos = nuevosEnfermos;
-        this.movimientosEnfermos = movimientosEnfermos;
-        this.corteDeCalles = corteDeCalles;
+    public CovidPerception(String tipo, String nodo1, String nodo2, String estado) {
+        this.tipo=tipo;
+        this.nodo1=nodo1;
+        this.nodo2=nodo2;
+        this.estado=estado;
     }
 
-    public CovidPerception() {
+    public String getTipo() {
+        return tipo;
     }
 
-    public ArrayList<SickPerson> getNuevosEnfermos() {
-        return nuevosEnfermos;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
-    public void setNuevosEnfermos(ArrayList<SickPerson> nuevosEnfermos) {
-        this.nuevosEnfermos = nuevosEnfermos;
+    public String getNodo1() {
+        return nodo1;
     }
 
-    public ArrayList<SickPerson> getMovimientosEnfermos() {
-        return movimientosEnfermos;
+    public void setNodo1(String nodo1) {
+        this.nodo1 = nodo1;
     }
 
-    public void setMovimientosEnfermos(ArrayList<SickPerson> movimientosEnfermos) {
-        this.movimientosEnfermos = movimientosEnfermos;
+    public String getNodo2() {
+        return nodo2;
     }
 
-    public void setMovimientosEnfermos(SickPerson s){
-        movimientosEnfermos.add(s);
+    public void setNodo2(String nodo2) {
+        this.nodo2 = nodo2;
     }
 
-    public ArrayList<TramoCalle> getCorteDeCalles() {
-        return corteDeCalles;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setCorteDeCalles(ArrayList<TramoCalle> corteDeCalles) {
-        this.corteDeCalles = corteDeCalles;
-    }
-
-    public void setCorteDeCalles(TramoCalle tramo) {
-        this.corteDeCalles.add(tramo);
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     @Override
@@ -60,19 +59,34 @@ public class CovidPerception extends Perception {
     @Override
     public String toString() {
         String cp = "";
-        cp+="Nuevos enfermos: \n\n";
-        for(SickPerson s: nuevosEnfermos){
-            cp+=s.toString();
+        if(this.tipo=="ANE"){
+            if(this.nodo1=="I3"){
+                cp = "Ha sido detectado un nuevo enfermo en el Sensor 1.";
+            }
+            if(this.nodo1=="Q10"){
+                cp = "Ha sido detectado un nuevo enfermo en el Sensor 2.";
+            }
+            if(this.nodo1=="J12"){
+                cp = "Ha sido detectado un nuevo enfermo en el Sensor 3.";
+            }
+            if(this.nodo1=="C10"){
+                cp = "Ha sido detectado un nuevo enfermo en el Sensor 4.";
+            }
         }
-        cp+="\nMovimientos de enfermos: \n\n";
-        for(SickPerson s:movimientosEnfermos){
-            cp+="Enfermo con ID "+s.getId()+" se movio hasta el nodo "+s.getActualPosition();
+
+        if(this.tipo=="ACC"){
+            if(Boolean.valueOf(this.estado)){
+                cp = "La calle entre los nodos " + this.nodo1 + " y " + this.nodo2 + " está cortada.";
+            }
+            else{
+                cp = "La calle entre los nodos " + this.nodo1 + " y " + this.nodo2 + " está abierta.";
+            }
         }
-        cp+="\nMovimientos de enfermos: ";
-        for(TramoCalle t:corteDeCalles){
-            cp+=t.toString();
+
+        if(this.tipo=="AEM"){
+            cp = "El enfermo " + this.estado + " ha roto la cuarentena y se encuentra en el nodo " + this.nodo1 + ".";
         }
         return cp;
-
     }
+
 }

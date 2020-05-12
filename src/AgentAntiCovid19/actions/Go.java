@@ -1,5 +1,6 @@
 package AgentAntiCovid19.actions;
 
+import AgentAntiCovid19.CovidAgent;
 import AgentAntiCovid19.CovidAgentState;
 import AgentAntiCovid19.CovidEnvironmentState;
 import AgentAntiCovid19.SickPerson;
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 
 public class Go extends SearchAction {
     private String objetiveNode ="";
-    private Double cost=1.0;
+    private final Double cost=1.0;
 
     public Go(String objetiveNode){
         this.objetiveNode = objetiveNode;
@@ -20,26 +21,24 @@ public class Go extends SearchAction {
 
     @Override
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
-        CovidAgentState agentState = (CovidAgentState) s;
-
-        //if (agentState.getVisitedPositions().contains(this.target)){
-        //  return null;
-        //}
+        /*if (agentState.getVisitedPositions().contains(this.objetiveNode)){
+          return null;
+        }*/
 
         ArrayList<String> succesors = new ArrayList<String>();
-        succesors.addAll(agentState.getSuccesors());
-        if (agentState.getSuccesors() != null){
-            for(SickPerson p:agentState.getSickPersonsList()){
+        succesors.addAll(((CovidAgentState)s).getSuccesors());
+        if (succesors != null){
+            /*for(SickPerson p:agentState.getSickPersonsList()){
                 if(p.getActualPosition()==objetiveNode){
                     agentState.setSeeSickPerson(true);
                     break;
                 }
-            }
+            }*/
             int i = succesors.indexOf(this.objetiveNode);
             if (i>=0){
-                agentState.setPosition(this.objetiveNode);
-                agentState.setTotalOfGoRealized((int) (agentState.getTotalOfGoRealized()+this.cost));
-                return agentState;
+                ((CovidAgentState)s).setPosition(this.objetiveNode);
+                ((CovidAgentState)s).setTotalOfGoRealized((int) (((CovidAgentState)s).getTotalOfGoRealized()+this.cost));
+                return ((CovidAgentState)s);
             }
         }
         return null;

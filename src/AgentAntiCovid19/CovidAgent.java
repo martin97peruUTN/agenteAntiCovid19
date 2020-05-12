@@ -27,7 +27,7 @@ public class CovidAgent extends SearchBasedAgent {
         CovidGoal goal = new CovidGoal();
 
         // Inicializo el estado del agente.
-        CovidAgentState agentState = new CovidAgentState(map,sensorslist, sickPersonsList,"A8");
+        CovidAgentState agentState = new CovidAgentState(map,sensorslist, sickPersonsList,"008");
         agentState.initState();
         this.setAgentState(agentState);
 
@@ -36,7 +36,7 @@ public class CovidAgent extends SearchBasedAgent {
 
         // Cargo las acciones Go del archivo NODOS-Mapa.csv
         CSVToMatrix converter;
-        String path = "NODOS-Mapa.csv";
+        String path = "mapita.csv";
         converter = new CSVToMatrix(';');
         ArrayList<String[]> nodes = converter.fileToMatrix(path);
 
@@ -63,50 +63,52 @@ public class CovidAgent extends SearchBasedAgent {
     //Acá en este método se decide qué acción tomar según el método de búsqueda elegido en la interfaz
     @Override
     public Action selectAction() {
-
-        if(this.searchMethod=="Depth First Search"){
-            //Método de búsqueda en profundidad
-            DepthFirstSearch depthFirstSearch = new DepthFirstSearch();
-            Search dfsSolver = new Search(depthFirstSearch);
-            dfsSolver.setVisibleTree(Search.XML_TREE);
-            //Seteo el search solver
-            this.setSolver(dfsSolver);
-        }
-        if(this.searchMethod=="Breath First Search"){
-            //Método de búsqueda en anchura
-            BreathFirstSearch breathFirstSearch = new BreathFirstSearch();
-            Search bfsSolver = new Search(breathFirstSearch);
-            bfsSolver.setVisibleTree(Search.XML_TREE);
-            //Seteo el search solver
-            this.setSolver(bfsSolver);
-        }
-        if(this.searchMethod=="A* Search"){
-            //Método de búsqueda A*
-            IStepCostFunction aCostFunction = new CovidCostFunction();
-            IEstimatedCostFunction heuristicAStar = new CovidHeuristic();
-            AStarSearch aStarSearch = new AStarSearch(aCostFunction, heuristicAStar);
-            Search sasSolver = new Search(aStarSearch);
-            sasSolver.setVisibleTree(Search.XML_TREE);
-            //Seteo el search solver
-            this.setSolver(sasSolver);
-        }
-        if(this.searchMethod=="Uniform Cost Search"){
-            //Método de búsqueda de costo uniforme
-            IStepCostFunction uniCostFunction = new CovidCostFunction();
-            UniformCostSearch uniCostSearch = new UniformCostSearch(uniCostFunction);
-            Search uniCostSolver = new Search(uniCostSearch);
-            uniCostSolver.setVisibleTree(Search.XML_TREE);
-            //Seteo el search solver
-            this.setSolver(uniCostSolver);
-        }
-        if(this.searchMethod=="Greedy Search"){
-            //Método de búsqueda ávara
-            IEstimatedCostFunction gHeuristicFunction = new CovidHeuristic();
-            GreedySearch gSearch = new GreedySearch(gHeuristicFunction);
-            Search gsSolver = new Search(gSearch);
-            gsSolver.setVisibleTree(Search.XML_TREE);
-            //Seteo el search solver
-            this.setSolver(gsSolver);
+        switch(this.searchMethod) {
+            case "Depth First Search":
+                //Método de búsqueda en profundidad
+                DepthFirstSearch depthFirstSearch = new DepthFirstSearch();
+                Search dfsSolver = new Search(depthFirstSearch);
+                dfsSolver.setVisibleTree(Search.XML_TREE);
+                //Seteo el search solver
+                this.setSolver(dfsSolver);
+            break;
+            case "Breath First Search":
+                //Método de búsqueda en anchura
+                BreathFirstSearch breathFirstSearch = new BreathFirstSearch();
+                Search bfsSolver = new Search(breathFirstSearch);
+                bfsSolver.setVisibleTree(Search.XML_TREE);
+                //Seteo el search solver
+                this.setSolver(bfsSolver);
+            break;
+            case "A* Search":
+                //Método de búsqueda A*
+                IStepCostFunction aCostFunction = new CovidCostFunction();
+                IEstimatedCostFunction heuristicAStar = new CovidHeuristic();
+                AStarSearch aStarSearch = new AStarSearch(aCostFunction, heuristicAStar);
+                Search sasSolver = new Search(aStarSearch);
+                sasSolver.setVisibleTree(Search.XML_TREE);
+                //Seteo el search solver
+                this.setSolver(sasSolver);
+            case "Uniform Cost Search":
+                //Método de búsqueda de costo uniforme
+                IStepCostFunction uniCostFunction = new CovidCostFunction();
+                UniformCostSearch uniCostSearch = new UniformCostSearch(uniCostFunction);
+                Search uniCostSolver = new Search(uniCostSearch);
+                uniCostSolver.setVisibleTree(Search.XML_TREE);
+                //Seteo el search solver
+                this.setSolver(uniCostSolver);
+            break;
+            case "Greedy Search":
+                //Método de búsqueda ávara
+                IEstimatedCostFunction gHeuristicFunction = new CovidHeuristic();
+                GreedySearch gSearch = new GreedySearch(gHeuristicFunction);
+                Search gsSolver = new Search(gSearch);
+                gsSolver.setVisibleTree(Search.XML_TREE);
+                //Seteo el search solver
+                this.setSolver(gsSolver);
+            break;
+            default:
+                break;
         }
 
         //Buscar las acciones para pasar al árbol de búsqueda

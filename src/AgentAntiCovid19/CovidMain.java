@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class CovidMain {
 
     public static ArrayList<String> main(String[] args) throws PrologConnectorException {
-
+        System.out.println("Agente ANTICOVID19");
         CovidEnvironment environment = new CovidEnvironment();
 
         CovidEnvironmentState environmentState = (CovidEnvironmentState) environment.getEnvironmentState();
@@ -21,7 +21,7 @@ public class CovidMain {
         CovidAgent agent = new CovidAgent(environmentState.getMap(), environmentState.getSickPersonsList(), environmentState.getSensorsList(), args[0]);
 
         SearchBasedAgentSimulator simu = new SearchBasedAgentSimulator(environment, agent);
-
+        System.out.println(environment.toString());
         simu.start();
 
         ArrayList<String> visitedNodes = ((CovidAgentState)agent.getAgentState()).getVisitedPositions();

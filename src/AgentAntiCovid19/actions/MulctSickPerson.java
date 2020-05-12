@@ -22,9 +22,10 @@ public class MulctSickPerson extends SearchAction {
         String position = covidAgentState.getPosition();
         for(SickPerson p: covidAgentState.getSickPersonsList()){
             if(p.getActualPosition().equals(position) && !p.getActualPosition().equals(p.getHomePosition())){
-                covidAgentState.setSeeSickPerson(false); //acá actualiza que el enfermo ya no está en ese nodo
+                //covidAgentState.setSeeSickPerson(false); //acá actualiza que el enfermo ya no está en ese nodo
                 idSickPerson = p.getId();
-                if((p.getCantMultas()+1)>3){
+                int multita = p.getCantMultas();
+                if((multita+1)>3){
                     covidAgentState.getSickPersonsList().remove(p);
                     covidAgentState.setTotalOfSickPersonHealted(covidAgentState.getTotalOfSickPersonHealted()+1);
                 }
@@ -45,10 +46,11 @@ public class MulctSickPerson extends SearchAction {
         String position = ((CovidEnvironmentState) est).getAgentPosition();
         for(SickPerson p: covidEnvironmentState.getSickPersonsList()){
             if(p.getActualPosition().equals(position) && !p.getActualPosition().equals(p.getHomePosition())){
-                covidAgentState.setSeeSickPerson(false); //acá actualiza que el enfermo está en ese nodo
+                //covidAgentState.setSeeSickPerson(false); //acá actualiza que el enfermo está en ese nodo
                 idSickPerson = p.getId();
+                int multita = p.getCantMultas();
                 //Actualizo el estado del ambiente.
-                if((p.getCantMultas()+1)>3){
+                if((multita+1)>3){
                     covidEnvironmentState.getSickPersonsList().remove(p);
                 }
                 else{
@@ -59,7 +61,8 @@ public class MulctSickPerson extends SearchAction {
                 //Actualizo el estado del agente.
                 for(SickPerson sp: covidAgentState.getSickPersonsList()){
                     if (sp.equals(p)){
-                        if((sp.getCantMultas()+1)>3) {
+                        int multita2 = sp.getCantMultas();
+                        if((multita2+1)>3) {
                             covidEnvironmentState.getSickPersonsList().remove(p);
                             covidAgentState.setTotalOfSickPersonHealted(covidAgentState.getTotalOfSickPersonHealted()+1);
                         }

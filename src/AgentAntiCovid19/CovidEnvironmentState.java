@@ -22,10 +22,10 @@ public class CovidEnvironmentState extends EnvironmentState {
     @Override
     public void initState() {
         CSVToMatrix converter;
-        String path = "NODOS-Mapa.csv";
+        String path = "mapita.csv";
         converter = new CSVToMatrix(';');
         ArrayList<String[]> nodes = converter.fileToMatrix(path);
-        path = "NODOS-Sucesores.csv";
+        path = "sucesoritos.csv";
         ArrayList<String[]>  nodesSuccesors = converter.fileToMatrix(path);
 
         map = new HashMap<String, Collection<String>>();
@@ -34,61 +34,62 @@ public class CovidEnvironmentState extends EnvironmentState {
         for(int i=0;i<nodes.size();i++){
             ArrayList<String> succesors = new ArrayList<String>();
             for(int j=0;j<nodesSuccesors.size();j++){
-                if(nodesSuccesors.get(j)[1]!="null") {
-                    succesors.add(nodesSuccesors.get(j)[1]);
-                }
-                if(nodesSuccesors.get(j)[2]!="null") {
-                    succesors.add(nodesSuccesors.get(j)[2]);
-                }
-                if(nodesSuccesors.get(j)[3]!="null") {
-                    succesors.add(nodesSuccesors.get(j)[3]);
-                }
-                if(nodesSuccesors.get(j)[4]!="null") {
-                    succesors.add(nodesSuccesors.get(j)[4]);
+                if(nodesSuccesors.get(j)[0].contentEquals(nodes.get(i)[0])) {
+                        succesors.add(nodesSuccesors.get(j)[1]);
                 }
             }
             map.put(nodes.get(i)[0], succesors);
         }
 
         //Inicializar lista de sensores con el archivo SENSORES.csv
-        path = "SENSORES.csv";
+        path = "sensoritos.csv";
         converter = new CSVToMatrix(';');
         ArrayList<String[]> sensors = converter.fileToMatrix(path);
         for(int i=0;i<sensors.size();i++){
-            sensorsList.add(new Sensor(sensors.get(i)[0], sensors.get(i)[1], sensors.get(i)[2], sensors.get(i)[3]));
+            sensorsList.add(new Sensor(sensors.get(i)[0], sensors.get(i)[1], sensors.get(i)[2], sensors.get(i)[3], sensors.get(i)[4]));
         }
 
         //Inicializar lista de enfermos con el archivo ENFERMOS.csv
-        path = "ENFERMOS.csv";
+        path = "enfermitos.csv";
         converter = new CSVToMatrix(';');
         ArrayList<String[]> sickPersons = converter.fileToMatrix(path);
-        for(int i=0;i<sensors.size();i++){
-            sickPersonsList.add(new SickPerson(Integer.valueOf(sickPersons.get(i)[0]), sickPersons.get(i)[1], sickPersons.get(i)[2]));
+        for(int i=0;i<sickPersons.size();i++){
+            sickPersonsList.add(new SickPerson(Integer.valueOf(sickPersons.get(i)[0]), sickPersons.get(i)[1], sickPersons.get(i)[2], sickPersons.get(i)[3] ));
         }
+        //Seteo la posición del agente en el entorno.
+        this.setAgentPosition("008");
 
     }
 
     public void sendPerception(CovidPerception cp){
-        if(cp!=null){
-            if(cp.getNuevosEnfermos()!=null){//Si la lista de enfermos nuevos de la percepción no está vacía agrego todos los enfermos a la lista de enfermos.
-                for(SickPerson p1: cp.getNuevosEnfermos()){
-                    sickPersonsList.add(p1);
+        switch(cp.getTipo()){
+            //Percepción de aparición de nuevo enfermo, agrego a la lista de enfermos un nuevo enfermo.
+            case "ANE":
+                sickPersonsList.add(new SickPerson(Integer.valueOf(cp.getEstado()), cp.getNodo1(), cp.getNodo2(), "0"));
+            break;
+            //Percepción de corte de calle: si la calle está cortada le quito a la lista de sucesores de nodo1 el nodo2.
+            //Si la calle no está cortada le agrego a la lista de sucesores de nodo1 el nodo2.
+            case "ACC":
+                if(Boolean.valueOf(cp.getEstado())){
+                    map.get(cp.getNodo1()).remove(cp.getNodo2());
                 }
-            }
-            if(cp.getCorteDeCalles()!=null){//Si la lista de cortes de calles no está vacía saco el nodoFinal de los sucesores del nodoInicial.
-                for(TramoCalle t: cp.getCorteDeCalles()){
-                    map.get(t.getInitialNode()).remove(t.getFinalNode());
-                }
-            }
-            if(cp.getMovimientosEnfermos()!=null){//Si la lista de movimientos de enfermos no está vacía actualizo las posiciones de los enfermos que se movieron.
-                for(SickPerson sp: cp.getMovimientosEnfermos()){
-                    for(SickPerson pe: sickPersonsList){
-                        if(sp.getId()==pe.getId()){
-                            pe.setActualPosition(sp.getActualPosition());
-                        }
+                else{
+                    if(!map.get(cp.getNodo1()).contains(cp.getNodo2())){
+                        map.get(cp.getNodo1()).add(cp.getNodo2());
                     }
                 }
-            }
+            break;
+            //Percepción de aparición de enfermo en el mapa: busco el enfermo en la lista de enfermos y le cambio la posición actual.
+            case "AEM":
+                for(SickPerson sp: sickPersonsList){
+                    if(sp.getId()==Integer.valueOf(cp.getEstado())){
+                        sp.setActualPosition(cp.getNodo1());
+                        break;
+                    }
+                }
+            break;
+            default:
+                break;
         }
     }
 

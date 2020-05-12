@@ -15,7 +15,7 @@ public class CovidHeuristic implements IEstimatedCostFunction {
         Integer cost = null;
         int weithg = 10;//Esto se puede cambiar
         //Ahora usaremos la metrica para tratar de buscar al que menos multas tiene
-        if(agentState.getSeeSickPerson()){
+        /*if(agentState.getSeeSickPerson()){
             for (SickPerson i:sickPeople) {
                 if(i.getActualPosition()==position) {
                     cost = distance + weithg*i.getCantMultas(); //Esto nos da el costo estimado para ir al nodo que tiene un enfermo
@@ -24,7 +24,8 @@ public class CovidHeuristic implements IEstimatedCostFunction {
             }
         }else{
              cost = distance;
-        }
-        return cost;
+        }*/
+        //return cost;
+        return 1;
     }
 }

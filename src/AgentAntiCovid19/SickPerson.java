@@ -5,13 +5,13 @@ public class SickPerson {
     private Integer id; //0
     private String actualPosition; //1
     private String homePosition; //2
-    private Integer cantMultas;
+    private Integer cantMultas; //3
 
-    public SickPerson(Integer id, String actualPosition, String homePosition){
+    public SickPerson(Integer id, String actualPosition, String homePosition, String cantMultas){
         this.id = id;
         this.actualPosition = actualPosition;
         this.homePosition = homePosition;
-        this.cantMultas = 0;
+        this.cantMultas = Integer.valueOf(cantMultas);
     }
 
     public String getActualPosition() {
