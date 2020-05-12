@@ -47,13 +47,6 @@ public class CovidAgentState extends SearchBasedAgentState{
         //Inicializo la lista de nodos visitados.
         visitedPositions = new ArrayList<String>();
 
-        /*Inicializo la lista de enfermos.
-        path="enfermitos.csv";
-        ArrayList<String[]> sickPersons = converter.fileToMatrix(path);
-        for(int i=0;i<sickPersons.size();i++){
-            sickPersonsList.add(new SickPerson(Integer.valueOf(sickPersons.get(i)[0]), sickPersons.get(i)[1], sickPersons.get(i)[2], sickPersons.get(i)[3]));
-        }*/
-
     }
 
     public void setKnownMap(HashMap<String, Collection<String>> knownMap) {
