@@ -9,18 +9,21 @@ import java.util.HashMap;
 
 public class CovidAgentState extends SearchBasedAgentState{
     private String position;
+    private String selectedPosition;
     private ArrayList<Sensor> sensorsList = new ArrayList<Sensor>();
     private ArrayList<SickPerson> sickPersonsList = new ArrayList<SickPerson>();
-    //private ArrayList<VisualMapNode> nodesList = new ArrayList<VisualMapNode>();
-    private HashMap<String, Collection<String>> knownMap;
-    private ArrayList<String> visitedPositions;
+    private ArrayList<Node> nodesList = new ArrayList<Node>();
     //private Boolean seeSickPerson = false; //Esto nos sirve para saber si en el nodo donde está el agente vio un enfermo
     private Integer totalOfGoRealized = 0;
     private Integer totalOfMulctRealized = 0;
     private Integer totalOfSickPersonHealted = 0;
 
-    public CovidAgentState(HashMap<String, Collection<String>> map, ArrayList<Sensor> sensorsList, ArrayList<SickPerson> sickPersonsList, String position){
-        this.position = position;
+    //Inicializo el mapa y la lista de posiciones visitadas.
+    private HashMap<String, Collection<String>> knownMap;
+    private ArrayList<String> visitedPositions;
+
+    public CovidAgentState(HashMap<String, Collection<String>> map, ArrayList<Sensor> sensorsList, ArrayList<SickPerson> sickPersonsList, String selPosition){
+        this.selectedPosition = selPosition;
         this.knownMap = (HashMap<String, Collection<String>>) map.clone();
         this.sickPersonsList = (ArrayList<SickPerson>) sickPersonsList.clone();
         this.sensorsList = (ArrayList<Sensor>) sensorsList.clone();
@@ -28,19 +31,20 @@ public class CovidAgentState extends SearchBasedAgentState{
 
     @Override
     public void initState() {
-        //position = this.position;    //Posición inicial del agente: Nodo: 008, Calles: Pedro de Vega y Echague.
-        //Inicializo la lista de nodos visitados.
-        visitedPositions = new ArrayList<String>();
+        position = this.selectedPosition;    //Posición inicial del agente: Nodo: 008, Calles: Pedro de Vega y Echague.
 
-        /*//Inicializo la lista de nodos.
+        //Inicializo la lista de nodos.
         CSVToMatrix converter = new CSVToMatrix(';');
         String path = "mapita.csv";
         ArrayList<String[]> nodes = converter.fileToMatrix(path);
         path = "sucesoritos.csv";
         ArrayList<String[]> nodesSuccesors = converter.fileToMatrix(path);
         for(int i=0;i<nodes.size();i++){
-            nodesList.add(new VisualMapNode(nodes.get(i)[0], nodes.get(i)[1], nodes.get(i)[2], nodes.get(i)[3]));
-        }*/
+            nodesList.add(new Node(nodes.get(i)[0], nodes.get(i)[1], nodes.get(i)[2], nodes.get(i)[3]));
+        }
+
+        //Inicializo la lista de nodos visitados.
+        visitedPositions = new ArrayList<String>();
 
         /*Inicializo la lista de enfermos.
         path="enfermitos.csv";
@@ -64,13 +68,13 @@ public class CovidAgentState extends SearchBasedAgentState{
         this.position = position;
     }
 
-    /*public ArrayList<VisualMapNode> getNodesList() {
+    public ArrayList<Node> getNodesList() {
         return nodesList;
-    }*/
+    }
 
-    /*public void setNodesList(ArrayList<VisualMapNode> nodesList) {
+    public void setNodesList(ArrayList<Node> nodesList) {
         this.nodesList = nodesList;
-    }*/
+    }
 
     public HashMap<String, Collection<String>> getKnownMap() {
         return knownMap;
@@ -134,14 +138,15 @@ public class CovidAgentState extends SearchBasedAgentState{
 
     @Override
     public SearchBasedAgentState clone() {
-        CovidAgentState newState = new CovidAgentState(knownMap, sensorsList, sickPersonsList, position);
+        CovidAgentState newState = new CovidAgentState(knownMap, sensorsList, sickPersonsList, "0");
+        newState.setPosition(position);
         newState.setTotalOfGoRealized(totalOfGoRealized);
         newState.setTotalOfMulctRealized(totalOfMulctRealized);
+        newState.setTotalOfSickPersonHealted(totalOfSickPersonHealted);
         newState.setVisitedPositions((ArrayList<String>) visitedPositions.clone());
-        //newState.setNodesList((ArrayList<VisualMapNode>) nodesList.clone());
+        newState.setNodesList((ArrayList<Node>) nodesList.clone());
         newState.setSensorsList((ArrayList<Sensor>) sensorsList.clone());
         newState.setSickPersonsList((ArrayList<SickPerson>) sickPersonsList.clone());
-        newState.setTotalOfSickPersonHealted(totalOfSickPersonHealted);
         //newState.setSeeSickPerson(seeSickPerson);
         return newState;
     }

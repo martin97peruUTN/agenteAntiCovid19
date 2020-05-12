@@ -54,10 +54,8 @@ public class CovidEnvironmentState extends EnvironmentState {
         converter = new CSVToMatrix(';');
         ArrayList<String[]> sickPersons = converter.fileToMatrix(path);
         for(int i=0;i<sickPersons.size();i++){
-            sickPersonsList.add(new SickPerson(Integer.valueOf(sickPersons.get(i)[0]), sickPersons.get(i)[1], sickPersons.get(i)[2], sickPersons.get(i)[3] ));
+            sickPersonsList.add(new SickPerson(Integer.valueOf(sickPersons.get(i)[0]), sickPersons.get(i)[1], sickPersons.get(i)[2], sickPersons.get(i)[3]));
         }
-        //Seteo la posición del agente en el entorno.
-        this.setAgentPosition("008");
 
     }
 
@@ -144,6 +142,6 @@ public class CovidEnvironmentState extends EnvironmentState {
     }
 
     public void setAgentPosition(String agentPosition) {
-        this.agentPosition = agentPosition;
+        agentPosition = agentPosition;
     }
 }

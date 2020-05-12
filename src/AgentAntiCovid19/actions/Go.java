@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class Go extends SearchAction {
     private String objetiveNode ="";
-    private final Double cost=1.0;
+    private Double cost=1.0;
 
     public Go(String objetiveNode){
         this.objetiveNode = objetiveNode;
@@ -21,12 +21,13 @@ public class Go extends SearchAction {
 
     @Override
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
-        /*if (agentState.getVisitedPositions().contains(this.objetiveNode)){
+        CovidAgentState agentState = (CovidAgentState) s;
+        /*if (((CovidAgentState)s).getVisitedPositions().contains(this.objetiveNode)){
           return null;
         }*/
 
         ArrayList<String> succesors = new ArrayList<String>();
-        succesors.addAll(((CovidAgentState)s).getSuccesors());
+        succesors.addAll(agentState.getSuccesors());
         if (succesors != null){
             /*for(SickPerson p:agentState.getSickPersonsList()){
                 if(p.getActualPosition()==objetiveNode){
@@ -36,17 +37,12 @@ public class Go extends SearchAction {
             }*/
             int i = succesors.indexOf(this.objetiveNode);
             if (i>=0){
-                ((CovidAgentState)s).setPosition(this.objetiveNode);
-                ((CovidAgentState)s).setTotalOfGoRealized((int) (((CovidAgentState)s).getTotalOfGoRealized()+this.cost));
-                return ((CovidAgentState)s);
+                agentState.setPosition(this.objetiveNode);
+                agentState.setTotalOfGoRealized((int) (((CovidAgentState)s).getTotalOfGoRealized()+this.cost));
+                return agentState;
             }
         }
         return null;
-    }
-
-    @Override
-    public Double getCost() {
-        return this.cost;
     }
 
     @Override
@@ -55,6 +51,11 @@ public class Go extends SearchAction {
             ((CovidEnvironmentState) est).setAgentPosition(this.objetiveNode);
         }
         return est;
+    }
+
+    @Override
+    public Double getCost() {
+        return this.cost;
     }
 
     @Override
