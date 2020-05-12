@@ -65,7 +65,7 @@ public class CovidEnvironment extends Environment {
                 }
             }
 
-            actualPerception.getNuevosEnfermos().add(new SickPerson(id+1,nodoSensorActual,nodoCasa));
+             actualPerception.getNuevosEnfermos().add(new SickPerson(id+1,nodoSensorActual,nodoCasa));
         }
 
         //Corte de calle

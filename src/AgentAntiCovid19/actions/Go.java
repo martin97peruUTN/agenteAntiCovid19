@@ -28,7 +28,7 @@ public class Go extends SearchAction {
 
         ArrayList<String> succesors = new ArrayList<String>();
         succesors.addAll(agentState.getSuccesors());
-        if (agentState.getSuccesors() != null){
+        if (succesors != null){
             for(SickPerson p:agentState.getSickPersonsList()){
                 if(p.getActualPosition()==objetiveNode){
                     agentState.setSeeSickPerson(true);
@@ -52,9 +52,8 @@ public class Go extends SearchAction {
 
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
-        if(this.execute((SearchBasedAgentState) ast)!=null) {
+        if(this.execute((SearchBasedAgentState) ast)!=null)
             ((CovidEnvironmentState) est).setAgentPosition(this.objetiveNode);
-        }
         return est;
     }
 

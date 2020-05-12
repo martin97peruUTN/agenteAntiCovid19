@@ -64,7 +64,7 @@ public class CovidAgent extends SearchBasedAgent {
     @Override
     public Action selectAction() {
 
-        if(this.searchMethod=="Depth First Search"){
+        if(this.searchMethod.equals("Depth First Search")){
             //Método de búsqueda en profundidad
             DepthFirstSearch depthFirstSearch = new DepthFirstSearch();
             Search dfsSolver = new Search(depthFirstSearch);
@@ -72,7 +72,7 @@ public class CovidAgent extends SearchBasedAgent {
             //Seteo el search solver
             this.setSolver(dfsSolver);
         }
-        if(this.searchMethod=="Breath First Search"){
+        if(this.searchMethod.equals("Breath First Search")){
             //Método de búsqueda en anchura
             BreathFirstSearch breathFirstSearch = new BreathFirstSearch();
             Search bfsSolver = new Search(breathFirstSearch);
@@ -80,7 +80,7 @@ public class CovidAgent extends SearchBasedAgent {
             //Seteo el search solver
             this.setSolver(bfsSolver);
         }
-        if(this.searchMethod=="A* Search"){
+        if(this.searchMethod.equals("A* Search")){
             //Método de búsqueda A*
             IStepCostFunction aCostFunction = new CovidCostFunction();
             IEstimatedCostFunction heuristicAStar = new CovidHeuristic();
@@ -90,7 +90,7 @@ public class CovidAgent extends SearchBasedAgent {
             //Seteo el search solver
             this.setSolver(sasSolver);
         }
-        if(this.searchMethod=="Uniform Cost Search"){
+        if(this.searchMethod.equals("Uniform Cost Search")){
             //Método de búsqueda de costo uniforme
             IStepCostFunction uniCostFunction = new CovidCostFunction();
             UniformCostSearch uniCostSearch = new UniformCostSearch(uniCostFunction);
@@ -99,7 +99,7 @@ public class CovidAgent extends SearchBasedAgent {
             //Seteo el search solver
             this.setSolver(uniCostSolver);
         }
-        if(this.searchMethod=="Greedy Search"){
+        if(this.searchMethod.equals("Greedy Search")){
             //Método de búsqueda ávara
             IEstimatedCostFunction gHeuristicFunction = new CovidHeuristic();
             GreedySearch gSearch = new GreedySearch(gHeuristicFunction);

@@ -69,27 +69,22 @@ public class CovidEnvironmentState extends EnvironmentState {
     }
 
     public void sendPerception(CovidPerception cp){
-        if(cp!=null){
-            if(cp.getNuevosEnfermos()!=null){//Si la lista de enfermos nuevos de la percepción no está vacía agrego todos los enfermos a la lista de enfermos.
-                for(SickPerson p1: cp.getNuevosEnfermos()){
-                    sickPersonsList.add(p1);
-                }
+            //Si la lista de enfermos nuevos de la percepción no está vacía agrego todos los enfermos a la lista de enfermos.
+            for(SickPerson p1: cp.getNuevosEnfermos()){
+                sickPersonsList.add(p1);
             }
-            if(cp.getCorteDeCalles()!=null){//Si la lista de cortes de calles no está vacía saco el nodoFinal de los sucesores del nodoInicial.
-                for(TramoCalle t: cp.getCorteDeCalles()){
-                    map.get(t.getInitialNode()).remove(t.getFinalNode());
-                }
+            //Si la lista de cortes de calles no está vacía saco el nodoFinal de los sucesores del nodoInicial.
+            for(TramoCalle t: cp.getCorteDeCalles()){
+                map.get(t.getInitialNode()).remove(t.getFinalNode());
             }
-            if(cp.getMovimientosEnfermos()!=null){//Si la lista de movimientos de enfermos no está vacía actualizo las posiciones de los enfermos que se movieron.
-                for(SickPerson sp: cp.getMovimientosEnfermos()){
-                    for(SickPerson pe: sickPersonsList){
-                        if(sp.getId()==pe.getId()){
-                            pe.setActualPosition(sp.getActualPosition());
-                        }
+            //Si la lista de movimientos de enfermos no está vacía actualizo las posiciones de los enfermos que se movieron.
+            for(SickPerson sp: cp.getMovimientosEnfermos()) {
+                for (SickPerson pe : sickPersonsList) {
+                    if (sp.getId() == pe.getId()) {
+                        pe.setActualPosition(sp.getActualPosition());
                     }
                 }
             }
-        }
     }
 
     @Override
