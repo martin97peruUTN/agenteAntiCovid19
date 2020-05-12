@@ -8,15 +8,18 @@ import java.util.Collection;
 import java.util.HashMap;
 
 public class CovidAgentState extends SearchBasedAgentState{
+    //Posición del Agente.
     private String position;
     private String selectedPosition;
     private ArrayList<Sensor> sensorsList = new ArrayList<Sensor>();
     private ArrayList<SickPerson> sickPersonsList = new ArrayList<SickPerson>();
     private ArrayList<Node> nodesList = new ArrayList<Node>();
     //private Boolean seeSickPerson = false; //Esto nos sirve para saber si en el nodo donde está el agente vio un enfermo
-    private Integer totalOfGoRealized = 0;
-    private Integer totalOfMulctRealized = 0;
-    private Integer totalOfSickPersonHealted = 0;
+    private Integer totalOfGoRealized = 0; //Total de go realizados.
+    private Integer totalOfMulctRealized = 0; //Total de multas realizadas.
+    private Integer totalOfSickPersonHealted = 0; //Total de personas curadas.
+
+    ArrayList<String[]> nodes;
 
     //Inicializo el mapa y la lista de posiciones visitadas.
     private HashMap<String, Collection<String>> knownMap;
@@ -31,14 +34,12 @@ public class CovidAgentState extends SearchBasedAgentState{
 
     @Override
     public void initState() {
-        position = this.selectedPosition;    //Posición inicial del agente: Nodo: 008, Calles: Pedro de Vega y Echague.
+        position = this.selectedPosition;    //Seteo la posición inicial del agente: Nodo: 008, Calles: Pedro de Vega y Echague.
 
         //Inicializo la lista de nodos.
         CSVToMatrix converter = new CSVToMatrix(';');
         String path = "mapita.csv";
-        ArrayList<String[]> nodes = converter.fileToMatrix(path);
-        path = "sucesoritos.csv";
-        ArrayList<String[]> nodesSuccesors = converter.fileToMatrix(path);
+        nodes = converter.fileToMatrix(path);
         for(int i=0;i<nodes.size();i++){
             nodesList.add(new Node(nodes.get(i)[0], nodes.get(i)[1], nodes.get(i)[2], nodes.get(i)[3]));
         }
@@ -55,54 +56,25 @@ public class CovidAgentState extends SearchBasedAgentState{
 
     }
 
-
-    public Collection<String> getSuccesors(){
-        return knownMap.get(position);
-    }
-
-    public String getPosition() {
-        return position;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
-    }
-
-    public ArrayList<Node> getNodesList() {
-        return nodesList;
-    }
-
-    public void setNodesList(ArrayList<Node> nodesList) {
-        this.nodesList = nodesList;
-    }
-
-    public HashMap<String, Collection<String>> getKnownMap() {
-        return knownMap;
-    }
-
     public void setKnownMap(HashMap<String, Collection<String>> knownMap) {
         this.knownMap = knownMap;
     }
 
-    public ArrayList<String> getVisitedPositions() {
-        return visitedPositions;
+    @Override
+    public CovidAgentState clone() {
+        CovidAgentState newState = new CovidAgentState(knownMap, sensorsList, sickPersonsList, "0");
+
+        newState.setPosition(position);
+        newState.setTotalOfGoRealized(totalOfGoRealized);
+        newState.setTotalOfMulctRealized(totalOfMulctRealized);
+        newState.setTotalOfSickPersonHealted(totalOfSickPersonHealted);
+        newState.setVisitedPositions((ArrayList<String>) visitedPositions.clone());
+        newState.setNodesList((ArrayList<Node>) nodesList.clone());
+        newState.setSensorsList((ArrayList<Sensor>) sensorsList.clone());
+        newState.setSickPersonsList((ArrayList<SickPerson>) sickPersonsList.clone());
+        //newState.setSeeSickPerson(seeSickPerson);
+        return newState;
     }
-
-    public void setVisitedPositions(ArrayList<String> visitedPositions) {
-        this.visitedPositions = visitedPositions;
-    }
-
-    public void setSickPersonsList(ArrayList<SickPerson> sickPersonsList) {
-        this.sickPersonsList = sickPersonsList;
-    }
-
-    public ArrayList<SickPerson> getSickPersonsList() {
-        return sickPersonsList;
-    }
-
-    /*public Boolean getSeeSickPerson(){return seeSickPerson;}
-
-    public void setSeeSickPerson(Boolean seeSickPerson) { this.seeSickPerson = seeSickPerson; }*/
 
     @Override
     public boolean equals(Object obj) {
@@ -134,21 +106,6 @@ public class CovidAgentState extends SearchBasedAgentState{
         //Boolean comparing = (position.equals(((CovidAgentState) obj).getPosition()) && (sickPersonsList.size() == ((CovidAgentState) obj).getSickPersonsList().size()) && boolSickPerList && boolVisitedPositions);
         //return comparing;
         return (this.position.contentEquals(auxCompare.getPosition()) && (this.getSickPersonsList().size()==auxCompare.getSickPersonsList().size()));
-    }
-
-    @Override
-    public SearchBasedAgentState clone() {
-        CovidAgentState newState = new CovidAgentState(knownMap, sensorsList, sickPersonsList, "0");
-        newState.setPosition(position);
-        newState.setTotalOfGoRealized(totalOfGoRealized);
-        newState.setTotalOfMulctRealized(totalOfMulctRealized);
-        newState.setTotalOfSickPersonHealted(totalOfSickPersonHealted);
-        newState.setVisitedPositions((ArrayList<String>) visitedPositions.clone());
-        newState.setNodesList((ArrayList<Node>) nodesList.clone());
-        newState.setSensorsList((ArrayList<Sensor>) sensorsList.clone());
-        newState.setSickPersonsList((ArrayList<SickPerson>) sickPersonsList.clone());
-        //newState.setSeeSickPerson(seeSickPerson);
-        return newState;
     }
 
     @Override
@@ -186,6 +143,50 @@ public class CovidAgentState extends SearchBasedAgentState{
             }
         }
     }
+
+    public Collection<String> getSuccesors(){
+        return knownMap.get(position);
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public ArrayList<Node> getNodesList() {
+        return nodesList;
+    }
+
+    public void setNodesList(ArrayList<Node> nodesList) {
+        this.nodesList = nodesList;
+    }
+
+    public HashMap<String, Collection<String>> getKnownMap() {
+        return knownMap;
+    }
+
+    public ArrayList<String> getVisitedPositions() {
+        return visitedPositions;
+    }
+
+    public void setVisitedPositions(ArrayList<String> visitedPositions) {
+        this.visitedPositions = visitedPositions;
+    }
+
+    public void setSickPersonsList(ArrayList<SickPerson> sickPersonsList) {
+        this.sickPersonsList = sickPersonsList;
+    }
+
+    public ArrayList<SickPerson> getSickPersonsList() {
+        return sickPersonsList;
+    }
+
+    /*public Boolean getSeeSickPerson(){return seeSickPerson;}
+
+    public void setSeeSickPerson(Boolean seeSickPerson) { this.seeSickPerson = seeSickPerson; }*/
 
     public Integer getTotalOfGoRealized() {
         return totalOfGoRealized;
