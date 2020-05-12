@@ -59,7 +59,7 @@ public class CovidPerception extends Perception {
     @Override
     public String toString() {
         String cp = "";
-        if(this.tipo=="ANE"){
+        if(this.tipo.contentEquals("ANE")){
             if(this.nodo1=="I3"){
                 cp = "Ha sido detectado un nuevo enfermo en el Sensor 1.";
             }
@@ -74,7 +74,7 @@ public class CovidPerception extends Perception {
             }
         }
 
-        if(this.tipo=="ACC"){
+        if(this.tipo.contentEquals("ACC")){
             if(Boolean.valueOf(this.estado)){
                 cp = "La calle entre los nodos " + this.nodo1 + " y " + this.nodo2 + " está cortada.";
             }
@@ -83,7 +83,7 @@ public class CovidPerception extends Perception {
             }
         }
 
-        if(this.tipo=="AEM"){
+        if(this.tipo.contentEquals("AEM")){
             cp = "El enfermo " + this.estado + " ha roto la cuarentena y se encuentra en el nodo " + this.nodo1 + ".";
         }
         return cp;

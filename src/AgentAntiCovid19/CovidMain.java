@@ -16,7 +16,6 @@ public class CovidMain {
         System.out.println("Agente ANTICOVID19");
         CovidEnvironment environment = new CovidEnvironment();
         CovidEnvironmentState environmentState = (CovidEnvironmentState) environment.getEnvironmentState();
-        System.out.println(environmentState.toString());
         CovidAgent agent = new CovidAgent(environmentState.getMap(), environmentState.getSickPersonsList(), environmentState.getSensorsList(), args[0]);
 
         SearchBasedAgentSimulator simu = new SearchBasedAgentSimulator(environment, agent);

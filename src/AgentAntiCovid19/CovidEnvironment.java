@@ -10,10 +10,9 @@ import java.util.Vector;
 
 public class CovidEnvironment extends Environment {
     private HashMap<Integer, CovidPerception> perceptionsList = new HashMap<Integer, CovidPerception>();
-    private int iteration;
+    private int iteration=0;
 
     public CovidEnvironment(){
-        this.iteration=0;
         //Creamos el estado del ambiente y se lo seteamos al ambiente.
         this.environmentState = new CovidEnvironmentState();
 
@@ -29,8 +28,7 @@ public class CovidEnvironment extends Environment {
                 perceptionsList.put(i, new CovidPerception(perceptions.get(i)[1], perceptions.get(i)[2], perceptions.get(i)[3], perceptions.get(i)[4]));
             }
             else{
-                int j=0;
-                while(j<Integer.valueOf(perceptions.get(i)[0])){
+                for(int j=0; j<Integer.parseInt((perceptions.get(i)[0]));j++, k++){
                     //En este caso agrego percepciones nulas en la lista hasta la posición k, ya que en esas iteraciones hasta no pasó nada.
                     perceptionsList.put(j,null);
                 }
