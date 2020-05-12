@@ -20,7 +20,6 @@ public class CovidMain {
         CovidEnvironmentState environmentState = (CovidEnvironmentState) environment.getEnvironmentState();
 
         CovidAgent agent = new CovidAgent(environmentState.getMap(), environmentState.getSickPersonsList(), environmentState.getSensorsList(), args[0]);
-
         SearchBasedAgentSimulator simu = new SearchBasedAgentSimulator(environment, agent);
 
         simu.start();

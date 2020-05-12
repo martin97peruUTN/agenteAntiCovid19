@@ -53,57 +53,50 @@ public class CovidAgent extends SearchBasedAgent {
 
     }
 
-
-    //Este método es usado para percibir el ambiente
-    @Override
-    public void see(Perception percepcion) {
-        this.getAgentState().updateState(percepcion);
-    }
-
     //Acá en este método se decide qué acción tomar según el método de búsqueda elegido en la interfaz
     @Override
     public Action selectAction() {
         switch(this.searchMethod) {
-            case "Depth First Search":
+            case "DepthFirstSearch":
                 //Método de búsqueda en profundidad
                 DepthFirstSearch depthFirstSearch = new DepthFirstSearch();
                 Search dfsSolver = new Search(depthFirstSearch);
-                dfsSolver.setVisibleTree(Search.XML_TREE);
+                dfsSolver.setVisibleTree(Search.EFAIA_TREE);
                 //Seteo el search solver
                 this.setSolver(dfsSolver);
             break;
-            case "Breath First Search":
+            case "BreathFirstSearch":
                 //Método de búsqueda en anchura
                 BreathFirstSearch breathFirstSearch = new BreathFirstSearch();
                 Search bfsSolver = new Search(breathFirstSearch);
-                bfsSolver.setVisibleTree(Search.XML_TREE);
+                bfsSolver.setVisibleTree(Search.EFAIA_TREE);
                 //Seteo el search solver
                 this.setSolver(bfsSolver);
             break;
-            case "A* Search":
+            case "A*Search":
                 //Método de búsqueda A*
                 IStepCostFunction aCostFunction = new CovidCostFunction();
                 IEstimatedCostFunction heuristicAStar = new CovidHeuristic();
                 AStarSearch aStarSearch = new AStarSearch(aCostFunction, heuristicAStar);
                 Search sasSolver = new Search(aStarSearch);
-                sasSolver.setVisibleTree(Search.XML_TREE);
+                sasSolver.setVisibleTree(Search.EFAIA_TREE);
                 //Seteo el search solver
                 this.setSolver(sasSolver);
-            case "Uniform Cost Search":
+            case "UniformCostSearch":
                 //Método de búsqueda de costo uniforme
                 IStepCostFunction uniCostFunction = new CovidCostFunction();
                 UniformCostSearch uniCostSearch = new UniformCostSearch(uniCostFunction);
                 Search uniCostSolver = new Search(uniCostSearch);
-                uniCostSolver.setVisibleTree(Search.XML_TREE);
+                uniCostSolver.setVisibleTree(Search.EFAIA_TREE);
                 //Seteo el search solver
                 this.setSolver(uniCostSolver);
             break;
-            case "Greedy Search":
+            case "GreedySearch":
                 //Método de búsqueda ávara
                 IEstimatedCostFunction gHeuristicFunction = new CovidHeuristic();
                 GreedySearch gSearch = new GreedySearch(gHeuristicFunction);
                 Search gsSolver = new Search(gSearch);
-                gsSolver.setVisibleTree(Search.XML_TREE);
+                gsSolver.setVisibleTree(Search.EFAIA_TREE);
                 //Seteo el search solver
                 this.setSolver(gsSolver);
             break;
@@ -122,4 +115,9 @@ public class CovidAgent extends SearchBasedAgent {
         return selectedAction;
     }
 
+    //Este método es usado para percibir el ambiente
+    @Override
+    public void see(Perception percepcion) {
+        this.getAgentState().updateState(percepcion);
+    }
 }

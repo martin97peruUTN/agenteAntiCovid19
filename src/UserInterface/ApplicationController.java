@@ -35,7 +35,7 @@ public class ApplicationController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         lblPosition.setText(position);
 
-        methodSel.setItems(FXCollections.observableArrayList("Depth First Search", "Breath First Search", "A* Search", "Uniform Cost Search", "Greedy Search"));
+        methodSel.setItems(FXCollections.observableArrayList("DepthFirstSearch", "BreathFirstSearch", "A*Search", "UniformCostSearch", "GreedySearch"));
 
         methodSel.getSelectionModel().selectedItemProperty().addListener(new ChangeListener() {
             @Override
