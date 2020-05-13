@@ -4,6 +4,7 @@ import AgentAntiCovid19.CovidAgentState;
 import AgentAntiCovid19.CovidEnvironmentState;
 import AgentAntiCovid19.SickPerson;
 import frsf.cidisi.faia.agent.search.SearchAction;
+import frsf.cidisi.faia.agent.search.SearchBasedAgent;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
@@ -20,18 +21,16 @@ public class MulctSickPerson extends SearchAction {
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
         CovidAgentState covidAgentState = (CovidAgentState) s;
         String position = covidAgentState.getPosition();
-        for(SickPerson p: covidAgentState.getSickPersonsList()){
+        for(SickPerson p: covidAgentState.getNewSickPersonsList()){
             if(p.getActualPosition().equals(position) && !p.getActualPosition().equals(p.getHomePosition())){
                 //covidAgentState.setSeeSickPerson(false); //acá actualiza que el enfermo ya no está en ese nodo
-                idSickPerson = p.getId();
-                int multita = p.getCantMultas();
-                if((multita+1)>3){
-                    covidAgentState.getSickPersonsList().remove(p);
+                if((p.getCantMultas()+1)>3){
+                    covidAgentState.getNewSickPersonsList().remove(p);
                     covidAgentState.setTotalOfSickPersonHealted(covidAgentState.getTotalOfSickPersonHealted()+1);
                 }
                 else {
                     p.setActualPosition(p.getHomePosition());
-                    p.setCantMultas(multita + 1);
+                    p.setCantMultas(p.getCantMultas() + 1);
                 }
                 return covidAgentState;
             }
@@ -41,39 +40,7 @@ public class MulctSickPerson extends SearchAction {
 
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
-        CovidAgentState covidAgentState = (CovidAgentState) ast;
-        CovidEnvironmentState covidEnvironmentState = (CovidEnvironmentState) est;
-        String position = ((CovidEnvironmentState) est).getAgentPosition();
-        for(SickPerson p: covidEnvironmentState.getSickPersonsList()){
-            if(p.getActualPosition().equals(position) && !p.getActualPosition().equals(p.getHomePosition())){
-                //covidAgentState.setSeeSickPerson(false); //acá actualiza que el enfermo está en ese nodo
-                idSickPerson = p.getId();
-                int multita = p.getCantMultas();
-                //Actualizo el estado del ambiente.
-                if((multita+1)>3){
-                    covidEnvironmentState.getSickPersonsList().remove(p);
-                }
-                else{
-                    p.setActualPosition(p.getHomePosition());
-                    p.setCantMultas(p.getCantMultas() + 1);
-                }
-                //Actualizo el estado del agente.
-                for(SickPerson sp: covidAgentState.getSickPersonsList()){
-                    if (sp.equals(p)){
-                        int multita2 = sp.getCantMultas();
-                        if((multita2+1)>3) {
-                            covidEnvironmentState.getSickPersonsList().remove(p);
-                            covidAgentState.setTotalOfSickPersonHealted(covidAgentState.getTotalOfSickPersonHealted()+1);
-                        }
-                        else{
-                            sp.setActualPosition(sp.getHomePosition());
-                            sp.setCantMultas(multita2 + 1);
-                        }
-                        return covidEnvironmentState;
-                    }
-                }
-            }
-        }
+        this.execute((SearchBasedAgentState) ast);
         return null;
     }
 

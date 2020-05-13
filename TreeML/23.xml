@@ -1,0 +1,5 @@
+<tree id="23" edgedefault="directed">
+<node Id="0" Action="null" Cost="0.0" Estado_Agente="Nodo: 001 Enfermos: {id:1,actualPos:019,homePos:020,cantMultas:1}{id:2,actualPos:001,homePos:002,cantMultas:1}{id:3,actualPos:008,homePos:009,cantMultas:1}{id:4,actualPos:036,homePos:037,cantMultas:1}"/>
+<node Id="1" Action="Go 001" Cost="-1.0" Estado_Agente="Nodo: 001 Enfermos: {id:1,actualPos:019,homePos:020,cantMultas:1}{id:2,actualPos:001,homePos:002,cantMultas:1}{id:3,actualPos:008,homePos:009,cantMultas:1}{id:4,actualPos:036,homePos:037,cantMultas:1}"/>
+<edge source="0" target="1"/>
+</tree>

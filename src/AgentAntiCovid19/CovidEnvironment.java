@@ -9,44 +9,40 @@ import java.util.Random;
 import java.util.Vector;
 
 public class CovidEnvironment extends Environment {
-    private HashMap<Integer, CovidPerception> perceptionsList = new HashMap<Integer, CovidPerception>();
-    private int iteration=0;
 
     public CovidEnvironment(){
         //Creamos el estado del ambiente y se lo seteamos al ambiente.
         this.environmentState = new CovidEnvironmentState();
-
-        //Inicializamos la lista de percepciones tomadas del archivo.
-        CSVToMatrix converter;
-        String path = "PERCEPCIONES.csv";
-        converter = new CSVToMatrix(';');
-        ArrayList<String[]> perceptions = converter.fileToMatrix(path);
-
-        for(int i=0,k=0;i<perceptions.size();i++,k=0){
-            if(Integer.valueOf(perceptions.get(i)[0])==i){ //Solo agrego una percepción a la lista de percepciones si la iteración es la misma que el índice de la percepción.
-                //Sino no pasa nada en esa iteración.
-                perceptionsList.put(i, new CovidPerception(perceptions.get(i)[1], perceptions.get(i)[2], perceptions.get(i)[3], perceptions.get(i)[4]));
-            }
-            else{
-                for(int j=0; j<Integer.parseInt((perceptions.get(i)[0]));j++, k++){
-                    //En este caso agrego percepciones nulas en la lista hasta la posición k, ya que en esas iteraciones hasta no pasó nada.
-                    perceptionsList.put(j,null);
-                }
-                perceptionsList.put(k, new CovidPerception(perceptions.get(i)[1], perceptions.get(i)[2], perceptions.get(i)[3], perceptions.get(i)[4]));
-            }
-        }
     }
 
     @Override
     public Perception getPercept() {
         //Mandamos una percepción de la lista de  por cada iteración.
-        iteration++;
-        CovidPerception actualPerception = perceptionsList.get(iteration);
-        if (actualPerception!=null){
-            ((CovidEnvironmentState)this.getEnvironmentState()).sendPerception(actualPerception);
-            return actualPerception;
+       CovidPerception p = new CovidPerception();
+       p.setCallesCortadas(this.getCallesCortadas());
+       p.setEnfermosNuevos(this.getEnfermosNuevos());
+
+       return p;
+    }
+
+    //CREAR METODOS PARA DEVOLVER ENFERMOS NUEVOS Y CALLES CORTADAS;
+
+    public ArrayList<TramoCalle> getCallesCortadas (){
+        ArrayList<TramoCalle> callesCortadas = new ArrayList<TramoCalle>();
+        return callesCortadas;
+    }
+
+    public ArrayList<SickPerson> getEnfermosNuevos (){
+        ArrayList<SickPerson> enfermosNuevos = new ArrayList<SickPerson>();
+        //Inicializar lista de enfermos con el archivo ENFERMOS.csv
+
+        String path = "enfermitos.csv";
+        CSVToMatrix converter = new CSVToMatrix(';');
+        ArrayList<String[]> sickPersons = converter.fileToMatrix(path);
+        for(int i=0;i<sickPersons.size();i++){
+           enfermosNuevos.add(new SickPerson(Integer.valueOf(sickPersons.get(i)[0]), sickPersons.get(i)[1], sickPersons.get(i)[2], sickPersons.get(i)[3]));
         }
-        return null;
+        return enfermosNuevos;
     }
 
     @Override

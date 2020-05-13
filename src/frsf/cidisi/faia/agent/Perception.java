@@ -17,7 +17,10 @@
  */
 package frsf.cidisi.faia.agent;
 
+import AgentAntiCovid19.SickPerson;
 import frsf.cidisi.faia.environment.Environment;
+
+import java.util.ArrayList;
 
 /**
  * This class is used to inform the agent about perceptions of the
@@ -33,4 +36,5 @@ public abstract class Perception {
     }
 
     public abstract void initPerception(Agent agent, Environment environment);
+
 }

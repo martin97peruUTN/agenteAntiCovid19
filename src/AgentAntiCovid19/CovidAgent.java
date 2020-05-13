@@ -19,7 +19,7 @@ public class CovidAgent extends SearchBasedAgent {
     private String searchMethod;
 
     //Constructor
-    public CovidAgent(HashMap<String, Collection<String>> map, ArrayList<SickPerson> sickPersonsList, ArrayList<Sensor> sensorslist, String searchMethod){
+    public CovidAgent(String searchMethod){
         // Inicializo el método de búsqueda elegido.
         this.searchMethod = searchMethod;
 
@@ -27,8 +27,7 @@ public class CovidAgent extends SearchBasedAgent {
         CovidGoal goal = new CovidGoal();
 
         // Inicializo el estado del agente.
-        CovidAgentState agentState = new CovidAgentState(map,sensorslist, sickPersonsList,"008");
-        agentState.initState();
+        CovidAgentState agentState = new CovidAgentState();
         this.setAgentState(agentState);
 
         // Inicializo las acciones del agente.
@@ -51,6 +50,13 @@ public class CovidAgent extends SearchBasedAgent {
         Problem problem = new Problem(goal, agentState, actions);
         this.setProblem(problem);
 
+    }
+
+
+    //Este método es usado para percibir el ambiente
+    @Override
+    public void see(Perception percepcion) {
+        this.getAgentState().updateState(percepcion);
     }
 
     //Acá en este método se decide qué acción tomar según el método de búsqueda elegido en la interfaz
@@ -115,9 +121,4 @@ public class CovidAgent extends SearchBasedAgent {
         return selectedAction;
     }
 
-    //Este método es usado para percibir el ambiente
-    @Override
-    public void see(Perception percepcion) {
-        this.getAgentState().updateState(percepcion);
-    }
 }
