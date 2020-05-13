@@ -30,15 +30,15 @@ public class CovidAgentState extends SearchBasedAgentState{
 
     @Override
     public void initState() {
-        position = "008";    //Posición inicial del agente: Nodo: 008, Calles: Pedro de Vega y Echague.
+        position = "A8";    //Posición inicial del agente: Nodo: 008, Calles: Pedro de Vega y Echague.
 
         knownMap = new HashMap<String, Collection<String>>();
 
         //Inicializo la lista de nodos.
         CSVToMatrix converter = new CSVToMatrix(';');
-        String path = "mapita.csv";
+        String path = "mapita2.csv";
         ArrayList<String[]> nodes = converter.fileToMatrix(path);
-        path = "sucesoritos.csv";
+        path = "sucesoritos2.csv";
         ArrayList<String[]> nodesSuccesors = converter.fileToMatrix(path);
         //Inicializar mapa con los nodos del archivo NODOS-Mapa.csv
         for(int i=0;i<nodes.size();i++){

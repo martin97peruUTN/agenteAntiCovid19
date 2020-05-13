@@ -8,7 +8,7 @@ public class CovidGoal extends GoalTest {
 
     @Override
     public boolean isGoalState(AgentState agentState) {
-        if(((CovidAgentState)agentState).getPosition().equals("001")){
+        if(((CovidAgentState)agentState).getPosition().equals("A1")){
             return true;
         }
         return false;
