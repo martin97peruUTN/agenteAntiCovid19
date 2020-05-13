@@ -31,7 +31,7 @@ public class MulctSickPerson extends SearchAction {
                 }
                 else {
                     p.setActualPosition(p.getHomePosition());
-                    p.setCantMultas(p.getCantMultas() + 1);
+                    p.setCantMultas(multita + 1);
                 }
                 return covidAgentState;
             }
@@ -55,8 +55,7 @@ public class MulctSickPerson extends SearchAction {
                 }
                 else{
                     p.setActualPosition(p.getHomePosition());
-                    p.setCantMultas(p.getCantMultas() +1 );
-                    p.setCantMultas(p.getCantMultas()+1);
+                    p.setCantMultas(p.getCantMultas() + 1);
                 }
                 //Actualizo el estado del agente.
                 for(SickPerson sp: covidAgentState.getSickPersonsList()){
@@ -68,7 +67,7 @@ public class MulctSickPerson extends SearchAction {
                         }
                         else{
                             sp.setActualPosition(sp.getHomePosition());
-                            sp.setCantMultas(sp.getCantMultas() + 1);
+                            sp.setCantMultas(multita2 + 1);
                         }
                         return covidEnvironmentState;
                     }

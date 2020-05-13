@@ -77,28 +77,28 @@ public class CovidAgentState extends SearchBasedAgentState{
         CovidAgentState auxCompare = (CovidAgentState) obj;
         Boolean boolSickPerList = sickPersonsList.equals(auxCompare.getSickPersonsList());
         Boolean boolVisitedPositions = visitedPositions.equals(auxCompare.getVisitedPositions());
-        /* Hecho con for comparando elemento por elemento
+        //Hecho con for comparando elemento por elemento
         for(int i=0;i<sickPersonsList.size();i++){
             Boolean boolSickPerLis2;
-            if(sickPersonsList.get(i).equals(auxCompare.getSickPersonList().get(i))){
+            if(sickPersonsList.get(i).equals(auxCompare.getSickPersonsList().get(i))){
                 boolSickPerLis2=true;
             }else{
                 boolSickPerLis2 =false;
                 break;
             }
-        }*/
-        /*for(int i=0;i<visitedPositions.size();i++){
+        }
+        for(int i=0;i<visitedPositions.size();i++){
             Boolean boolvisitedposition2;
-            if(sickPersonsList.get(i).equals(auxCompare.getSickPersonList().get(i))){
+            if(sickPersonsList.get(i).equals(auxCompare.getSickPersonsList().get(i))){
                 boolvisitedposition2=true;
             }else{
                 boolvisitedposition2 =false;
                 break;
             }
-        }*/
-        //Boolean comparing = (position.equals(((CovidAgentState) obj).getPosition()) && (sickPersonsList.size() == ((CovidAgentState) obj).getSickPersonsList().size()) && boolSickPerList && boolVisitedPositions);
-        //return comparing;
-        return (this.position.contentEquals(auxCompare.getPosition()) && (this.getSickPersonsList().size()==auxCompare.getSickPersonsList().size()));
+        }
+        Boolean comparing = (position.equals(((CovidAgentState) obj).getPosition()) && (sickPersonsList.size() == ((CovidAgentState) obj).getSickPersonsList().size()) && boolSickPerList && boolVisitedPositions);
+        return comparing;
+        //return (this.position.contentEquals(auxCompare.getPosition()) && (this.getSickPersonsList().size()==auxCompare.getSickPersonsList().size()));
     }
 
     @Override
