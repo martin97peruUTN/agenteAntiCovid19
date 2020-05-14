@@ -3,6 +3,7 @@ package AgentAntiCovid19;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.environment.Environment;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
@@ -21,6 +22,7 @@ public class CovidEnvironment extends Environment {
        CovidPerception p = new CovidPerception();
        p.setCallesCortadas(this.getCallesCortadas());
        p.setEnfermosNuevos(this.getEnfermosNuevos());
+       p.setEnfermosQueSeMovieron(this.getEnfermosQueSeMovieron());
 
        return p;
     }
@@ -43,6 +45,17 @@ public class CovidEnvironment extends Environment {
            enfermosNuevos.add(new SickPerson(Integer.valueOf(sickPersons.get(i)[0]), sickPersons.get(i)[1], sickPersons.get(i)[2], sickPersons.get(i)[3]));
         }
         return enfermosNuevos;
+    }
+
+    public ArrayList<SickPerson> getEnfermosQueSeMovieron(){
+        ArrayList<SickPerson> enfermosQueSeMovieron = new ArrayList<SickPerson>();
+        String path = "enfermitosMovidos.csv";
+        CSVToMatrix converter = new CSVToMatrix(';');
+        ArrayList<String[]> sickPersonsMove = converter.fileToMatrix(path);
+        for(int i=0;i<sickPersonsMove.size();i++){
+            enfermosQueSeMovieron.add(new SickPerson(Integer.valueOf(sickPersonsMove.get(i)[0]), sickPersonsMove.get(i)[1], sickPersonsMove.get(i)[2], sickPersonsMove.get(i)[3]));
+        }
+        return enfermosQueSeMovieron;
     }
 
     @Override

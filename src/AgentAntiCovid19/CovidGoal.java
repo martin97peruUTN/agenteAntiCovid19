@@ -14,10 +14,7 @@ public class CovidGoal extends GoalTest {
                 b=false;
             }
         }
-        if(((CovidAgentState)agentState).getNewSickPersonsList().isEmpty()){
-            return b;
-        }
-        return false;
+        return b;
     }
 
 }

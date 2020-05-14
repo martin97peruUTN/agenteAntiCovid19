@@ -20,7 +20,6 @@ public class CovidMain {
 
         SearchBasedAgentSimulator simu = new SearchBasedAgentSimulator(environment, agent);
 
-        System.out.println(environment.toString());
         simu.start();
 
         ArrayList<String> visitedNodes = ((CovidAgentState)agent.getAgentState()).getVisitedPositions();

@@ -12,6 +12,7 @@ public class CovidAgentState extends SearchBasedAgentState{
     private String position;
     private ArrayList<SickPerson> newSickPersonsList = new ArrayList<SickPerson>();
     private ArrayList<TramoCalle> cutStreetsList = new ArrayList<TramoCalle>();
+    private ArrayList<SickPerson> sickPersonsMoveList = new ArrayList<SickPerson>();
 
 
 
@@ -36,9 +37,9 @@ public class CovidAgentState extends SearchBasedAgentState{
 
         //Inicializo la lista de nodos.
         CSVToMatrix converter = new CSVToMatrix(';');
-        String path = "mapita2.csv";
+        String path = "NODOS-Mapa.csv";
         ArrayList<String[]> nodes = converter.fileToMatrix(path);
-        path = "sucesoritos2.csv";
+        path = "NODOS-Sucesores.csv";
         ArrayList<String[]> nodesSuccesors = converter.fileToMatrix(path);
         //Inicializar mapa con los nodos del archivo NODOS-Mapa.csv
         for(int i=0;i<nodes.size();i++){
@@ -105,6 +106,14 @@ public class CovidAgentState extends SearchBasedAgentState{
         this.cutStreetsList = cutStreetsList;
     }
 
+    public ArrayList<SickPerson> getSickPersonsMoveList() {
+        return sickPersonsMoveList;
+    }
+
+    public void setSickPersonsMoveList(ArrayList<SickPerson> sickPersonsMoveList) {
+        this.sickPersonsMoveList = sickPersonsMoveList;
+    }
+
     /*public Boolean getSeeSickPerson(){return seeSickPerson;}
 
     public void setSeeSickPerson(Boolean seeSickPerson) { this.seeSickPerson = seeSickPerson; }*/
@@ -132,23 +141,41 @@ public class CovidAgentState extends SearchBasedAgentState{
         newState.setTotalOfMulctRealized(totalOfMulctRealized);
         newState.setTotalOfSickPersonHealted(totalOfSickPersonHealted);
 
-        ArrayList<SickPerson> clonenewSickPersonList = (ArrayList<SickPerson>) newSickPersonsList.clone();
+        ArrayList<SickPerson> cloneNewSickPersonList = (ArrayList<SickPerson>) newSickPersonsList.clone();
         ArrayList<TramoCalle> clonecutStreetList = (ArrayList<TramoCalle>) cutStreetsList.clone();
+        ArrayList<SickPerson> cloneSickPersonMoveList = (ArrayList<SickPerson>) sickPersonsMoveList.clone();
         ArrayList<String> cloneVisitedPositions = (ArrayList<String>) visitedPositions.clone();
 
-        newState.setNewSickPersonsList(clonenewSickPersonList);
+        newState.setNewSickPersonsList(cloneNewSickPersonList);
         newState.setCutStreetsList(clonecutStreetList);
+        newState.setSickPersonsMoveList(cloneSickPersonMoveList);
         newState.setVisitedPositions(cloneVisitedPositions);
         //newState.setSeeSickPerson(seeSickPerson);
         return newState;
     }
 
     @Override
-    public void updateState(Perception p) { //Tengo que agarrar la percepción que paso
+    public void updateState(Perception p) { //Tengo que agarrar la percepción que paso y setearla.
         visitedPositions.add(position);
         CovidPerception cp = (CovidPerception) p;
         this.newSickPersonsList = cp.getEnfermosNuevos();
         this.cutStreetsList = cp.getCallesCortadas();
+        this.sickPersonsMoveList = cp.getEnfermosQueSeMovieron();
+
+        if(!this.cutStreetsList.isEmpty()){
+            for(TramoCalle tc: cutStreetsList){
+                knownMap.get(tc.getInitialNode()).remove(tc.getFinalNode());
+            }
+        }
+        if(!this.sickPersonsMoveList.isEmpty()){
+            for(SickPerson sp: sickPersonsMoveList){
+                for(SickPerson spn: newSickPersonsList){
+                    if(sp.getId().equals(spn.getId())){
+                        spn.setActualPosition(sp.getActualPosition());
+                    }
+                }
+            }
+        }
     }
 
     public Integer getTotalOfGoRealized() {

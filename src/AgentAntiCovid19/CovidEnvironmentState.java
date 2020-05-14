@@ -20,10 +20,10 @@ public class CovidEnvironmentState extends EnvironmentState {
     @Override
     public void initState() {
         CSVToMatrix converter;
-        String path = "mapita2.csv";
+        String path = "NODOS-Mapa.csv";
         converter = new CSVToMatrix(';');
         ArrayList<String[]> nodes = converter.fileToMatrix(path);
-        path = "sucesoritos2.csv";
+        path = "NODOS-Sucesores.csv";
         ArrayList<String[]>  nodesSuccesors = converter.fileToMatrix(path);
 
         map = new HashMap<String, Collection<String>>();

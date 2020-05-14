@@ -23,14 +23,17 @@ public class MulctSickPerson extends SearchAction {
         String position = covidAgentState.getPosition();
         for(SickPerson p: covidAgentState.getNewSickPersonsList()){
             if(p.getActualPosition().equals(position) && !p.getActualPosition().equals(p.getHomePosition())){
+                this.idSickPerson=p.getId();
                 //covidAgentState.setSeeSickPerson(false); //acá actualiza que el enfermo ya no está en ese nodo
                 if((p.getCantMultas()+1)>3){
                     covidAgentState.getNewSickPersonsList().remove(p);
+                    covidAgentState.setTotalOfMulctRealized(covidAgentState.getTotalOfMulctRealized()+1);
                     covidAgentState.setTotalOfSickPersonHealted(covidAgentState.getTotalOfSickPersonHealted()+1);
                 }
-                else {
+                if((p.getCantMultas()+1)<=3) {
                     p.setActualPosition(p.getHomePosition());
-                    p.setCantMultas(p.getCantMultas() + 1);
+                    covidAgentState.setTotalOfMulctRealized(covidAgentState.getTotalOfMulctRealized()+1);
+                    p.setCantMultas(p.getCantMultas()+1);
                 }
                 return covidAgentState;
             }
@@ -52,6 +55,6 @@ public class MulctSickPerson extends SearchAction {
 
     @Override
     public String toString() {
-        return "Multar persona: " + idSickPerson;
+        return "Multar al enfermo " + idSickPerson;
     }
 }

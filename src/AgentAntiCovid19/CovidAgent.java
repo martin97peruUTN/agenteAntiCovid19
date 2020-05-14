@@ -35,7 +35,7 @@ public class CovidAgent extends SearchBasedAgent {
 
         // Cargo las acciones Go del archivo NODOS-Mapa.csv
         CSVToMatrix converter;
-        String path = "mapita2.csv";
+        String path = "NODOS-Mapa.csv";
         converter = new CSVToMatrix(';');
         ArrayList<String[]> nodes = converter.fileToMatrix(path);
 
