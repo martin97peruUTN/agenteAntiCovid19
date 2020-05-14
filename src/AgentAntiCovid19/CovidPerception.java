@@ -22,7 +22,6 @@ public class CovidPerception extends Perception {
         CovidAgent covidAgent = (CovidAgent) agent;
         CovidEnvironment covidEnvironment = (CovidEnvironment) environment;
         CovidEnvironmentState covidEnvironmentState = (CovidEnvironmentState) environment.getEnvironmentState();
-
         this.callesCortadas.addAll(covidEnvironment.getCallesCortadas());
         this.enfermosNuevos.addAll(covidEnvironment.getEnfermosNuevos());
         this.enfermosQueSeMovieron.addAll(covidEnvironment.getEnfermosQueSeMovieron());

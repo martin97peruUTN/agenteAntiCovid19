@@ -1,0 +1,1613 @@
+<tree id="4" edgedefault="directed">
+<node Id="0" Action="null" Cost="0.0" Estado_Agente="Nodo: A3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="1" Action="Go A3" Cost="1.0" Estado_Agente="Nodo: A3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="2" Action="Go B3" Cost="2.0" Estado_Agente="Nodo: B3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="3" Action="Go B4" Cost="3.0" Estado_Agente="Nodo: B4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="4" Action="Go C3" Cost="3.0" Estado_Agente="Nodo: C3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="5" Action="Go B5" Cost="4.0" Estado_Agente="Nodo: B5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="9" Action="Go B6" Cost="5.0" Estado_Agente="Nodo: B6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="10" Action="Go C5" Cost="5.0" Estado_Agente="Nodo: C5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="18" Action="Go A6" Cost="6.0" Estado_Agente="Nodo: A6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="19" Action="Go B7" Cost="6.0" Estado_Agente="Nodo: B7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="36" Action="Go A5" Cost="7.0" Estado_Agente="Nodo: A5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="37" Action="Go B8" Cost="7.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="38" Action="Go C7" Cost="7.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="67" Action="Go A8" Cost="8.0" Estado_Agente="Nodo: A8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="68" Action="Go B9" Cost="8.0" Estado_Agente="Nodo: B9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="121" Action="Go A7" Cost="9.0" Estado_Agente="Nodo: A7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="212" Action="Go A6" Cost="10.0" Estado_Agente="Nodo: A6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="378" Action="Go A5" Cost="11.0" Estado_Agente="Nodo: A5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="122" Action="Go A9" Cost="9.0" Estado_Agente="Nodo: A9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="123" Action="Go C10" Cost="9.0" Estado_Agente="Nodo: C10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="213" Action="Go A8" Cost="10.0" Estado_Agente="Nodo: A8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="379" Action="Go A7" Cost="11.0" Estado_Agente="Nodo: A7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="647" Action="Go A6" Cost="12.0" Estado_Agente="Nodo: A6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="214" Action="Go C9" Cost="10.0" Estado_Agente="Nodo: C9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="215" Action="Go D11" Cost="10.0" Estado_Agente="Nodo: D11 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="380" Action="Go C8" Cost="11.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="381" Action="Go D9" Cost="11.0" Estado_Agente="Nodo: D9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="648" Action="Go C7" Cost="12.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="649" Action="Go D10" Cost="12.0" Estado_Agente="Nodo: D10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="650" Action="Go F9" Cost="12.0" Estado_Agente="Nodo: F9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="382" Action="Go F11" Cost="11.0" Estado_Agente="Nodo: F11 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="651" Action="Go F10" Cost="12.0" Estado_Agente="Nodo: F10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="652" Action="Go FG" Cost="12.0" Estado_Agente="Nodo: FG Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="69" Action="Go C6" Cost="8.0" Estado_Agente="Nodo: C6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="70" Action="Go C8" Cost="8.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="71" Action="Go D7" Cost="8.0" Estado_Agente="Nodo: D7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="124" Action="Go C5" Cost="9.0" Estado_Agente="Nodo: C5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="216" Action="Go C4" Cost="10.0" Estado_Agente="Nodo: C4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="217" Action="Go D5" Cost="10.0" Estado_Agente="Nodo: D5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="383" Action="Go C3" Cost="11.0" Estado_Agente="Nodo: C3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="653" Action="Go C2" Cost="12.0" Estado_Agente="Nodo: C2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="654" Action="Go D3" Cost="12.0" Estado_Agente="Nodo: D3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="384" Action="Go D6" Cost="11.0" Estado_Agente="Nodo: D6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="385" Action="Go E5" Cost="11.0" Estado_Agente="Nodo: E5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="655" Action="Go D7" Cost="12.0" Estado_Agente="Nodo: D7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="656" Action="Go E4" Cost="12.0" Estado_Agente="Nodo: E4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="657" Action="Go F5" Cost="12.0" Estado_Agente="Nodo: F5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="125" Action="Go B8" Cost="9.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="126" Action="Go C9" Cost="9.0" Estado_Agente="Nodo: C9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="218" Action="Go A8" Cost="10.0" Estado_Agente="Nodo: A8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="219" Action="Go B9" Cost="10.0" Estado_Agente="Nodo: B9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="386" Action="Go A7" Cost="11.0" Estado_Agente="Nodo: A7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="658" Action="Go A6" Cost="12.0" Estado_Agente="Nodo: A6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="387" Action="Go A9" Cost="11.0" Estado_Agente="Nodo: A9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="388" Action="Go C10" Cost="11.0" Estado_Agente="Nodo: C10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="659" Action="Go A8" Cost="12.0" Estado_Agente="Nodo: A8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="660" Action="Go C9" Cost="12.0" Estado_Agente="Nodo: C9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="661" Action="Go D11" Cost="12.0" Estado_Agente="Nodo: D11 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="220" Action="Go C10" Cost="10.0" Estado_Agente="Nodo: C10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="221" Action="Go D9" Cost="10.0" Estado_Agente="Nodo: D9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="389" Action="Go B9" Cost="11.0" Estado_Agente="Nodo: B9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="390" Action="Go D11" Cost="11.0" Estado_Agente="Nodo: D11 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="662" Action="Go A9" Cost="12.0" Estado_Agente="Nodo: A9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="663" Action="Go F11" Cost="12.0" Estado_Agente="Nodo: F11 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="391" Action="Go D10" Cost="11.0" Estado_Agente="Nodo: D10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="392" Action="Go F9" Cost="11.0" Estado_Agente="Nodo: F9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="664" Action="Go D11" Cost="12.0" Estado_Agente="Nodo: D11 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="665" Action="Go F8" Cost="12.0" Estado_Agente="Nodo: F8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="666" Action="Go G9" Cost="12.0" Estado_Agente="Nodo: G9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="127" Action="Go D8" Cost="9.0" Estado_Agente="Nodo: D8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="128" Action="Go E7" Cost="9.0" Estado_Agente="Nodo: E7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="222" Action="Go C8" Cost="10.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="223" Action="Go D9" Cost="10.0" Estado_Agente="Nodo: D9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="393" Action="Go B8" Cost="11.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="394" Action="Go C9" Cost="11.0" Estado_Agente="Nodo: C9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="667" Action="Go A8" Cost="12.0" Estado_Agente="Nodo: A8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="668" Action="Go B9" Cost="12.0" Estado_Agente="Nodo: B9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="669" Action="Go C10" Cost="12.0" Estado_Agente="Nodo: C10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="670" Action="Go D9" Cost="12.0" Estado_Agente="Nodo: D9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="395" Action="Go D10" Cost="11.0" Estado_Agente="Nodo: D10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="396" Action="Go F9" Cost="11.0" Estado_Agente="Nodo: F9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="671" Action="Go D11" Cost="12.0" Estado_Agente="Nodo: D11 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="672" Action="Go F8" Cost="12.0" Estado_Agente="Nodo: F8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="673" Action="Go G9" Cost="12.0" Estado_Agente="Nodo: G9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="224" Action="Go E6" Cost="10.0" Estado_Agente="Nodo: E6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="225" Action="Go E8" Cost="10.0" Estado_Agente="Nodo: E8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="226" Action="Go F7" Cost="10.0" Estado_Agente="Nodo: F7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="397" Action="Go D6" Cost="11.0" Estado_Agente="Nodo: D6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="674" Action="Go C6" Cost="12.0" Estado_Agente="Nodo: C6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="398" Action="Go D8" Cost="11.0" Estado_Agente="Nodo: D8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="675" Action="Go C8" Cost="12.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="676" Action="Go D9" Cost="12.0" Estado_Agente="Nodo: D9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="399" Action="Go F6" Cost="11.0" Estado_Agente="Nodo: F6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="400" Action="Go G7" Cost="11.0" Estado_Agente="Nodo: G7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="677" Action="Go E6" Cost="12.0" Estado_Agente="Nodo: E6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="678" Action="Go F5" Cost="12.0" Estado_Agente="Nodo: F5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="679" Action="Go G8" Cost="12.0" Estado_Agente="Nodo: G8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="680" Action="Go H7" Cost="12.0" Estado_Agente="Nodo: H7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="20" Action="Go C4" Cost="6.0" Estado_Agente="Nodo: C4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="21" Action="Go C6" Cost="6.0" Estado_Agente="Nodo: C6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="22" Action="Go D5" Cost="6.0" Estado_Agente="Nodo: D5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="39" Action="Go C3" Cost="7.0" Estado_Agente="Nodo: C3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="72" Action="Go C2" Cost="8.0" Estado_Agente="Nodo: C2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="73" Action="Go D3" Cost="8.0" Estado_Agente="Nodo: D3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="129" Action="Go B2" Cost="9.0" Estado_Agente="Nodo: B2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="130" Action="Go C1" Cost="9.0" Estado_Agente="Nodo: C1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="131" Action="Multar enfermo." Cost="9.0" Estado_Agente="Nodo: C2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="227" Action="Go A2" Cost="10.0" Estado_Agente="Nodo: A2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="401" Action="Go A1" Cost="11.0" Estado_Agente="Nodo: A1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="681" Action="Go B1" Cost="12.0" Estado_Agente="Nodo: B1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="228" Action="Go B1" Cost="10.0" Estado_Agente="Nodo: B1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="229" Action="Go F2" Cost="10.0" Estado_Agente="Nodo: F2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="402" Action="Go A1" Cost="11.0" Estado_Agente="Nodo: A1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="403" Action="Go B2" Cost="11.0" Estado_Agente="Nodo: B2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="682" Action="Go A2" Cost="12.0" Estado_Agente="Nodo: A2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="404" Action="Go G2" Cost="11.0" Estado_Agente="Nodo: G2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="683" Action="Go G3" Cost="12.0" Estado_Agente="Nodo: G3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="684" Action="Go H2" Cost="12.0" Estado_Agente="Nodo: H2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="230" Action="Go B2" Cost="10.0" Estado_Agente="Nodo: B2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="231" Action="Go C1" Cost="10.0" Estado_Agente="Nodo: C1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="232" Action="Go C3" Cost="10.0" Estado_Agente="Nodo: C3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="405" Action="Go A2" Cost="11.0" Estado_Agente="Nodo: A2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="685" Action="Go A1" Cost="12.0" Estado_Agente="Nodo: A1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="406" Action="Go B1" Cost="11.0" Estado_Agente="Nodo: B1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="407" Action="Go F2" Cost="11.0" Estado_Agente="Nodo: F2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="686" Action="Go A1" Cost="12.0" Estado_Agente="Nodo: A1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="687" Action="Go B2" Cost="12.0" Estado_Agente="Nodo: B2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="688" Action="Go G2" Cost="12.0" Estado_Agente="Nodo: G2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="408" Action="Go C4" Cost="11.0" Estado_Agente="Nodo: C4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="409" Action="Go D3" Cost="11.0" Estado_Agente="Nodo: D3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="689" Action="Go B4" Cost="12.0" Estado_Agente="Nodo: B4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="690" Action="Go C5" Cost="12.0" Estado_Agente="Nodo: C5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="691" Action="Go D4" Cost="12.0" Estado_Agente="Nodo: D4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="692" Action="Go F3" Cost="12.0" Estado_Agente="Nodo: F3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="132" Action="Go D4" Cost="9.0" Estado_Agente="Nodo: D4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="133" Action="Go F3" Cost="9.0" Estado_Agente="Nodo: F3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="233" Action="Go D5" Cost="10.0" Estado_Agente="Nodo: D5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="410" Action="Go D6" Cost="11.0" Estado_Agente="Nodo: D6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="411" Action="Go E5" Cost="11.0" Estado_Agente="Nodo: E5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="693" Action="Go C6" Cost="12.0" Estado_Agente="Nodo: C6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="694" Action="Go D7" Cost="12.0" Estado_Agente="Nodo: D7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="695" Action="Go E4" Cost="12.0" Estado_Agente="Nodo: E4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="696" Action="Go F5" Cost="12.0" Estado_Agente="Nodo: F5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="234" Action="Go F2" Cost="10.0" Estado_Agente="Nodo: F2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="235" Action="Go G3" Cost="10.0" Estado_Agente="Nodo: G3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="412" Action="Go C1" Cost="11.0" Estado_Agente="Nodo: C1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="413" Action="Go G2" Cost="11.0" Estado_Agente="Nodo: G2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="697" Action="Go B1" Cost="12.0" Estado_Agente="Nodo: B1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="698" Action="Go C2" Cost="12.0" Estado_Agente="Nodo: C2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="699" Action="Go G3" Cost="12.0" Estado_Agente="Nodo: G3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="700" Action="Go H2" Cost="12.0" Estado_Agente="Nodo: H2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="414" Action="Go G4" Cost="11.0" Estado_Agente="Nodo: G4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="415" Action="Go H3" Cost="11.0" Estado_Agente="Nodo: H3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="701" Action="Go F4" Cost="12.0" Estado_Agente="Nodo: F4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="702" Action="Go G5" Cost="12.0" Estado_Agente="Nodo: G5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="703" Action="Go H2" Cost="12.0" Estado_Agente="Nodo: H2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="704" Action="Multar enfermo." Cost="12.0" Estado_Agente="Nodo: H3 Enfermos: {id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="40" Action="Go B6" Cost="7.0" Estado_Agente="Nodo: B6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="41" Action="Go C7" Cost="7.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="74" Action="Go A6" Cost="8.0" Estado_Agente="Nodo: A6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="75" Action="Go B7" Cost="8.0" Estado_Agente="Nodo: B7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="134" Action="Go A5" Cost="9.0" Estado_Agente="Nodo: A5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="135" Action="Go B8" Cost="9.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="136" Action="Go C7" Cost="9.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="236" Action="Go A8" Cost="10.0" Estado_Agente="Nodo: A8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="237" Action="Go B9" Cost="10.0" Estado_Agente="Nodo: B9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="416" Action="Go A7" Cost="11.0" Estado_Agente="Nodo: A7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="705" Action="Go A6" Cost="12.0" Estado_Agente="Nodo: A6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="417" Action="Go A9" Cost="11.0" Estado_Agente="Nodo: A9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="418" Action="Go C10" Cost="11.0" Estado_Agente="Nodo: C10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="706" Action="Go A8" Cost="12.0" Estado_Agente="Nodo: A8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="707" Action="Go C9" Cost="12.0" Estado_Agente="Nodo: C9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="708" Action="Go D11" Cost="12.0" Estado_Agente="Nodo: D11 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="238" Action="Go C8" Cost="10.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="239" Action="Go D7" Cost="10.0" Estado_Agente="Nodo: D7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="419" Action="Go B8" Cost="11.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="420" Action="Go C9" Cost="11.0" Estado_Agente="Nodo: C9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="709" Action="Go A8" Cost="12.0" Estado_Agente="Nodo: A8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="710" Action="Go B9" Cost="12.0" Estado_Agente="Nodo: B9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="711" Action="Go C10" Cost="12.0" Estado_Agente="Nodo: C10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="712" Action="Go D9" Cost="12.0" Estado_Agente="Nodo: D9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="421" Action="Go D8" Cost="11.0" Estado_Agente="Nodo: D8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="422" Action="Go E7" Cost="11.0" Estado_Agente="Nodo: E7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="713" Action="Go C8" Cost="12.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="714" Action="Go D9" Cost="12.0" Estado_Agente="Nodo: D9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="715" Action="Go E6" Cost="12.0" Estado_Agente="Nodo: E6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="716" Action="Go E8" Cost="12.0" Estado_Agente="Nodo: E8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="717" Action="Go F7" Cost="12.0" Estado_Agente="Nodo: F7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="76" Action="Go C8" Cost="8.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="77" Action="Go D7" Cost="8.0" Estado_Agente="Nodo: D7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="137" Action="Go B8" Cost="9.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="138" Action="Go C9" Cost="9.0" Estado_Agente="Nodo: C9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="240" Action="Go A8" Cost="10.0" Estado_Agente="Nodo: A8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="241" Action="Go B9" Cost="10.0" Estado_Agente="Nodo: B9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="423" Action="Go A7" Cost="11.0" Estado_Agente="Nodo: A7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="718" Action="Go A6" Cost="12.0" Estado_Agente="Nodo: A6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="719" Action="Go B7" Cost="12.0" Estado_Agente="Nodo: B7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="424" Action="Go A9" Cost="11.0" Estado_Agente="Nodo: A9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="425" Action="Go C10" Cost="11.0" Estado_Agente="Nodo: C10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="720" Action="Go A8" Cost="12.0" Estado_Agente="Nodo: A8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="721" Action="Go C9" Cost="12.0" Estado_Agente="Nodo: C9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="722" Action="Go D11" Cost="12.0" Estado_Agente="Nodo: D11 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="242" Action="Go C10" Cost="10.0" Estado_Agente="Nodo: C10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="243" Action="Go D9" Cost="10.0" Estado_Agente="Nodo: D9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="426" Action="Go B9" Cost="11.0" Estado_Agente="Nodo: B9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="427" Action="Go D11" Cost="11.0" Estado_Agente="Nodo: D11 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="723" Action="Go A9" Cost="12.0" Estado_Agente="Nodo: A9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="724" Action="Go F11" Cost="12.0" Estado_Agente="Nodo: F11 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="428" Action="Go D10" Cost="11.0" Estado_Agente="Nodo: D10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="429" Action="Go F9" Cost="11.0" Estado_Agente="Nodo: F9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="725" Action="Go D11" Cost="12.0" Estado_Agente="Nodo: D11 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="726" Action="Go F8" Cost="12.0" Estado_Agente="Nodo: F8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="727" Action="Go G9" Cost="12.0" Estado_Agente="Nodo: G9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="139" Action="Go D8" Cost="9.0" Estado_Agente="Nodo: D8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="140" Action="Go E7" Cost="9.0" Estado_Agente="Nodo: E7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="244" Action="Go C8" Cost="10.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="245" Action="Go D9" Cost="10.0" Estado_Agente="Nodo: D9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="430" Action="Go B8" Cost="11.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="431" Action="Go C9" Cost="11.0" Estado_Agente="Nodo: C9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="728" Action="Go A8" Cost="12.0" Estado_Agente="Nodo: A8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="729" Action="Go B9" Cost="12.0" Estado_Agente="Nodo: B9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="730" Action="Go C10" Cost="12.0" Estado_Agente="Nodo: C10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="731" Action="Go D9" Cost="12.0" Estado_Agente="Nodo: D9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="432" Action="Go D10" Cost="11.0" Estado_Agente="Nodo: D10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="433" Action="Go F9" Cost="11.0" Estado_Agente="Nodo: F9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="732" Action="Go D11" Cost="12.0" Estado_Agente="Nodo: D11 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="733" Action="Go F8" Cost="12.0" Estado_Agente="Nodo: F8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="734" Action="Go G9" Cost="12.0" Estado_Agente="Nodo: G9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="246" Action="Go E6" Cost="10.0" Estado_Agente="Nodo: E6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="247" Action="Go E8" Cost="10.0" Estado_Agente="Nodo: E8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="248" Action="Go F7" Cost="10.0" Estado_Agente="Nodo: F7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="434" Action="Go D6" Cost="11.0" Estado_Agente="Nodo: D6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="435" Action="Go D8" Cost="11.0" Estado_Agente="Nodo: D8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="735" Action="Go C8" Cost="12.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="736" Action="Go D9" Cost="12.0" Estado_Agente="Nodo: D9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="436" Action="Go F6" Cost="11.0" Estado_Agente="Nodo: F6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="437" Action="Go G7" Cost="11.0" Estado_Agente="Nodo: G7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="737" Action="Go E6" Cost="12.0" Estado_Agente="Nodo: E6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="738" Action="Go F5" Cost="12.0" Estado_Agente="Nodo: F5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="739" Action="Go G8" Cost="12.0" Estado_Agente="Nodo: G8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="740" Action="Go H7" Cost="12.0" Estado_Agente="Nodo: H7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="42" Action="Go D6" Cost="7.0" Estado_Agente="Nodo: D6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="43" Action="Go E5" Cost="7.0" Estado_Agente="Nodo: E5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="78" Action="Go C6" Cost="8.0" Estado_Agente="Nodo: C6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="79" Action="Go D7" Cost="8.0" Estado_Agente="Nodo: D7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="141" Action="Go B6" Cost="9.0" Estado_Agente="Nodo: B6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="142" Action="Go C7" Cost="9.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="249" Action="Go A6" Cost="10.0" Estado_Agente="Nodo: A6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="250" Action="Go B7" Cost="10.0" Estado_Agente="Nodo: B7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="438" Action="Go A5" Cost="11.0" Estado_Agente="Nodo: A5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="439" Action="Go B8" Cost="11.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="440" Action="Go C7" Cost="11.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="741" Action="Go A8" Cost="12.0" Estado_Agente="Nodo: A8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="742" Action="Go B9" Cost="12.0" Estado_Agente="Nodo: B9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="743" Action="Go C8" Cost="12.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="744" Action="Go D7" Cost="12.0" Estado_Agente="Nodo: D7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="251" Action="Go C8" Cost="10.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="252" Action="Go D7" Cost="10.0" Estado_Agente="Nodo: D7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="441" Action="Go B8" Cost="11.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="442" Action="Go C9" Cost="11.0" Estado_Agente="Nodo: C9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="745" Action="Go A8" Cost="12.0" Estado_Agente="Nodo: A8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="746" Action="Go B9" Cost="12.0" Estado_Agente="Nodo: B9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="747" Action="Go C10" Cost="12.0" Estado_Agente="Nodo: C10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="748" Action="Go D9" Cost="12.0" Estado_Agente="Nodo: D9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="443" Action="Go D8" Cost="11.0" Estado_Agente="Nodo: D8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="444" Action="Go E7" Cost="11.0" Estado_Agente="Nodo: E7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="749" Action="Go C8" Cost="12.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="750" Action="Go D9" Cost="12.0" Estado_Agente="Nodo: D9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="751" Action="Go E6" Cost="12.0" Estado_Agente="Nodo: E6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="752" Action="Go E8" Cost="12.0" Estado_Agente="Nodo: E8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="753" Action="Go F7" Cost="12.0" Estado_Agente="Nodo: F7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="143" Action="Go D8" Cost="9.0" Estado_Agente="Nodo: D8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="144" Action="Go E7" Cost="9.0" Estado_Agente="Nodo: E7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="253" Action="Go C8" Cost="10.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="254" Action="Go D9" Cost="10.0" Estado_Agente="Nodo: D9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="445" Action="Go B8" Cost="11.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="446" Action="Go C7" Cost="11.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="447" Action="Go C9" Cost="11.0" Estado_Agente="Nodo: C9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="754" Action="Go A8" Cost="12.0" Estado_Agente="Nodo: A8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="755" Action="Go B9" Cost="12.0" Estado_Agente="Nodo: B9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="756" Action="Go C6" Cost="12.0" Estado_Agente="Nodo: C6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="757" Action="Go C10" Cost="12.0" Estado_Agente="Nodo: C10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="758" Action="Go D9" Cost="12.0" Estado_Agente="Nodo: D9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="448" Action="Go D10" Cost="11.0" Estado_Agente="Nodo: D10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="449" Action="Go F9" Cost="11.0" Estado_Agente="Nodo: F9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="759" Action="Go D11" Cost="12.0" Estado_Agente="Nodo: D11 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="760" Action="Go F8" Cost="12.0" Estado_Agente="Nodo: F8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="761" Action="Go G9" Cost="12.0" Estado_Agente="Nodo: G9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="255" Action="Go E6" Cost="10.0" Estado_Agente="Nodo: E6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="256" Action="Go E8" Cost="10.0" Estado_Agente="Nodo: E8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="257" Action="Go F7" Cost="10.0" Estado_Agente="Nodo: F7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="450" Action="Go D8" Cost="11.0" Estado_Agente="Nodo: D8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="762" Action="Go C8" Cost="12.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="763" Action="Go D9" Cost="12.0" Estado_Agente="Nodo: D9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="451" Action="Go F6" Cost="11.0" Estado_Agente="Nodo: F6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="452" Action="Go G7" Cost="11.0" Estado_Agente="Nodo: G7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="764" Action="Go E6" Cost="12.0" Estado_Agente="Nodo: E6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="765" Action="Go F5" Cost="12.0" Estado_Agente="Nodo: F5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="766" Action="Go G8" Cost="12.0" Estado_Agente="Nodo: G8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="767" Action="Go H7" Cost="12.0" Estado_Agente="Nodo: H7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="80" Action="Go E4" Cost="8.0" Estado_Agente="Nodo: E4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="81" Action="Go F5" Cost="8.0" Estado_Agente="Nodo: F5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="145" Action="Go D4" Cost="9.0" Estado_Agente="Nodo: D4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="258" Action="Go C4" Cost="10.0" Estado_Agente="Nodo: C4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="453" Action="Go C3" Cost="11.0" Estado_Agente="Nodo: C3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="768" Action="Go C2" Cost="12.0" Estado_Agente="Nodo: C2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="769" Action="Go D3" Cost="12.0" Estado_Agente="Nodo: D3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="146" Action="Go F4" Cost="9.0" Estado_Agente="Nodo: F4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="147" Action="Go G5" Cost="9.0" Estado_Agente="Nodo: G5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="259" Action="Go E4" Cost="10.0" Estado_Agente="Nodo: E4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="260" Action="Go F3" Cost="10.0" Estado_Agente="Nodo: F3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="454" Action="Go D4" Cost="11.0" Estado_Agente="Nodo: D4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="770" Action="Go C4" Cost="12.0" Estado_Agente="Nodo: C4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="455" Action="Go F2" Cost="11.0" Estado_Agente="Nodo: F2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="456" Action="Go G3" Cost="11.0" Estado_Agente="Nodo: G3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="771" Action="Go C1" Cost="12.0" Estado_Agente="Nodo: C1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="772" Action="Go G2" Cost="12.0" Estado_Agente="Nodo: G2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="773" Action="Go G4" Cost="12.0" Estado_Agente="Nodo: G4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="774" Action="Go H3" Cost="12.0" Estado_Agente="Nodo: H3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="261" Action="Go G6" Cost="10.0" Estado_Agente="Nodo: G6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="262" Action="Go H5" Cost="10.0" Estado_Agente="Nodo: H5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="457" Action="Go F6" Cost="11.0" Estado_Agente="Nodo: F6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="458" Action="Go G7" Cost="11.0" Estado_Agente="Nodo: G7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="775" Action="Go E6" Cost="12.0" Estado_Agente="Nodo: E6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="776" Action="Go G8" Cost="12.0" Estado_Agente="Nodo: G8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="777" Action="Go H7" Cost="12.0" Estado_Agente="Nodo: H7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="459" Action="Go H4" Cost="11.0" Estado_Agente="Nodo: H4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="460" Action="Go I5" Cost="11.0" Estado_Agente="Nodo: I5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="778" Action="Go G4" Cost="12.0" Estado_Agente="Nodo: G4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="779" Action="Go H3" Cost="12.0" Estado_Agente="Nodo: H3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="780" Action="Go I6" Cost="12.0" Estado_Agente="Nodo: I6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="781" Action="Go J5" Cost="12.0" Estado_Agente="Nodo: J5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="6" Action="Go C2" Cost="4.0" Estado_Agente="Nodo: C2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="7" Action="Go C4" Cost="4.0" Estado_Agente="Nodo: C4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="8" Action="Go D3" Cost="4.0" Estado_Agente="Nodo: D3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="11" Action="Go B2" Cost="5.0" Estado_Agente="Nodo: B2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="12" Action="Go C1" Cost="5.0" Estado_Agente="Nodo: C1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="13" Action="Multar enfermo." Cost="5.0" Estado_Agente="Nodo: C2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="23" Action="Go A2" Cost="6.0" Estado_Agente="Nodo: A2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="44" Action="Go A1" Cost="7.0" Estado_Agente="Nodo: A1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="82" Action="Go B1" Cost="8.0" Estado_Agente="Nodo: B1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="148" Action="Go C1" Cost="9.0" Estado_Agente="Nodo: C1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="263" Action="Go F2" Cost="10.0" Estado_Agente="Nodo: F2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="461" Action="Go G2" Cost="11.0" Estado_Agente="Nodo: G2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="782" Action="Go G3" Cost="12.0" Estado_Agente="Nodo: G3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="783" Action="Go H2" Cost="12.0" Estado_Agente="Nodo: H2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="24" Action="Go B1" Cost="6.0" Estado_Agente="Nodo: B1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="25" Action="Go F2" Cost="6.0" Estado_Agente="Nodo: F2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="45" Action="Go A1" Cost="7.0" Estado_Agente="Nodo: A1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="46" Action="Go B2" Cost="7.0" Estado_Agente="Nodo: B2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="83" Action="Go A2" Cost="8.0" Estado_Agente="Nodo: A2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="149" Action="Go A1" Cost="9.0" Estado_Agente="Nodo: A1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="47" Action="Go G2" Cost="7.0" Estado_Agente="Nodo: G2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="84" Action="Go G3" Cost="8.0" Estado_Agente="Nodo: G3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="85" Action="Go H2" Cost="8.0" Estado_Agente="Nodo: H2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="150" Action="Go G4" Cost="9.0" Estado_Agente="Nodo: G4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="151" Action="Go H3" Cost="9.0" Estado_Agente="Nodo: H3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="264" Action="Go F4" Cost="10.0" Estado_Agente="Nodo: F4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="265" Action="Go G5" Cost="10.0" Estado_Agente="Nodo: G5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="462" Action="Go E4" Cost="11.0" Estado_Agente="Nodo: E4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="463" Action="Go F3" Cost="11.0" Estado_Agente="Nodo: F3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="784" Action="Go D4" Cost="12.0" Estado_Agente="Nodo: D4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="785" Action="Go E5" Cost="12.0" Estado_Agente="Nodo: E5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="464" Action="Go G6" Cost="11.0" Estado_Agente="Nodo: G6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="465" Action="Go H5" Cost="11.0" Estado_Agente="Nodo: H5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="786" Action="Go F6" Cost="12.0" Estado_Agente="Nodo: F6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="787" Action="Go G7" Cost="12.0" Estado_Agente="Nodo: G7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="788" Action="Go H4" Cost="12.0" Estado_Agente="Nodo: H4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="789" Action="Go I5" Cost="12.0" Estado_Agente="Nodo: I5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="266" Action="Go H2" Cost="10.0" Estado_Agente="Nodo: H2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="267" Action="Multar enfermo." Cost="10.0" Estado_Agente="Nodo: H3 Enfermos: {id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="466" Action="Go I3" Cost="11.0" Estado_Agente="Nodo: I3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="790" Action="Go I4" Cost="12.0" Estado_Agente="Nodo: I4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="791" Action="Go J3" Cost="12.0" Estado_Agente="Nodo: J3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="467" Action="Go H2" Cost="11.0" Estado_Agente="Nodo: H2 Enfermos: {id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="792" Action="Go G2" Cost="12.0" Estado_Agente="Nodo: G2 Enfermos: {id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="793" Action="Go I3" Cost="12.0" Estado_Agente="Nodo: I3 Enfermos: {id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="152" Action="Go I3" Cost="9.0" Estado_Agente="Nodo: I3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="268" Action="Go I4" Cost="10.0" Estado_Agente="Nodo: I4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="269" Action="Go J3" Cost="10.0" Estado_Agente="Nodo: J3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="468" Action="Go H4" Cost="11.0" Estado_Agente="Nodo: H4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="469" Action="Go I5" Cost="11.0" Estado_Agente="Nodo: I5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="794" Action="Go G4" Cost="12.0" Estado_Agente="Nodo: G4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="795" Action="Go H3" Cost="12.0" Estado_Agente="Nodo: H3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="796" Action="Go I6" Cost="12.0" Estado_Agente="Nodo: I6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="797" Action="Go J5" Cost="12.0" Estado_Agente="Nodo: J5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="470" Action="Go K3" Cost="11.0" Estado_Agente="Nodo: K3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="798" Action="Go K4" Cost="12.0" Estado_Agente="Nodo: K4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="799" Action="Go L3" Cost="12.0" Estado_Agente="Nodo: L3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="26" Action="Go B2" Cost="6.0" Estado_Agente="Nodo: B2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="27" Action="Go C1" Cost="6.0" Estado_Agente="Nodo: C1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="28" Action="Go C3" Cost="6.0" Estado_Agente="Nodo: C3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="48" Action="Go A2" Cost="7.0" Estado_Agente="Nodo: A2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="86" Action="Go A1" Cost="8.0" Estado_Agente="Nodo: A1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="153" Action="Go B1" Cost="9.0" Estado_Agente="Nodo: B1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="270" Action="Go C1" Cost="10.0" Estado_Agente="Nodo: C1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="471" Action="Go F2" Cost="11.0" Estado_Agente="Nodo: F2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="800" Action="Go G2" Cost="12.0" Estado_Agente="Nodo: G2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="49" Action="Go B1" Cost="7.0" Estado_Agente="Nodo: B1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="50" Action="Go F2" Cost="7.0" Estado_Agente="Nodo: F2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="87" Action="Go A1" Cost="8.0" Estado_Agente="Nodo: A1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="88" Action="Go B2" Cost="8.0" Estado_Agente="Nodo: B2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="154" Action="Go A2" Cost="9.0" Estado_Agente="Nodo: A2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="271" Action="Go A1" Cost="10.0" Estado_Agente="Nodo: A1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="89" Action="Go G2" Cost="8.0" Estado_Agente="Nodo: G2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="155" Action="Go G3" Cost="9.0" Estado_Agente="Nodo: G3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="156" Action="Go H2" Cost="9.0" Estado_Agente="Nodo: H2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="272" Action="Go G4" Cost="10.0" Estado_Agente="Nodo: G4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="273" Action="Go H3" Cost="10.0" Estado_Agente="Nodo: H3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="472" Action="Go F4" Cost="11.0" Estado_Agente="Nodo: F4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="473" Action="Go G5" Cost="11.0" Estado_Agente="Nodo: G5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="801" Action="Go E4" Cost="12.0" Estado_Agente="Nodo: E4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="802" Action="Go F3" Cost="12.0" Estado_Agente="Nodo: F3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="803" Action="Go G6" Cost="12.0" Estado_Agente="Nodo: G6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="804" Action="Go H5" Cost="12.0" Estado_Agente="Nodo: H5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="474" Action="Go H2" Cost="11.0" Estado_Agente="Nodo: H2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="475" Action="Multar enfermo." Cost="11.0" Estado_Agente="Nodo: H3 Enfermos: "/>
+<node Id="805" Action="Go I3" Cost="12.0" Estado_Agente="Nodo: I3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="274" Action="Go I3" Cost="10.0" Estado_Agente="Nodo: I3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="476" Action="Go I4" Cost="11.0" Estado_Agente="Nodo: I4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="477" Action="Go J3" Cost="11.0" Estado_Agente="Nodo: J3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="51" Action="Go C4" Cost="7.0" Estado_Agente="Nodo: C4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="52" Action="Go D3" Cost="7.0" Estado_Agente="Nodo: D3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="90" Action="Go B4" Cost="8.0" Estado_Agente="Nodo: B4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="91" Action="Go C5" Cost="8.0" Estado_Agente="Nodo: C5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="157" Action="Go A4" Cost="9.0" Estado_Agente="Nodo: A4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="158" Action="Go B5" Cost="9.0" Estado_Agente="Nodo: B5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="275" Action="Go A3" Cost="10.0" Estado_Agente="Nodo: A3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="478" Action="Go B3" Cost="11.0" Estado_Agente="Nodo: B3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="276" Action="Go B6" Cost="10.0" Estado_Agente="Nodo: B6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="277" Action="Go C5" Cost="10.0" Estado_Agente="Nodo: C5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="479" Action="Go A6" Cost="11.0" Estado_Agente="Nodo: A6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="480" Action="Go B7" Cost="11.0" Estado_Agente="Nodo: B7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="481" Action="Go C6" Cost="11.0" Estado_Agente="Nodo: C6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="482" Action="Go D5" Cost="11.0" Estado_Agente="Nodo: D5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="159" Action="Go C6" Cost="9.0" Estado_Agente="Nodo: C6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="160" Action="Go D5" Cost="9.0" Estado_Agente="Nodo: D5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="278" Action="Go B6" Cost="10.0" Estado_Agente="Nodo: B6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="279" Action="Go C7" Cost="10.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="483" Action="Go A6" Cost="11.0" Estado_Agente="Nodo: A6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="484" Action="Go B7" Cost="11.0" Estado_Agente="Nodo: B7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="485" Action="Go C8" Cost="11.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="486" Action="Go D7" Cost="11.0" Estado_Agente="Nodo: D7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="280" Action="Go D6" Cost="10.0" Estado_Agente="Nodo: D6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="281" Action="Go E5" Cost="10.0" Estado_Agente="Nodo: E5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="487" Action="Go C6" Cost="11.0" Estado_Agente="Nodo: C6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="488" Action="Go D7" Cost="11.0" Estado_Agente="Nodo: D7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="489" Action="Go E4" Cost="11.0" Estado_Agente="Nodo: E4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="490" Action="Go F5" Cost="11.0" Estado_Agente="Nodo: F5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="92" Action="Go D4" Cost="8.0" Estado_Agente="Nodo: D4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="93" Action="Go F3" Cost="8.0" Estado_Agente="Nodo: F3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="161" Action="Go C4" Cost="9.0" Estado_Agente="Nodo: C4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="162" Action="Go D5" Cost="9.0" Estado_Agente="Nodo: D5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="282" Action="Go B4" Cost="10.0" Estado_Agente="Nodo: B4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="283" Action="Go C5" Cost="10.0" Estado_Agente="Nodo: C5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="491" Action="Go A4" Cost="11.0" Estado_Agente="Nodo: A4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="492" Action="Go B5" Cost="11.0" Estado_Agente="Nodo: B5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="493" Action="Go C6" Cost="11.0" Estado_Agente="Nodo: C6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="494" Action="Go D5" Cost="11.0" Estado_Agente="Nodo: D5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="284" Action="Go D6" Cost="10.0" Estado_Agente="Nodo: D6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="285" Action="Go E5" Cost="10.0" Estado_Agente="Nodo: E5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="495" Action="Go C6" Cost="11.0" Estado_Agente="Nodo: C6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="496" Action="Go D7" Cost="11.0" Estado_Agente="Nodo: D7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="497" Action="Go E4" Cost="11.0" Estado_Agente="Nodo: E4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="498" Action="Go F5" Cost="11.0" Estado_Agente="Nodo: F5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="163" Action="Go F2" Cost="9.0" Estado_Agente="Nodo: F2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="164" Action="Go G3" Cost="9.0" Estado_Agente="Nodo: G3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="286" Action="Go C1" Cost="10.0" Estado_Agente="Nodo: C1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="287" Action="Go G2" Cost="10.0" Estado_Agente="Nodo: G2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="499" Action="Go B1" Cost="11.0" Estado_Agente="Nodo: B1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="500" Action="Go G3" Cost="11.0" Estado_Agente="Nodo: G3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="501" Action="Go H2" Cost="11.0" Estado_Agente="Nodo: H2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="288" Action="Go G4" Cost="10.0" Estado_Agente="Nodo: G4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="289" Action="Go H3" Cost="10.0" Estado_Agente="Nodo: H3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="502" Action="Go F4" Cost="11.0" Estado_Agente="Nodo: F4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="503" Action="Go G5" Cost="11.0" Estado_Agente="Nodo: G5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="504" Action="Go H2" Cost="11.0" Estado_Agente="Nodo: H2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="505" Action="Multar enfermo." Cost="11.0" Estado_Agente="Nodo: H3 Enfermos: "/>
+<node Id="14" Action="Go B4" Cost="5.0" Estado_Agente="Nodo: B4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="15" Action="Go C5" Cost="5.0" Estado_Agente="Nodo: C5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="29" Action="Go B5" Cost="6.0" Estado_Agente="Nodo: B5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="53" Action="Go B6" Cost="7.0" Estado_Agente="Nodo: B6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="54" Action="Go C5" Cost="7.0" Estado_Agente="Nodo: C5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="94" Action="Go A6" Cost="8.0" Estado_Agente="Nodo: A6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="95" Action="Go B7" Cost="8.0" Estado_Agente="Nodo: B7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="165" Action="Go A5" Cost="9.0" Estado_Agente="Nodo: A5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="166" Action="Go B8" Cost="9.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="167" Action="Go C7" Cost="9.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="290" Action="Go A8" Cost="10.0" Estado_Agente="Nodo: A8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="291" Action="Go B9" Cost="10.0" Estado_Agente="Nodo: B9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="506" Action="Go A7" Cost="11.0" Estado_Agente="Nodo: A7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="507" Action="Go A9" Cost="11.0" Estado_Agente="Nodo: A9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="508" Action="Go C10" Cost="11.0" Estado_Agente="Nodo: C10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="292" Action="Go C6" Cost="10.0" Estado_Agente="Nodo: C6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="293" Action="Go C8" Cost="10.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="294" Action="Go D7" Cost="10.0" Estado_Agente="Nodo: D7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="509" Action="Go C5" Cost="11.0" Estado_Agente="Nodo: C5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="510" Action="Go B8" Cost="11.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="511" Action="Go C9" Cost="11.0" Estado_Agente="Nodo: C9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="512" Action="Go D8" Cost="11.0" Estado_Agente="Nodo: D8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="513" Action="Go E7" Cost="11.0" Estado_Agente="Nodo: E7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="96" Action="Go C6" Cost="8.0" Estado_Agente="Nodo: C6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="97" Action="Go D5" Cost="8.0" Estado_Agente="Nodo: D5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="168" Action="Go B6" Cost="9.0" Estado_Agente="Nodo: B6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="169" Action="Go C7" Cost="9.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="295" Action="Go A6" Cost="10.0" Estado_Agente="Nodo: A6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="296" Action="Go B7" Cost="10.0" Estado_Agente="Nodo: B7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="514" Action="Go A5" Cost="11.0" Estado_Agente="Nodo: A5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="515" Action="Go B8" Cost="11.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="516" Action="Go C7" Cost="11.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="297" Action="Go C8" Cost="10.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="298" Action="Go D7" Cost="10.0" Estado_Agente="Nodo: D7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="517" Action="Go B8" Cost="11.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="518" Action="Go C9" Cost="11.0" Estado_Agente="Nodo: C9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="519" Action="Go D8" Cost="11.0" Estado_Agente="Nodo: D8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="520" Action="Go E7" Cost="11.0" Estado_Agente="Nodo: E7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="170" Action="Go D6" Cost="9.0" Estado_Agente="Nodo: D6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="171" Action="Go E5" Cost="9.0" Estado_Agente="Nodo: E5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="299" Action="Go C6" Cost="10.0" Estado_Agente="Nodo: C6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="300" Action="Go D7" Cost="10.0" Estado_Agente="Nodo: D7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="521" Action="Go B6" Cost="11.0" Estado_Agente="Nodo: B6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="522" Action="Go C7" Cost="11.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="523" Action="Go D8" Cost="11.0" Estado_Agente="Nodo: D8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="524" Action="Go E7" Cost="11.0" Estado_Agente="Nodo: E7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="301" Action="Go E4" Cost="10.0" Estado_Agente="Nodo: E4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="302" Action="Go F5" Cost="10.0" Estado_Agente="Nodo: F5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="525" Action="Go D4" Cost="11.0" Estado_Agente="Nodo: D4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="526" Action="Go F4" Cost="11.0" Estado_Agente="Nodo: F4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="527" Action="Go G5" Cost="11.0" Estado_Agente="Nodo: G5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="30" Action="Go C6" Cost="6.0" Estado_Agente="Nodo: C6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="31" Action="Go D5" Cost="6.0" Estado_Agente="Nodo: D5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="55" Action="Go B6" Cost="7.0" Estado_Agente="Nodo: B6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="56" Action="Go C7" Cost="7.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="98" Action="Go A6" Cost="8.0" Estado_Agente="Nodo: A6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="99" Action="Go B7" Cost="8.0" Estado_Agente="Nodo: B7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="172" Action="Go A5" Cost="9.0" Estado_Agente="Nodo: A5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="303" Action="Go B5" Cost="10.0" Estado_Agente="Nodo: B5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="173" Action="Go B8" Cost="9.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="174" Action="Go C7" Cost="9.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="304" Action="Go A8" Cost="10.0" Estado_Agente="Nodo: A8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="305" Action="Go B9" Cost="10.0" Estado_Agente="Nodo: B9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="528" Action="Go A7" Cost="11.0" Estado_Agente="Nodo: A7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="529" Action="Go A9" Cost="11.0" Estado_Agente="Nodo: A9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="530" Action="Go C10" Cost="11.0" Estado_Agente="Nodo: C10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="306" Action="Go C8" Cost="10.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="307" Action="Go D7" Cost="10.0" Estado_Agente="Nodo: D7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="531" Action="Go B8" Cost="11.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="532" Action="Go C9" Cost="11.0" Estado_Agente="Nodo: C9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="533" Action="Go D8" Cost="11.0" Estado_Agente="Nodo: D8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="534" Action="Go E7" Cost="11.0" Estado_Agente="Nodo: E7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="100" Action="Go C8" Cost="8.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="101" Action="Go D7" Cost="8.0" Estado_Agente="Nodo: D7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="175" Action="Go B8" Cost="9.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="176" Action="Go C9" Cost="9.0" Estado_Agente="Nodo: C9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="308" Action="Go A8" Cost="10.0" Estado_Agente="Nodo: A8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="309" Action="Go B9" Cost="10.0" Estado_Agente="Nodo: B9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="535" Action="Go A7" Cost="11.0" Estado_Agente="Nodo: A7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="536" Action="Go A9" Cost="11.0" Estado_Agente="Nodo: A9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="537" Action="Go C10" Cost="11.0" Estado_Agente="Nodo: C10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="310" Action="Go C10" Cost="10.0" Estado_Agente="Nodo: C10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="311" Action="Go D9" Cost="10.0" Estado_Agente="Nodo: D9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="538" Action="Go B9" Cost="11.0" Estado_Agente="Nodo: B9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="539" Action="Go D11" Cost="11.0" Estado_Agente="Nodo: D11 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="540" Action="Go D10" Cost="11.0" Estado_Agente="Nodo: D10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="541" Action="Go F9" Cost="11.0" Estado_Agente="Nodo: F9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="177" Action="Go D8" Cost="9.0" Estado_Agente="Nodo: D8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="178" Action="Go E7" Cost="9.0" Estado_Agente="Nodo: E7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="312" Action="Go C8" Cost="10.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="313" Action="Go D9" Cost="10.0" Estado_Agente="Nodo: D9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="542" Action="Go B8" Cost="11.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="543" Action="Go C9" Cost="11.0" Estado_Agente="Nodo: C9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="544" Action="Go D10" Cost="11.0" Estado_Agente="Nodo: D10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="545" Action="Go F9" Cost="11.0" Estado_Agente="Nodo: F9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="314" Action="Go E6" Cost="10.0" Estado_Agente="Nodo: E6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="315" Action="Go E8" Cost="10.0" Estado_Agente="Nodo: E8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="316" Action="Go F7" Cost="10.0" Estado_Agente="Nodo: F7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="546" Action="Go D6" Cost="11.0" Estado_Agente="Nodo: D6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="547" Action="Go D8" Cost="11.0" Estado_Agente="Nodo: D8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="548" Action="Go F6" Cost="11.0" Estado_Agente="Nodo: F6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="549" Action="Go G7" Cost="11.0" Estado_Agente="Nodo: G7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="57" Action="Go D6" Cost="7.0" Estado_Agente="Nodo: D6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="58" Action="Go E5" Cost="7.0" Estado_Agente="Nodo: E5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="102" Action="Go C6" Cost="8.0" Estado_Agente="Nodo: C6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="103" Action="Go D7" Cost="8.0" Estado_Agente="Nodo: D7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="179" Action="Go B6" Cost="9.0" Estado_Agente="Nodo: B6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="180" Action="Go C7" Cost="9.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="317" Action="Go A6" Cost="10.0" Estado_Agente="Nodo: A6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="318" Action="Go B7" Cost="10.0" Estado_Agente="Nodo: B7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="550" Action="Go A5" Cost="11.0" Estado_Agente="Nodo: A5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="551" Action="Go B8" Cost="11.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="552" Action="Go C7" Cost="11.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="319" Action="Go C8" Cost="10.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="320" Action="Go D7" Cost="10.0" Estado_Agente="Nodo: D7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="553" Action="Go B8" Cost="11.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="554" Action="Go C9" Cost="11.0" Estado_Agente="Nodo: C9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="555" Action="Go D8" Cost="11.0" Estado_Agente="Nodo: D8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="556" Action="Go E7" Cost="11.0" Estado_Agente="Nodo: E7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="181" Action="Go D8" Cost="9.0" Estado_Agente="Nodo: D8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="182" Action="Go E7" Cost="9.0" Estado_Agente="Nodo: E7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="321" Action="Go C8" Cost="10.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="322" Action="Go D9" Cost="10.0" Estado_Agente="Nodo: D9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="557" Action="Go B8" Cost="11.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="558" Action="Go C7" Cost="11.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="559" Action="Go C9" Cost="11.0" Estado_Agente="Nodo: C9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="560" Action="Go D10" Cost="11.0" Estado_Agente="Nodo: D10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="561" Action="Go F9" Cost="11.0" Estado_Agente="Nodo: F9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="323" Action="Go E6" Cost="10.0" Estado_Agente="Nodo: E6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="324" Action="Go E8" Cost="10.0" Estado_Agente="Nodo: E8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="325" Action="Go F7" Cost="10.0" Estado_Agente="Nodo: F7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="562" Action="Go D8" Cost="11.0" Estado_Agente="Nodo: D8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="563" Action="Go F6" Cost="11.0" Estado_Agente="Nodo: F6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="564" Action="Go G7" Cost="11.0" Estado_Agente="Nodo: G7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="104" Action="Go E4" Cost="8.0" Estado_Agente="Nodo: E4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="105" Action="Go F5" Cost="8.0" Estado_Agente="Nodo: F5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="183" Action="Go D4" Cost="9.0" Estado_Agente="Nodo: D4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="184" Action="Go F4" Cost="9.0" Estado_Agente="Nodo: F4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="185" Action="Go G5" Cost="9.0" Estado_Agente="Nodo: G5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="326" Action="Go E4" Cost="10.0" Estado_Agente="Nodo: E4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="327" Action="Go F3" Cost="10.0" Estado_Agente="Nodo: F3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="565" Action="Go D4" Cost="11.0" Estado_Agente="Nodo: D4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="566" Action="Go F2" Cost="11.0" Estado_Agente="Nodo: F2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="567" Action="Go G3" Cost="11.0" Estado_Agente="Nodo: G3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="328" Action="Go G6" Cost="10.0" Estado_Agente="Nodo: G6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="329" Action="Go H5" Cost="10.0" Estado_Agente="Nodo: H5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="568" Action="Go F6" Cost="11.0" Estado_Agente="Nodo: F6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="569" Action="Go G7" Cost="11.0" Estado_Agente="Nodo: G7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="570" Action="Go H4" Cost="11.0" Estado_Agente="Nodo: H4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="571" Action="Go I5" Cost="11.0" Estado_Agente="Nodo: I5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="16" Action="Go D4" Cost="5.0" Estado_Agente="Nodo: D4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="17" Action="Go F3" Cost="5.0" Estado_Agente="Nodo: F3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="32" Action="Go C4" Cost="6.0" Estado_Agente="Nodo: C4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="33" Action="Go D5" Cost="6.0" Estado_Agente="Nodo: D5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="59" Action="Go B4" Cost="7.0" Estado_Agente="Nodo: B4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="60" Action="Go C5" Cost="7.0" Estado_Agente="Nodo: C5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="106" Action="Go B5" Cost="8.0" Estado_Agente="Nodo: B5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="186" Action="Go B6" Cost="9.0" Estado_Agente="Nodo: B6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="187" Action="Go C5" Cost="9.0" Estado_Agente="Nodo: C5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="330" Action="Go A6" Cost="10.0" Estado_Agente="Nodo: A6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="331" Action="Go B7" Cost="10.0" Estado_Agente="Nodo: B7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="572" Action="Go A5" Cost="11.0" Estado_Agente="Nodo: A5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="573" Action="Go B8" Cost="11.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="574" Action="Go C7" Cost="11.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="332" Action="Go C6" Cost="10.0" Estado_Agente="Nodo: C6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="333" Action="Go D5" Cost="10.0" Estado_Agente="Nodo: D5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="575" Action="Go B6" Cost="11.0" Estado_Agente="Nodo: B6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="576" Action="Go C7" Cost="11.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="577" Action="Go D6" Cost="11.0" Estado_Agente="Nodo: D6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="578" Action="Go E5" Cost="11.0" Estado_Agente="Nodo: E5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="107" Action="Go C6" Cost="8.0" Estado_Agente="Nodo: C6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="108" Action="Go D5" Cost="8.0" Estado_Agente="Nodo: D5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="188" Action="Go B6" Cost="9.0" Estado_Agente="Nodo: B6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="189" Action="Go C7" Cost="9.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="334" Action="Go A6" Cost="10.0" Estado_Agente="Nodo: A6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="335" Action="Go B7" Cost="10.0" Estado_Agente="Nodo: B7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="579" Action="Go A5" Cost="11.0" Estado_Agente="Nodo: A5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="580" Action="Go B8" Cost="11.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="581" Action="Go C7" Cost="11.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="336" Action="Go C8" Cost="10.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="337" Action="Go D7" Cost="10.0" Estado_Agente="Nodo: D7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="582" Action="Go B8" Cost="11.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="583" Action="Go C9" Cost="11.0" Estado_Agente="Nodo: C9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="584" Action="Go D8" Cost="11.0" Estado_Agente="Nodo: D8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="585" Action="Go E7" Cost="11.0" Estado_Agente="Nodo: E7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="190" Action="Go D6" Cost="9.0" Estado_Agente="Nodo: D6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="191" Action="Go E5" Cost="9.0" Estado_Agente="Nodo: E5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="338" Action="Go C6" Cost="10.0" Estado_Agente="Nodo: C6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="339" Action="Go D7" Cost="10.0" Estado_Agente="Nodo: D7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="586" Action="Go B6" Cost="11.0" Estado_Agente="Nodo: B6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="587" Action="Go C7" Cost="11.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="588" Action="Go D8" Cost="11.0" Estado_Agente="Nodo: D8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="589" Action="Go E7" Cost="11.0" Estado_Agente="Nodo: E7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="340" Action="Go E4" Cost="10.0" Estado_Agente="Nodo: E4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="341" Action="Go F5" Cost="10.0" Estado_Agente="Nodo: F5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="590" Action="Go F4" Cost="11.0" Estado_Agente="Nodo: F4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="591" Action="Go G5" Cost="11.0" Estado_Agente="Nodo: G5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="61" Action="Go D6" Cost="7.0" Estado_Agente="Nodo: D6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="62" Action="Go E5" Cost="7.0" Estado_Agente="Nodo: E5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="109" Action="Go C6" Cost="8.0" Estado_Agente="Nodo: C6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="110" Action="Go D7" Cost="8.0" Estado_Agente="Nodo: D7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="192" Action="Go B6" Cost="9.0" Estado_Agente="Nodo: B6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="193" Action="Go C5" Cost="9.0" Estado_Agente="Nodo: C5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="194" Action="Go C7" Cost="9.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="342" Action="Go A6" Cost="10.0" Estado_Agente="Nodo: A6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="343" Action="Go B7" Cost="10.0" Estado_Agente="Nodo: B7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="592" Action="Go A5" Cost="11.0" Estado_Agente="Nodo: A5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="593" Action="Go B8" Cost="11.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="594" Action="Go C7" Cost="11.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="344" Action="Go C4" Cost="10.0" Estado_Agente="Nodo: C4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="595" Action="Go B4" Cost="11.0" Estado_Agente="Nodo: B4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="345" Action="Go C8" Cost="10.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="346" Action="Go D7" Cost="10.0" Estado_Agente="Nodo: D7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="596" Action="Go B8" Cost="11.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="597" Action="Go C9" Cost="11.0" Estado_Agente="Nodo: C9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="598" Action="Go D8" Cost="11.0" Estado_Agente="Nodo: D8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="599" Action="Go E7" Cost="11.0" Estado_Agente="Nodo: E7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="195" Action="Go D8" Cost="9.0" Estado_Agente="Nodo: D8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="196" Action="Go E7" Cost="9.0" Estado_Agente="Nodo: E7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="347" Action="Go C8" Cost="10.0" Estado_Agente="Nodo: C8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="348" Action="Go D9" Cost="10.0" Estado_Agente="Nodo: D9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="600" Action="Go B8" Cost="11.0" Estado_Agente="Nodo: B8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="601" Action="Go C7" Cost="11.0" Estado_Agente="Nodo: C7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="602" Action="Go C9" Cost="11.0" Estado_Agente="Nodo: C9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="603" Action="Go D10" Cost="11.0" Estado_Agente="Nodo: D10 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="604" Action="Go F9" Cost="11.0" Estado_Agente="Nodo: F9 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="349" Action="Go E6" Cost="10.0" Estado_Agente="Nodo: E6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="350" Action="Go E8" Cost="10.0" Estado_Agente="Nodo: E8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="351" Action="Go F7" Cost="10.0" Estado_Agente="Nodo: F7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="605" Action="Go D8" Cost="11.0" Estado_Agente="Nodo: D8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="606" Action="Go F6" Cost="11.0" Estado_Agente="Nodo: F6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="607" Action="Go G7" Cost="11.0" Estado_Agente="Nodo: G7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="111" Action="Go E4" Cost="8.0" Estado_Agente="Nodo: E4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="112" Action="Go F5" Cost="8.0" Estado_Agente="Nodo: F5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="197" Action="Go F4" Cost="9.0" Estado_Agente="Nodo: F4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="198" Action="Go G5" Cost="9.0" Estado_Agente="Nodo: G5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="352" Action="Go E4" Cost="10.0" Estado_Agente="Nodo: E4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="353" Action="Go F3" Cost="10.0" Estado_Agente="Nodo: F3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="608" Action="Go F2" Cost="11.0" Estado_Agente="Nodo: F2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="609" Action="Go G3" Cost="11.0" Estado_Agente="Nodo: G3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="354" Action="Go G6" Cost="10.0" Estado_Agente="Nodo: G6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="355" Action="Go H5" Cost="10.0" Estado_Agente="Nodo: H5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="610" Action="Go F6" Cost="11.0" Estado_Agente="Nodo: F6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="611" Action="Go G7" Cost="11.0" Estado_Agente="Nodo: G7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="612" Action="Go H4" Cost="11.0" Estado_Agente="Nodo: H4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="613" Action="Go I5" Cost="11.0" Estado_Agente="Nodo: I5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="34" Action="Go F2" Cost="6.0" Estado_Agente="Nodo: F2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="35" Action="Go G3" Cost="6.0" Estado_Agente="Nodo: G3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="63" Action="Go C1" Cost="7.0" Estado_Agente="Nodo: C1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="64" Action="Go G2" Cost="7.0" Estado_Agente="Nodo: G2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="113" Action="Go B1" Cost="8.0" Estado_Agente="Nodo: B1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="114" Action="Go C2" Cost="8.0" Estado_Agente="Nodo: C2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="199" Action="Go A1" Cost="9.0" Estado_Agente="Nodo: A1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="200" Action="Go B2" Cost="9.0" Estado_Agente="Nodo: B2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="356" Action="Go A2" Cost="10.0" Estado_Agente="Nodo: A2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="614" Action="Go A1" Cost="11.0" Estado_Agente="Nodo: A1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="201" Action="Go B2" Cost="9.0" Estado_Agente="Nodo: B2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="202" Action="Multar enfermo." Cost="9.0" Estado_Agente="Nodo: C2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="357" Action="Go A2" Cost="10.0" Estado_Agente="Nodo: A2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="615" Action="Go A1" Cost="11.0" Estado_Agente="Nodo: A1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="358" Action="Go B2" Cost="10.0" Estado_Agente="Nodo: B2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="359" Action="Go C1" Cost="10.0" Estado_Agente="Nodo: C1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="360" Action="Go C3" Cost="10.0" Estado_Agente="Nodo: C3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="616" Action="Go A2" Cost="11.0" Estado_Agente="Nodo: A2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="617" Action="Go B1" Cost="11.0" Estado_Agente="Nodo: B1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="618" Action="Go F2" Cost="11.0" Estado_Agente="Nodo: F2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="619" Action="Go C4" Cost="11.0" Estado_Agente="Nodo: C4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="620" Action="Go D3" Cost="11.0" Estado_Agente="Nodo: D3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}"/>
+<node Id="115" Action="Go G3" Cost="8.0" Estado_Agente="Nodo: G3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="116" Action="Go H2" Cost="8.0" Estado_Agente="Nodo: H2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="203" Action="Go G4" Cost="9.0" Estado_Agente="Nodo: G4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="204" Action="Go H3" Cost="9.0" Estado_Agente="Nodo: H3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="361" Action="Go F4" Cost="10.0" Estado_Agente="Nodo: F4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="362" Action="Go G5" Cost="10.0" Estado_Agente="Nodo: G5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="621" Action="Go E4" Cost="11.0" Estado_Agente="Nodo: E4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="622" Action="Go G6" Cost="11.0" Estado_Agente="Nodo: G6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="623" Action="Go H5" Cost="11.0" Estado_Agente="Nodo: H5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="363" Action="Go H2" Cost="10.0" Estado_Agente="Nodo: H2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="364" Action="Multar enfermo." Cost="10.0" Estado_Agente="Nodo: H3 Enfermos: {id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="624" Action="Go I3" Cost="11.0" Estado_Agente="Nodo: I3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="625" Action="Go H2" Cost="11.0" Estado_Agente="Nodo: H2 Enfermos: {id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="205" Action="Go I3" Cost="9.0" Estado_Agente="Nodo: I3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="365" Action="Go I4" Cost="10.0" Estado_Agente="Nodo: I4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="366" Action="Go J3" Cost="10.0" Estado_Agente="Nodo: J3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="626" Action="Go H4" Cost="11.0" Estado_Agente="Nodo: H4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="627" Action="Go I5" Cost="11.0" Estado_Agente="Nodo: I5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="628" Action="Go K3" Cost="11.0" Estado_Agente="Nodo: K3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="65" Action="Go G4" Cost="7.0" Estado_Agente="Nodo: G4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="66" Action="Go H3" Cost="7.0" Estado_Agente="Nodo: H3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="117" Action="Go F4" Cost="8.0" Estado_Agente="Nodo: F4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="118" Action="Go G5" Cost="8.0" Estado_Agente="Nodo: G5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="206" Action="Go E4" Cost="9.0" Estado_Agente="Nodo: E4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="367" Action="Go D4" Cost="10.0" Estado_Agente="Nodo: D4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="368" Action="Go E5" Cost="10.0" Estado_Agente="Nodo: E5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="629" Action="Go C4" Cost="11.0" Estado_Agente="Nodo: C4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="630" Action="Go D5" Cost="11.0" Estado_Agente="Nodo: D5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="631" Action="Go F5" Cost="11.0" Estado_Agente="Nodo: F5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="207" Action="Go G6" Cost="9.0" Estado_Agente="Nodo: G6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="208" Action="Go H5" Cost="9.0" Estado_Agente="Nodo: H5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="369" Action="Go F6" Cost="10.0" Estado_Agente="Nodo: F6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="370" Action="Go G7" Cost="10.0" Estado_Agente="Nodo: G7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="632" Action="Go E6" Cost="11.0" Estado_Agente="Nodo: E6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="633" Action="Go F5" Cost="11.0" Estado_Agente="Nodo: F5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="634" Action="Go G8" Cost="11.0" Estado_Agente="Nodo: G8 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="635" Action="Go H7" Cost="11.0" Estado_Agente="Nodo: H7 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="371" Action="Go H4" Cost="10.0" Estado_Agente="Nodo: H4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="372" Action="Go I5" Cost="10.0" Estado_Agente="Nodo: I5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="636" Action="Go H3" Cost="11.0" Estado_Agente="Nodo: H3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="637" Action="Go I6" Cost="11.0" Estado_Agente="Nodo: I6 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="638" Action="Go J5" Cost="11.0" Estado_Agente="Nodo: J5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="119" Action="Go H2" Cost="8.0" Estado_Agente="Nodo: H2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="120" Action="Multar enfermo." Cost="8.0" Estado_Agente="Nodo: H3 Enfermos: {id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="209" Action="Go G2" Cost="9.0" Estado_Agente="Nodo: G2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="210" Action="Go I3" Cost="9.0" Estado_Agente="Nodo: I3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="373" Action="Go F2" Cost="10.0" Estado_Agente="Nodo: F2 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="639" Action="Go C1" Cost="11.0" Estado_Agente="Nodo: C1 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="374" Action="Go I4" Cost="10.0" Estado_Agente="Nodo: I4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="375" Action="Go J3" Cost="10.0" Estado_Agente="Nodo: J3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="640" Action="Go H4" Cost="11.0" Estado_Agente="Nodo: H4 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="641" Action="Go I5" Cost="11.0" Estado_Agente="Nodo: I5 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="642" Action="Go K3" Cost="11.0" Estado_Agente="Nodo: K3 Enfermos: {id:2,actualPos:H3,homePos:J6,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="211" Action="Go H2" Cost="9.0" Estado_Agente="Nodo: H2 Enfermos: {id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="376" Action="Go G2" Cost="10.0" Estado_Agente="Nodo: G2 Enfermos: {id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="377" Action="Go I3" Cost="10.0" Estado_Agente="Nodo: I3 Enfermos: {id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="643" Action="Go F2" Cost="11.0" Estado_Agente="Nodo: F2 Enfermos: {id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="644" Action="Go G3" Cost="11.0" Estado_Agente="Nodo: G3 Enfermos: {id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="645" Action="Go I4" Cost="11.0" Estado_Agente="Nodo: I4 Enfermos: {id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<node Id="646" Action="Go J3" Cost="11.0" Estado_Agente="Nodo: J3 Enfermos: {id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
+<edge source="0" target="1"/>
+<edge source="1" target="2"/>
+<edge source="2" target="3"/>
+<edge source="2" target="4"/>
+<edge source="3" target="5"/>
+<edge source="4" target="6"/>
+<edge source="4" target="7"/>
+<edge source="4" target="8"/>
+<edge source="5" target="9"/>
+<edge source="5" target="10"/>
+<edge source="9" target="18"/>
+<edge source="9" target="19"/>
+<edge source="10" target="20"/>
+<edge source="10" target="21"/>
+<edge source="10" target="22"/>
+<edge source="18" target="36"/>
+<edge source="19" target="37"/>
+<edge source="19" target="38"/>
+<edge source="37" target="67"/>
+<edge source="37" target="68"/>
+<edge source="38" target="69"/>
+<edge source="38" target="70"/>
+<edge source="38" target="71"/>
+<edge source="67" target="121"/>
+<edge source="68" target="122"/>
+<edge source="68" target="123"/>
+<edge source="121" target="212"/>
+<edge source="212" target="378"/>
+<edge source="122" target="213"/>
+<edge source="123" target="214"/>
+<edge source="123" target="215"/>
+<edge source="213" target="379"/>
+<edge source="379" target="647"/>
+<edge source="214" target="380"/>
+<edge source="214" target="381"/>
+<edge source="215" target="382"/>
+<edge source="380" target="648"/>
+<edge source="381" target="649"/>
+<edge source="381" target="650"/>
+<edge source="382" target="651"/>
+<edge source="382" target="652"/>
+<edge source="69" target="124"/>
+<edge source="70" target="125"/>
+<edge source="70" target="126"/>
+<edge source="71" target="127"/>
+<edge source="71" target="128"/>
+<edge source="124" target="216"/>
+<edge source="124" target="217"/>
+<edge source="216" target="383"/>
+<edge source="217" target="384"/>
+<edge source="217" target="385"/>
+<edge source="383" target="653"/>
+<edge source="383" target="654"/>
+<edge source="384" target="655"/>
+<edge source="385" target="656"/>
+<edge source="385" target="657"/>
+<edge source="125" target="218"/>
+<edge source="125" target="219"/>
+<edge source="126" target="220"/>
+<edge source="126" target="221"/>
+<edge source="218" target="386"/>
+<edge source="219" target="387"/>
+<edge source="219" target="388"/>
+<edge source="386" target="658"/>
+<edge source="387" target="659"/>
+<edge source="388" target="660"/>
+<edge source="388" target="661"/>
+<edge source="220" target="389"/>
+<edge source="220" target="390"/>
+<edge source="221" target="391"/>
+<edge source="221" target="392"/>
+<edge source="389" target="662"/>
+<edge source="390" target="663"/>
+<edge source="391" target="664"/>
+<edge source="392" target="665"/>
+<edge source="392" target="666"/>
+<edge source="127" target="222"/>
+<edge source="127" target="223"/>
+<edge source="128" target="224"/>
+<edge source="128" target="225"/>
+<edge source="128" target="226"/>
+<edge source="222" target="393"/>
+<edge source="222" target="394"/>
+<edge source="223" target="395"/>
+<edge source="223" target="396"/>
+<edge source="393" target="667"/>
+<edge source="393" target="668"/>
+<edge source="394" target="669"/>
+<edge source="394" target="670"/>
+<edge source="395" target="671"/>
+<edge source="396" target="672"/>
+<edge source="396" target="673"/>
+<edge source="224" target="397"/>
+<edge source="225" target="398"/>
+<edge source="226" target="399"/>
+<edge source="226" target="400"/>
+<edge source="397" target="674"/>
+<edge source="398" target="675"/>
+<edge source="398" target="676"/>
+<edge source="399" target="677"/>
+<edge source="399" target="678"/>
+<edge source="400" target="679"/>
+<edge source="400" target="680"/>
+<edge source="20" target="39"/>
+<edge source="21" target="40"/>
+<edge source="21" target="41"/>
+<edge source="22" target="42"/>
+<edge source="22" target="43"/>
+<edge source="39" target="72"/>
+<edge source="39" target="73"/>
+<edge source="72" target="129"/>
+<edge source="72" target="130"/>
+<edge source="72" target="131"/>
+<edge source="73" target="132"/>
+<edge source="73" target="133"/>
+<edge source="129" target="227"/>
+<edge source="130" target="228"/>
+<edge source="130" target="229"/>
+<edge source="131" target="230"/>
+<edge source="131" target="231"/>
+<edge source="131" target="232"/>
+<edge source="227" target="401"/>
+<edge source="401" target="681"/>
+<edge source="228" target="402"/>
+<edge source="228" target="403"/>
+<edge source="229" target="404"/>
+<edge source="403" target="682"/>
+<edge source="404" target="683"/>
+<edge source="404" target="684"/>
+<edge source="230" target="405"/>
+<edge source="231" target="406"/>
+<edge source="231" target="407"/>
+<edge source="232" target="408"/>
+<edge source="232" target="409"/>
+<edge source="405" target="685"/>
+<edge source="406" target="686"/>
+<edge source="406" target="687"/>
+<edge source="407" target="688"/>
+<edge source="408" target="689"/>
+<edge source="408" target="690"/>
+<edge source="409" target="691"/>
+<edge source="409" target="692"/>
+<edge source="132" target="233"/>
+<edge source="133" target="234"/>
+<edge source="133" target="235"/>
+<edge source="233" target="410"/>
+<edge source="233" target="411"/>
+<edge source="410" target="693"/>
+<edge source="410" target="694"/>
+<edge source="411" target="695"/>
+<edge source="411" target="696"/>
+<edge source="234" target="412"/>
+<edge source="234" target="413"/>
+<edge source="235" target="414"/>
+<edge source="235" target="415"/>
+<edge source="412" target="697"/>
+<edge source="412" target="698"/>
+<edge source="413" target="699"/>
+<edge source="413" target="700"/>
+<edge source="414" target="701"/>
+<edge source="414" target="702"/>
+<edge source="415" target="703"/>
+<edge source="415" target="704"/>
+<edge source="40" target="74"/>
+<edge source="40" target="75"/>
+<edge source="41" target="76"/>
+<edge source="41" target="77"/>
+<edge source="74" target="134"/>
+<edge source="75" target="135"/>
+<edge source="75" target="136"/>
+<edge source="135" target="236"/>
+<edge source="135" target="237"/>
+<edge source="136" target="238"/>
+<edge source="136" target="239"/>
+<edge source="236" target="416"/>
+<edge source="237" target="417"/>
+<edge source="237" target="418"/>
+<edge source="416" target="705"/>
+<edge source="417" target="706"/>
+<edge source="418" target="707"/>
+<edge source="418" target="708"/>
+<edge source="238" target="419"/>
+<edge source="238" target="420"/>
+<edge source="239" target="421"/>
+<edge source="239" target="422"/>
+<edge source="419" target="709"/>
+<edge source="419" target="710"/>
+<edge source="420" target="711"/>
+<edge source="420" target="712"/>
+<edge source="421" target="713"/>
+<edge source="421" target="714"/>
+<edge source="422" target="715"/>
+<edge source="422" target="716"/>
+<edge source="422" target="717"/>
+<edge source="76" target="137"/>
+<edge source="76" target="138"/>
+<edge source="77" target="139"/>
+<edge source="77" target="140"/>
+<edge source="137" target="240"/>
+<edge source="137" target="241"/>
+<edge source="138" target="242"/>
+<edge source="138" target="243"/>
+<edge source="240" target="423"/>
+<edge source="241" target="424"/>
+<edge source="241" target="425"/>
+<edge source="423" target="718"/>
+<edge source="423" target="719"/>
+<edge source="424" target="720"/>
+<edge source="425" target="721"/>
+<edge source="425" target="722"/>
+<edge source="242" target="426"/>
+<edge source="242" target="427"/>
+<edge source="243" target="428"/>
+<edge source="243" target="429"/>
+<edge source="426" target="723"/>
+<edge source="427" target="724"/>
+<edge source="428" target="725"/>
+<edge source="429" target="726"/>
+<edge source="429" target="727"/>
+<edge source="139" target="244"/>
+<edge source="139" target="245"/>
+<edge source="140" target="246"/>
+<edge source="140" target="247"/>
+<edge source="140" target="248"/>
+<edge source="244" target="430"/>
+<edge source="244" target="431"/>
+<edge source="245" target="432"/>
+<edge source="245" target="433"/>
+<edge source="430" target="728"/>
+<edge source="430" target="729"/>
+<edge source="431" target="730"/>
+<edge source="431" target="731"/>
+<edge source="432" target="732"/>
+<edge source="433" target="733"/>
+<edge source="433" target="734"/>
+<edge source="246" target="434"/>
+<edge source="247" target="435"/>
+<edge source="248" target="436"/>
+<edge source="248" target="437"/>
+<edge source="435" target="735"/>
+<edge source="435" target="736"/>
+<edge source="436" target="737"/>
+<edge source="436" target="738"/>
+<edge source="437" target="739"/>
+<edge source="437" target="740"/>
+<edge source="42" target="78"/>
+<edge source="42" target="79"/>
+<edge source="43" target="80"/>
+<edge source="43" target="81"/>
+<edge source="78" target="141"/>
+<edge source="78" target="142"/>
+<edge source="79" target="143"/>
+<edge source="79" target="144"/>
+<edge source="141" target="249"/>
+<edge source="141" target="250"/>
+<edge source="142" target="251"/>
+<edge source="142" target="252"/>
+<edge source="249" target="438"/>
+<edge source="250" target="439"/>
+<edge source="250" target="440"/>
+<edge source="439" target="741"/>
+<edge source="439" target="742"/>
+<edge source="440" target="743"/>
+<edge source="440" target="744"/>
+<edge source="251" target="441"/>
+<edge source="251" target="442"/>
+<edge source="252" target="443"/>
+<edge source="252" target="444"/>
+<edge source="441" target="745"/>
+<edge source="441" target="746"/>
+<edge source="442" target="747"/>
+<edge source="442" target="748"/>
+<edge source="443" target="749"/>
+<edge source="443" target="750"/>
+<edge source="444" target="751"/>
+<edge source="444" target="752"/>
+<edge source="444" target="753"/>
+<edge source="143" target="253"/>
+<edge source="143" target="254"/>
+<edge source="144" target="255"/>
+<edge source="144" target="256"/>
+<edge source="144" target="257"/>
+<edge source="253" target="445"/>
+<edge source="253" target="446"/>
+<edge source="253" target="447"/>
+<edge source="254" target="448"/>
+<edge source="254" target="449"/>
+<edge source="445" target="754"/>
+<edge source="445" target="755"/>
+<edge source="446" target="756"/>
+<edge source="447" target="757"/>
+<edge source="447" target="758"/>
+<edge source="448" target="759"/>
+<edge source="449" target="760"/>
+<edge source="449" target="761"/>
+<edge source="256" target="450"/>
+<edge source="257" target="451"/>
+<edge source="257" target="452"/>
+<edge source="450" target="762"/>
+<edge source="450" target="763"/>
+<edge source="451" target="764"/>
+<edge source="451" target="765"/>
+<edge source="452" target="766"/>
+<edge source="452" target="767"/>
+<edge source="80" target="145"/>
+<edge source="81" target="146"/>
+<edge source="81" target="147"/>
+<edge source="145" target="258"/>
+<edge source="258" target="453"/>
+<edge source="453" target="768"/>
+<edge source="453" target="769"/>
+<edge source="146" target="259"/>
+<edge source="146" target="260"/>
+<edge source="147" target="261"/>
+<edge source="147" target="262"/>
+<edge source="259" target="454"/>
+<edge source="260" target="455"/>
+<edge source="260" target="456"/>
+<edge source="454" target="770"/>
+<edge source="455" target="771"/>
+<edge source="455" target="772"/>
+<edge source="456" target="773"/>
+<edge source="456" target="774"/>
+<edge source="261" target="457"/>
+<edge source="261" target="458"/>
+<edge source="262" target="459"/>
+<edge source="262" target="460"/>
+<edge source="457" target="775"/>
+<edge source="458" target="776"/>
+<edge source="458" target="777"/>
+<edge source="459" target="778"/>
+<edge source="459" target="779"/>
+<edge source="460" target="780"/>
+<edge source="460" target="781"/>
+<edge source="6" target="11"/>
+<edge source="6" target="12"/>
+<edge source="6" target="13"/>
+<edge source="7" target="14"/>
+<edge source="7" target="15"/>
+<edge source="8" target="16"/>
+<edge source="8" target="17"/>
+<edge source="11" target="23"/>
+<edge source="12" target="24"/>
+<edge source="12" target="25"/>
+<edge source="13" target="26"/>
+<edge source="13" target="27"/>
+<edge source="13" target="28"/>
+<edge source="23" target="44"/>
+<edge source="44" target="82"/>
+<edge source="82" target="148"/>
+<edge source="148" target="263"/>
+<edge source="263" target="461"/>
+<edge source="461" target="782"/>
+<edge source="461" target="783"/>
+<edge source="24" target="45"/>
+<edge source="24" target="46"/>
+<edge source="25" target="47"/>
+<edge source="46" target="83"/>
+<edge source="83" target="149"/>
+<edge source="47" target="84"/>
+<edge source="47" target="85"/>
+<edge source="84" target="150"/>
+<edge source="84" target="151"/>
+<edge source="85" target="152"/>
+<edge source="150" target="264"/>
+<edge source="150" target="265"/>
+<edge source="151" target="266"/>
+<edge source="151" target="267"/>
+<edge source="264" target="462"/>
+<edge source="264" target="463"/>
+<edge source="265" target="464"/>
+<edge source="265" target="465"/>
+<edge source="462" target="784"/>
+<edge source="462" target="785"/>
+<edge source="464" target="786"/>
+<edge source="464" target="787"/>
+<edge source="465" target="788"/>
+<edge source="465" target="789"/>
+<edge source="266" target="466"/>
+<edge source="267" target="467"/>
+<edge source="466" target="790"/>
+<edge source="466" target="791"/>
+<edge source="467" target="792"/>
+<edge source="467" target="793"/>
+<edge source="152" target="268"/>
+<edge source="152" target="269"/>
+<edge source="268" target="468"/>
+<edge source="268" target="469"/>
+<edge source="269" target="470"/>
+<edge source="468" target="794"/>
+<edge source="468" target="795"/>
+<edge source="469" target="796"/>
+<edge source="469" target="797"/>
+<edge source="470" target="798"/>
+<edge source="470" target="799"/>
+<edge source="26" target="48"/>
+<edge source="27" target="49"/>
+<edge source="27" target="50"/>
+<edge source="28" target="51"/>
+<edge source="28" target="52"/>
+<edge source="48" target="86"/>
+<edge source="86" target="153"/>
+<edge source="153" target="270"/>
+<edge source="270" target="471"/>
+<edge source="471" target="800"/>
+<edge source="49" target="87"/>
+<edge source="49" target="88"/>
+<edge source="50" target="89"/>
+<edge source="88" target="154"/>
+<edge source="154" target="271"/>
+<edge source="89" target="155"/>
+<edge source="89" target="156"/>
+<edge source="155" target="272"/>
+<edge source="155" target="273"/>
+<edge source="156" target="274"/>
+<edge source="272" target="472"/>
+<edge source="272" target="473"/>
+<edge source="273" target="474"/>
+<edge source="273" target="475"/>
+<edge source="472" target="801"/>
+<edge source="472" target="802"/>
+<edge source="473" target="803"/>
+<edge source="473" target="804"/>
+<edge source="474" target="805"/>
+<edge source="274" target="476"/>
+<edge source="274" target="477"/>
+<edge source="51" target="90"/>
+<edge source="51" target="91"/>
+<edge source="52" target="92"/>
+<edge source="52" target="93"/>
+<edge source="90" target="157"/>
+<edge source="90" target="158"/>
+<edge source="91" target="159"/>
+<edge source="91" target="160"/>
+<edge source="157" target="275"/>
+<edge source="158" target="276"/>
+<edge source="158" target="277"/>
+<edge source="275" target="478"/>
+<edge source="276" target="479"/>
+<edge source="276" target="480"/>
+<edge source="277" target="481"/>
+<edge source="277" target="482"/>
+<edge source="159" target="278"/>
+<edge source="159" target="279"/>
+<edge source="160" target="280"/>
+<edge source="160" target="281"/>
+<edge source="278" target="483"/>
+<edge source="278" target="484"/>
+<edge source="279" target="485"/>
+<edge source="279" target="486"/>
+<edge source="280" target="487"/>
+<edge source="280" target="488"/>
+<edge source="281" target="489"/>
+<edge source="281" target="490"/>
+<edge source="92" target="161"/>
+<edge source="92" target="162"/>
+<edge source="93" target="163"/>
+<edge source="93" target="164"/>
+<edge source="161" target="282"/>
+<edge source="161" target="283"/>
+<edge source="162" target="284"/>
+<edge source="162" target="285"/>
+<edge source="282" target="491"/>
+<edge source="282" target="492"/>
+<edge source="283" target="493"/>
+<edge source="283" target="494"/>
+<edge source="284" target="495"/>
+<edge source="284" target="496"/>
+<edge source="285" target="497"/>
+<edge source="285" target="498"/>
+<edge source="163" target="286"/>
+<edge source="163" target="287"/>
+<edge source="164" target="288"/>
+<edge source="164" target="289"/>
+<edge source="286" target="499"/>
+<edge source="287" target="500"/>
+<edge source="287" target="501"/>
+<edge source="288" target="502"/>
+<edge source="288" target="503"/>
+<edge source="289" target="504"/>
+<edge source="289" target="505"/>
+<edge source="14" target="29"/>
+<edge source="15" target="30"/>
+<edge source="15" target="31"/>
+<edge source="29" target="53"/>
+<edge source="29" target="54"/>
+<edge source="53" target="94"/>
+<edge source="53" target="95"/>
+<edge source="54" target="96"/>
+<edge source="54" target="97"/>
+<edge source="94" target="165"/>
+<edge source="95" target="166"/>
+<edge source="95" target="167"/>
+<edge source="166" target="290"/>
+<edge source="166" target="291"/>
+<edge source="167" target="292"/>
+<edge source="167" target="293"/>
+<edge source="167" target="294"/>
+<edge source="290" target="506"/>
+<edge source="291" target="507"/>
+<edge source="291" target="508"/>
+<edge source="292" target="509"/>
+<edge source="293" target="510"/>
+<edge source="293" target="511"/>
+<edge source="294" target="512"/>
+<edge source="294" target="513"/>
+<edge source="96" target="168"/>
+<edge source="96" target="169"/>
+<edge source="97" target="170"/>
+<edge source="97" target="171"/>
+<edge source="168" target="295"/>
+<edge source="168" target="296"/>
+<edge source="169" target="297"/>
+<edge source="169" target="298"/>
+<edge source="295" target="514"/>
+<edge source="296" target="515"/>
+<edge source="296" target="516"/>
+<edge source="297" target="517"/>
+<edge source="297" target="518"/>
+<edge source="298" target="519"/>
+<edge source="298" target="520"/>
+<edge source="170" target="299"/>
+<edge source="170" target="300"/>
+<edge source="171" target="301"/>
+<edge source="171" target="302"/>
+<edge source="299" target="521"/>
+<edge source="299" target="522"/>
+<edge source="300" target="523"/>
+<edge source="300" target="524"/>
+<edge source="301" target="525"/>
+<edge source="302" target="526"/>
+<edge source="302" target="527"/>
+<edge source="30" target="55"/>
+<edge source="30" target="56"/>
+<edge source="31" target="57"/>
+<edge source="31" target="58"/>
+<edge source="55" target="98"/>
+<edge source="55" target="99"/>
+<edge source="56" target="100"/>
+<edge source="56" target="101"/>
+<edge source="98" target="172"/>
+<edge source="99" target="173"/>
+<edge source="99" target="174"/>
+<edge source="172" target="303"/>
+<edge source="173" target="304"/>
+<edge source="173" target="305"/>
+<edge source="174" target="306"/>
+<edge source="174" target="307"/>
+<edge source="304" target="528"/>
+<edge source="305" target="529"/>
+<edge source="305" target="530"/>
+<edge source="306" target="531"/>
+<edge source="306" target="532"/>
+<edge source="307" target="533"/>
+<edge source="307" target="534"/>
+<edge source="100" target="175"/>
+<edge source="100" target="176"/>
+<edge source="101" target="177"/>
+<edge source="101" target="178"/>
+<edge source="175" target="308"/>
+<edge source="175" target="309"/>
+<edge source="176" target="310"/>
+<edge source="176" target="311"/>
+<edge source="308" target="535"/>
+<edge source="309" target="536"/>
+<edge source="309" target="537"/>
+<edge source="310" target="538"/>
+<edge source="310" target="539"/>
+<edge source="311" target="540"/>
+<edge source="311" target="541"/>
+<edge source="177" target="312"/>
+<edge source="177" target="313"/>
+<edge source="178" target="314"/>
+<edge source="178" target="315"/>
+<edge source="178" target="316"/>
+<edge source="312" target="542"/>
+<edge source="312" target="543"/>
+<edge source="313" target="544"/>
+<edge source="313" target="545"/>
+<edge source="314" target="546"/>
+<edge source="315" target="547"/>
+<edge source="316" target="548"/>
+<edge source="316" target="549"/>
+<edge source="57" target="102"/>
+<edge source="57" target="103"/>
+<edge source="58" target="104"/>
+<edge source="58" target="105"/>
+<edge source="102" target="179"/>
+<edge source="102" target="180"/>
+<edge source="103" target="181"/>
+<edge source="103" target="182"/>
+<edge source="179" target="317"/>
+<edge source="179" target="318"/>
+<edge source="180" target="319"/>
+<edge source="180" target="320"/>
+<edge source="317" target="550"/>
+<edge source="318" target="551"/>
+<edge source="318" target="552"/>
+<edge source="319" target="553"/>
+<edge source="319" target="554"/>
+<edge source="320" target="555"/>
+<edge source="320" target="556"/>
+<edge source="181" target="321"/>
+<edge source="181" target="322"/>
+<edge source="182" target="323"/>
+<edge source="182" target="324"/>
+<edge source="182" target="325"/>
+<edge source="321" target="557"/>
+<edge source="321" target="558"/>
+<edge source="321" target="559"/>
+<edge source="322" target="560"/>
+<edge source="322" target="561"/>
+<edge source="324" target="562"/>
+<edge source="325" target="563"/>
+<edge source="325" target="564"/>
+<edge source="104" target="183"/>
+<edge source="105" target="184"/>
+<edge source="105" target="185"/>
+<edge source="184" target="326"/>
+<edge source="184" target="327"/>
+<edge source="185" target="328"/>
+<edge source="185" target="329"/>
+<edge source="326" target="565"/>
+<edge source="327" target="566"/>
+<edge source="327" target="567"/>
+<edge source="328" target="568"/>
+<edge source="328" target="569"/>
+<edge source="329" target="570"/>
+<edge source="329" target="571"/>
+<edge source="16" target="32"/>
+<edge source="16" target="33"/>
+<edge source="17" target="34"/>
+<edge source="17" target="35"/>
+<edge source="32" target="59"/>
+<edge source="32" target="60"/>
+<edge source="33" target="61"/>
+<edge source="33" target="62"/>
+<edge source="59" target="106"/>
+<edge source="60" target="107"/>
+<edge source="60" target="108"/>
+<edge source="106" target="186"/>
+<edge source="106" target="187"/>
+<edge source="186" target="330"/>
+<edge source="186" target="331"/>
+<edge source="187" target="332"/>
+<edge source="187" target="333"/>
+<edge source="330" target="572"/>
+<edge source="331" target="573"/>
+<edge source="331" target="574"/>
+<edge source="332" target="575"/>
+<edge source="332" target="576"/>
+<edge source="333" target="577"/>
+<edge source="333" target="578"/>
+<edge source="107" target="188"/>
+<edge source="107" target="189"/>
+<edge source="108" target="190"/>
+<edge source="108" target="191"/>
+<edge source="188" target="334"/>
+<edge source="188" target="335"/>
+<edge source="189" target="336"/>
+<edge source="189" target="337"/>
+<edge source="334" target="579"/>
+<edge source="335" target="580"/>
+<edge source="335" target="581"/>
+<edge source="336" target="582"/>
+<edge source="336" target="583"/>
+<edge source="337" target="584"/>
+<edge source="337" target="585"/>
+<edge source="190" target="338"/>
+<edge source="190" target="339"/>
+<edge source="191" target="340"/>
+<edge source="191" target="341"/>
+<edge source="338" target="586"/>
+<edge source="338" target="587"/>
+<edge source="339" target="588"/>
+<edge source="339" target="589"/>
+<edge source="341" target="590"/>
+<edge source="341" target="591"/>
+<edge source="61" target="109"/>
+<edge source="61" target="110"/>
+<edge source="62" target="111"/>
+<edge source="62" target="112"/>
+<edge source="109" target="192"/>
+<edge source="109" target="193"/>
+<edge source="109" target="194"/>
+<edge source="110" target="195"/>
+<edge source="110" target="196"/>
+<edge source="192" target="342"/>
+<edge source="192" target="343"/>
+<edge source="193" target="344"/>
+<edge source="194" target="345"/>
+<edge source="194" target="346"/>
+<edge source="342" target="592"/>
+<edge source="343" target="593"/>
+<edge source="343" target="594"/>
+<edge source="344" target="595"/>
+<edge source="345" target="596"/>
+<edge source="345" target="597"/>
+<edge source="346" target="598"/>
+<edge source="346" target="599"/>
+<edge source="195" target="347"/>
+<edge source="195" target="348"/>
+<edge source="196" target="349"/>
+<edge source="196" target="350"/>
+<edge source="196" target="351"/>
+<edge source="347" target="600"/>
+<edge source="347" target="601"/>
+<edge source="347" target="602"/>
+<edge source="348" target="603"/>
+<edge source="348" target="604"/>
+<edge source="350" target="605"/>
+<edge source="351" target="606"/>
+<edge source="351" target="607"/>
+<edge source="112" target="197"/>
+<edge source="112" target="198"/>
+<edge source="197" target="352"/>
+<edge source="197" target="353"/>
+<edge source="198" target="354"/>
+<edge source="198" target="355"/>
+<edge source="353" target="608"/>
+<edge source="353" target="609"/>
+<edge source="354" target="610"/>
+<edge source="354" target="611"/>
+<edge source="355" target="612"/>
+<edge source="355" target="613"/>
+<edge source="34" target="63"/>
+<edge source="34" target="64"/>
+<edge source="35" target="65"/>
+<edge source="35" target="66"/>
+<edge source="63" target="113"/>
+<edge source="63" target="114"/>
+<edge source="64" target="115"/>
+<edge source="64" target="116"/>
+<edge source="113" target="199"/>
+<edge source="113" target="200"/>
+<edge source="114" target="201"/>
+<edge source="114" target="202"/>
+<edge source="200" target="356"/>
+<edge source="356" target="614"/>
+<edge source="201" target="357"/>
+<edge source="202" target="358"/>
+<edge source="202" target="359"/>
+<edge source="202" target="360"/>
+<edge source="357" target="615"/>
+<edge source="358" target="616"/>
+<edge source="359" target="617"/>
+<edge source="359" target="618"/>
+<edge source="360" target="619"/>
+<edge source="360" target="620"/>
+<edge source="115" target="203"/>
+<edge source="115" target="204"/>
+<edge source="116" target="205"/>
+<edge source="203" target="361"/>
+<edge source="203" target="362"/>
+<edge source="204" target="363"/>
+<edge source="204" target="364"/>
+<edge source="361" target="621"/>
+<edge source="362" target="622"/>
+<edge source="362" target="623"/>
+<edge source="363" target="624"/>
+<edge source="364" target="625"/>
+<edge source="205" target="365"/>
+<edge source="205" target="366"/>
+<edge source="365" target="626"/>
+<edge source="365" target="627"/>
+<edge source="366" target="628"/>
+<edge source="65" target="117"/>
+<edge source="65" target="118"/>
+<edge source="66" target="119"/>
+<edge source="66" target="120"/>
+<edge source="117" target="206"/>
+<edge source="118" target="207"/>
+<edge source="118" target="208"/>
+<edge source="206" target="367"/>
+<edge source="206" target="368"/>
+<edge source="367" target="629"/>
+<edge source="367" target="630"/>
+<edge source="368" target="631"/>
+<edge source="207" target="369"/>
+<edge source="207" target="370"/>
+<edge source="208" target="371"/>
+<edge source="208" target="372"/>
+<edge source="369" target="632"/>
+<edge source="369" target="633"/>
+<edge source="370" target="634"/>
+<edge source="370" target="635"/>
+<edge source="371" target="636"/>
+<edge source="372" target="637"/>
+<edge source="372" target="638"/>
+<edge source="119" target="209"/>
+<edge source="119" target="210"/>
+<edge source="120" target="211"/>
+<edge source="209" target="373"/>
+<edge source="210" target="374"/>
+<edge source="210" target="375"/>
+<edge source="373" target="639"/>
+<edge source="374" target="640"/>
+<edge source="374" target="641"/>
+<edge source="375" target="642"/>
+<edge source="211" target="376"/>
+<edge source="211" target="377"/>
+<edge source="376" target="643"/>
+<edge source="376" target="644"/>
+<edge source="377" target="645"/>
+<edge source="377" target="646"/>
+</tree>

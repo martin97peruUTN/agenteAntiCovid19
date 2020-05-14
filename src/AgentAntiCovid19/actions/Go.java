@@ -22,9 +22,9 @@ public class Go extends SearchAction {
     @Override
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
         CovidAgentState agentState = (CovidAgentState) s;
-        if (((CovidAgentState)s).getVisitedPositions().contains(this.objetiveNode)){
+        /*if (((CovidAgentState)s).getVisitedPositions().contains(this.objetiveNode)){
           return null;
-        }
+        }*/
 
         ArrayList<String> succesors = new ArrayList<String>();
         succesors.addAll(agentState.getSuccesors());

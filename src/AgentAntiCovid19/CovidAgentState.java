@@ -158,24 +158,32 @@ public class CovidAgentState extends SearchBasedAgentState{
     public void updateState(Perception p) { //Tengo que agarrar la percepción que paso y setearla.
         visitedPositions.add(position);
         CovidPerception cp = (CovidPerception) p;
-        this.newSickPersonsList = cp.getEnfermosNuevos();
-        this.cutStreetsList = cp.getCallesCortadas();
-        this.sickPersonsMoveList = cp.getEnfermosQueSeMovieron();
+        if((!cp.getEnfermosNuevos().isEmpty()) || (!cp.getEnfermosQueSeMovieron().isEmpty()) || (!cp.getCallesCortadas().isEmpty())) {
+            this.newSickPersonsList = cp.getEnfermosNuevos();
+            this.cutStreetsList = cp.getCallesCortadas();
+            this.sickPersonsMoveList = cp.getEnfermosQueSeMovieron();
+        }
+        /*if(!cp.getEnfermosNuevos().isEmpty()){
+            this.newSickPersonsList.addAll(cp.getEnfermosNuevos());
+        }
 
-        if(!this.cutStreetsList.isEmpty()){
-            for(TramoCalle tc: cutStreetsList){
+        if(!cp.getCallesCortadas().isEmpty()){
+            this.cutStreetsList.addAll(cp.getCallesCortadas());
+            for(TramoCalle tc: cp.getCallesCortadas()){
                 knownMap.get(tc.getInitialNode()).remove(tc.getFinalNode());
             }
         }
-        if(!this.sickPersonsMoveList.isEmpty()){
-            for(SickPerson sp: sickPersonsMoveList){
+
+        if(!cp.getEnfermosQueSeMovieron().isEmpty()){
+            for(SickPerson sp: cp.getEnfermosQueSeMovieron()){
                 for(SickPerson spn: newSickPersonsList){
                     if(sp.getId().equals(spn.getId())){
                         spn.setActualPosition(sp.getActualPosition());
                     }
                 }
             }
-        }
+        }*/
+
     }
 
     public Integer getTotalOfGoRealized() {
