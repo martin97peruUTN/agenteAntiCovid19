@@ -7,6 +7,10 @@ public class SickPerson {
     private String homePosition; //2
     private Integer cantMultas; //3
 
+    public SickPerson(){
+
+    }
+
     public SickPerson(Integer id, String actualPosition, String homePosition, String cantMultas){
         this.id = id;
         this.actualPosition = actualPosition;

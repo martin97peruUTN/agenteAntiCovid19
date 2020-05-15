@@ -1,6 +1,7 @@
 package AgentAntiCovid19.actions;
 
 import AgentAntiCovid19.CovidAgentState;
+import AgentAntiCovid19.CovidEnvironment;
 import AgentAntiCovid19.CovidEnvironmentState;
 import AgentAntiCovid19.SickPerson;
 import frsf.cidisi.faia.agent.search.SearchAction;
@@ -22,7 +23,7 @@ public class MulctSickPerson extends SearchAction {
         String position = covidAgentState.getPosition();
         for(SickPerson p: covidAgentState.getSickPersonsList()){
             if(position.equals(p.getActualPosition())) {
-                if (p.getActualPosition().equals(position) && !p.getActualPosition().equals(p.getHomePosition())) {
+                if (!p.getActualPosition().equals(p.getHomePosition())) {
                     //covidAgentState.setSeeSickPerson(false); //acá actualiza que el enfermo ya no está en ese nodo
                     if ((p.getCantMultas() + 1) > 3) {
                         covidAgentState.getSickPersonsList().remove(p);
@@ -43,20 +44,23 @@ public class MulctSickPerson extends SearchAction {
 
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
-        if(this.execute((SearchBasedAgentState) ast)!=null){
+        if(this.execute((SearchBasedAgentState) ast)!=null) {
+            CovidEnvironmentState covidEnvironmentState = (CovidEnvironmentState) est;
+            CovidAgentState covidAgentState = (CovidAgentState) ast;
+            String position = covidAgentState.getPosition();
             for(SickPerson p: ((CovidEnvironmentState) est).getEnfermos()){
-                if((p.getActualPosition().equals(((CovidEnvironmentState) est).getAgentPosition())) &&
-                        (!p.getActualPosition().equals(p.getHomePosition()))){
-                    p.setActualPosition(p.getHomePosition());
-                    if((p.getCantMultas()+1)>3){
-                        ((CovidEnvironmentState) est).getEnfermos().remove(p);
+                if(position.equals(p.getActualPosition())) {
+                    if (!p.getActualPosition().equals(p.getHomePosition())) {
+                        if ((p.getCantMultas() + 1) > 3) {
+                            covidEnvironmentState.getEnfermos().remove(p);
+                        }
+                        if ((p.getCantMultas() + 1) <= 3) {
+                            p.setActualPosition(p.getHomePosition());
+                            p.setCantMultas(p.getCantMultas() + 1);
+                        }
                     }
-                    if((p.getCantMultas()+1)<=3){
-                        p.setActualPosition(p.getHomePosition());
-                        p.setCantMultas(p.getCantMultas() + 1);
-                    }
-                    return est;
                 }
+                return covidEnvironmentState;
             }
         }
         return null;

@@ -24,6 +24,9 @@ public class CovidEnvironmentState extends EnvironmentState {
 
     @Override
     public void initState() {
+        //Inicializo la posición del agente en el ambiente.
+        agentPosition="A8";
+
         CSVToMatrix converter;
         String path = "NODOS-Mapa.csv";
         converter = new CSVToMatrix(';');
@@ -59,25 +62,29 @@ public class CovidEnvironmentState extends EnvironmentState {
     public void actualizarAmbiente(){
         //Acá actualizo el ambiente con las percepciones de los .csv
         //Si hay cortes de calles nuevos los agrego a la lista de cortes de calle del estado del ambiente.
-        if (!this.getCallesCortadasNuevas().isEmpty()) {
-            this.cortesDeCalle.add(this.getCallesCortadasNuevas().get(iteration));
+        if (this.getCalleCortadaNueva()!=null) {
+            this.cortesDeCalle.add(this.getCalleCortadaNueva());
             for (TramoCalle tc : this.cortesDeCalle) {
                 map.get(tc.getInitialNode()).remove(tc.getFinalNode());
             }
         }
         //Si hay enfermos nuevos los agrego a la lista de enfermos del estado del ambiente.
-        if (!this.getEnfermosNuevos().isEmpty()) {
-            this.enfermos.add(this.getEnfermosNuevos().get(iteration));
+        if (this.getEnfermoNuevo()!=null) {
+            this.enfermos.add(this.getEnfermoNuevo());
         }
         //Si hay enfermos que se movieron, actualizo su posición en la lista de enfermos del estado del ambiente.
-        if (!this.getEnfermosQueSeMovieron().isEmpty()) {
+        if (this.getEnfermoQueSeMovio()!=null) {
             for (SickPerson sp : this.enfermos) {
-                if (sp.getId().equals(this.getEnfermosQueSeMovieron().get(iteration).getId())) {
-                    sp.setActualPosition(this.getEnfermosQueSeMovieron().get(iteration).getActualPosition());
+                if (sp.getId().equals(this.getEnfermoQueSeMovio().getId())) {
+                    sp.setActualPosition(this.getEnfermoQueSeMovio().getActualPosition());
                 }
             }
         }
         iteration++;
+    }
+
+    public int getIteration(){
+        return this.iteration;
     }
 
     public ArrayList<SickPerson> getEnfermos() {
@@ -88,40 +95,50 @@ public class CovidEnvironmentState extends EnvironmentState {
         return cortesDeCalle;
     }
 
-    public ArrayList<TramoCalle> getCallesCortadasNuevas (){
+    private TramoCalle getCalleCortadaNueva (){
         //Tomo las calles cortadas nuevas del csv.
-        ArrayList<TramoCalle> callesCortadasNuevas = new ArrayList<TramoCalle>();
-        String path = "callecitasCortadas.csv";
+        TramoCalle calleCortadaNueva = new TramoCalle();
+        String path = "callecitasCortadasNuevas.csv";
         CSVToMatrix converter = new CSVToMatrix(';');
         ArrayList<String[]> cutStreets = converter.fileToMatrix(path);
-        for (int i = 0; i < cutStreets.size(); i++) {
-            callesCortadasNuevas.add(new TramoCalle(cutStreets.get(i)[1], cutStreets.get(i)[2]));
+        if(iteration<cutStreets.size()){
+            calleCortadaNueva.setInitialNode(cutStreets.get(iteration)[1]);
+            calleCortadaNueva.setFinalNode(cutStreets.get(iteration)[2]);
+            return calleCortadaNueva;
         }
-        return callesCortadasNuevas;
+        else{return null;}
     }
 
-    public ArrayList<SickPerson> getEnfermosNuevos (){
+    private SickPerson getEnfermoNuevo (){
         //Tomo los enfermos nuevos del csv.
-        ArrayList<SickPerson> enfermosNuevos = new ArrayList<SickPerson>();
-        String path = "enfermitos.csv";
+        SickPerson enfermoNuevo = new SickPerson();
+        String path = "enfermitosNuevos.csv";
         CSVToMatrix converter = new CSVToMatrix(';');
         ArrayList<String[]> sickPersons = converter.fileToMatrix(path);
-        for (int i = 0; i < sickPersons.size(); i++) {
-            enfermosNuevos.add(new SickPerson(Integer.valueOf(sickPersons.get(i)[0]), sickPersons.get(i)[1], sickPersons.get(i)[2], sickPersons.get(i)[3]));
+        if (iteration<sickPersons.size()){
+            enfermoNuevo.setId(Integer.valueOf(sickPersons.get(iteration)[0]));
+            enfermoNuevo.setActualPosition(sickPersons.get(iteration)[1]);
+            enfermoNuevo.setHomePosition(sickPersons.get(iteration)[2]);
+            enfermoNuevo.setCantMultas(Integer.valueOf(sickPersons.get(iteration)[3]));
+            return enfermoNuevo;
         }
-        return enfermosNuevos;
+        else{return null;}
     }
 
-    public ArrayList<SickPerson> getEnfermosQueSeMovieron(){
+    private SickPerson getEnfermoQueSeMovio(){
         //Tomo los movimientos de enfermos del csv.
-        ArrayList<SickPerson> enfermosQueSeMovieron = new ArrayList<SickPerson>();
+        SickPerson enfermoQueSeMovio = new SickPerson();
         String path = "enfermitosMovidos.csv";
         CSVToMatrix converter = new CSVToMatrix(';');
         ArrayList<String[]> sickPersonsMove = converter.fileToMatrix(path);
-        for (int i = 0; i < sickPersonsMove.size(); i++) {
-            enfermosQueSeMovieron.add(new SickPerson(Integer.valueOf(sickPersonsMove.get(i)[0]), sickPersonsMove.get(i)[1], sickPersonsMove.get(i)[2], sickPersonsMove.get(i)[3]));
+        if(iteration<sickPersonsMove.size()) {
+            enfermoQueSeMovio.setId(Integer.valueOf(sickPersonsMove.get(iteration)[0]));
+            enfermoQueSeMovio.setActualPosition(sickPersonsMove.get(iteration)[1]);
+            enfermoQueSeMovio.setHomePosition(sickPersonsMove.get(iteration)[2]);
+            enfermoQueSeMovio.setCantMultas(Integer.valueOf(sickPersonsMove.get(iteration)[3]));
+            return enfermoQueSeMovio;
         }
-        return enfermosQueSeMovieron;
+        else{return null;}
     }
 
     @Override
@@ -159,6 +176,6 @@ public class CovidEnvironmentState extends EnvironmentState {
     }
 
     public void setAgentPosition(String agentPosition) {
-        agentPosition = agentPosition;
+        this.agentPosition = agentPosition;
     }
 }

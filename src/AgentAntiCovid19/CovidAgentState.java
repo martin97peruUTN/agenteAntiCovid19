@@ -31,7 +31,7 @@ public class CovidAgentState extends SearchBasedAgentState{
 
     @Override
     public void initState() {
-        position = "A8";    //Posición inicial del agente: Nodo: 008, Calles: Pedro de Vega y Echague.
+        position = "A8";    //Posición inicial del agente: Nodo: A8, Calles: Pedro de Vega y Echague.
 
         knownMap = new HashMap<String, Collection<String>>();
 
@@ -146,15 +146,17 @@ public class CovidAgentState extends SearchBasedAgentState{
 
     @Override
     public void updateState(Perception p) { //Tengo que agarrar la percepción que paso y setearla.
-        visitedPositions.add(position);
+        if(!visitedPositions.contains(position)){
+            visitedPositions.add(position);
+        }
         if(p!=null) {
             CovidPerception cp = (CovidPerception) p;
             if (!cp.getEnfermos().isEmpty()) {
-                this.sickPersonsList = cp.getEnfermos();
+                this.sickPersonsList=cp.getEnfermos();
             }
             if (!cp.getCallesCortadas().isEmpty()) {
-                this.cutStreetsList = cp.getCallesCortadas();
-                for (TramoCalle tc : cp.getCallesCortadas()) {
+                this.cutStreetsList=cp.getCallesCortadas();
+                for(TramoCalle tc:cutStreetsList){
                     knownMap.get(tc.getInitialNode()).remove(tc.getFinalNode());
                 }
             }

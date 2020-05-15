@@ -23,11 +23,11 @@ public class CovidEnvironment extends Environment {
     @Override
     public Perception getPercept() {
         //Actualizo el ambiente.
-        (this.getEnvironmentState()).actualizarAmbiente();
+        ((CovidEnvironmentState) this.environmentState).actualizarAmbiente();
         //Mandamos las percepciones.
         CovidPerception p = new CovidPerception();
-        p.setEnfermos(this.getEnvironmentState().getEnfermos());
         p.setCallesCortadas(this.getEnvironmentState().getCortesDeCalle());
+        p.setEnfermos(this.getEnvironmentState().getEnfermos());
         return p;
     }
 
