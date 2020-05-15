@@ -13,8 +13,6 @@ public class CovidEnvironmentState extends EnvironmentState {
     private String agentPosition = "";
     private int iteration = 0;
 
-    //Tengo que agregar la información del ambiente, los enfermos y los cortes de calle.
-
     public CovidEnvironmentState() {this.initState();}
 
     @Override

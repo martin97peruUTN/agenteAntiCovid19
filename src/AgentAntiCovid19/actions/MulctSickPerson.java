@@ -46,7 +46,7 @@ public class MulctSickPerson extends SearchAction {
         if(this.execute((SearchBasedAgentState) ast)!=null) {
             CovidEnvironmentState covidEnvironmentState = (CovidEnvironmentState) est;
             CovidAgentState covidAgentState = (CovidAgentState) ast;
-            String position = covidEnvironmentState.getAgentPosition();
+            String position = covidAgentState.getPosition();
             for(SickPerson p: ((CovidEnvironmentState) est).getEnfermos()){
                 if(position.equals(p.getActualPosition())) {
                     if (!p.getActualPosition().equals(p.getHomePosition())) {

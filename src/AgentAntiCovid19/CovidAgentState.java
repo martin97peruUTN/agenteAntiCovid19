@@ -154,6 +154,26 @@ public class CovidAgentState extends SearchBasedAgentState{
         }
     }
 
+    public Double cantMultasQueFaltanHacer(){
+        int multasParaCurarse = 0;
+        for(SickPerson p: this.sickPersonsList){
+            if(p.getCantMultas()<=3){
+                multasParaCurarse = multasParaCurarse + (4-p.getCantMultas());
+            }
+        }
+        return Double.valueOf(multasParaCurarse);
+    }
+
+    public Double cantEnfermosFueraDeCasa(){
+        Double cantEnfermosFueraDeCasa = 0.0;
+        for(SickPerson p: this.sickPersonsList){
+            if(!p.getActualPosition().equals(p.getHomePosition())){
+                cantEnfermosFueraDeCasa = cantEnfermosFueraDeCasa + 1.0;
+            }
+        }
+        return cantEnfermosFueraDeCasa;
+    }
+
     public Integer getTotalOfGoRealized() {
         return totalOfGoRealized;
     }
