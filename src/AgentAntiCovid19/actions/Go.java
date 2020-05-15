@@ -32,12 +32,6 @@ public class Go extends SearchAction {
         if (succesors != null){
             int i = succesors.indexOf(this.objetiveNode);
             if (i>=0){
-                for(SickPerson p:agentState.getSickPersonsList()){
-                    if(p.getActualPosition().equals(objetiveNode)){
-                        agentState.setSeeSickPerson(true);
-                        break;
-                    }
-                }
                 agentState.setPosition(this.objetiveNode);
                 agentState.setTotalOfGoRealized((int) (((CovidAgentState)s).getTotalOfGoRealized()+this.cost));
                 return agentState;

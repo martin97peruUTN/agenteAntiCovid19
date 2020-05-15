@@ -13,7 +13,6 @@ public class CovidAgentState extends SearchBasedAgentState{
     private ArrayList<SickPerson> sickPersonsList = new ArrayList<SickPerson>();
     private ArrayList<TramoCalle> cutStreetsList = new ArrayList<TramoCalle>();
 
-    private Boolean seeSickPerson = false; //Esto nos sirve para saber si en el nodo donde está el agente vio un enfermo
     private Integer totalOfGoRealized = 0;
     private Integer totalOfMulctRealized = 0;
     private Integer totalOfSickPersonHealted = 0;
@@ -103,10 +102,6 @@ public class CovidAgentState extends SearchBasedAgentState{
         this.cutStreetsList = cutStreetsList;
     }
 
-    public Boolean getSeeSickPerson(){ return seeSickPerson; }
-
-    public void setSeeSickPerson(Boolean seeSickPerson) { this.seeSickPerson = seeSickPerson; }
-
     @Override
     public boolean equals(Object obj) {
         if(!(obj instanceof CovidAgentState)){
@@ -115,8 +110,7 @@ public class CovidAgentState extends SearchBasedAgentState{
         if((this.getPosition().equals(((CovidAgentState) obj).getPosition())) && (this.getSickPersonsList().containsAll(((CovidAgentState) obj).getSickPersonsList()) &&
         this.getSickPersonsList().size()==((CovidAgentState) obj).getSickPersonsList().size()) &&
                 (this.getCutStreetsList().containsAll(((CovidAgentState) obj).getCutStreetsList()) &&
-                        this.getCutStreetsList().size()==((CovidAgentState) obj).getCutStreetsList().size())
-                && (this.getSeeSickPerson().equals(((CovidAgentState) obj).getSeeSickPerson())))
+                        this.getCutStreetsList().size()==((CovidAgentState) obj).getCutStreetsList().size()))
         {return true;}
         else{
             return false;
@@ -138,7 +132,6 @@ public class CovidAgentState extends SearchBasedAgentState{
         newState.setSickPersonsList(cloneSickPersonList);
         newState.setCutStreetsList(cloneCutStreetList);
         newState.setVisitedPositions(cloneVisitedPositions);
-        newState.setSeeSickPerson(seeSickPerson);
         return newState;
     }
 
@@ -189,7 +182,7 @@ public class CovidAgentState extends SearchBasedAgentState{
     public String toString() {
         String str = "Nodo: " + position + " Enfermos: ";
         for(SickPerson sp: sickPersonsList){
-            str+="{"+"id:"+sp.getId()+","+"actualPos:"+sp.getActualPosition()+","+"homePos:"+sp.getHomePosition()+","+"cantMultas:"+sp.getCantMultas()+"}";
+            str+="["+"id:"+sp.getId()+","+"actualPos:"+sp.getActualPosition()+","+"homePos:"+sp.getHomePosition()+","+"cantMultas:"+sp.getCantMultas()+"]";
         }
         return str;
     }
