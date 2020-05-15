@@ -13,10 +13,7 @@ public class CovidAgentState extends SearchBasedAgentState{
     private ArrayList<SickPerson> sickPersonsList = new ArrayList<SickPerson>();
     private ArrayList<TramoCalle> cutStreetsList = new ArrayList<TramoCalle>();
 
-
-
-
-    //private Boolean seeSickPerson = false; //Esto nos sirve para saber si en el nodo donde está el agente vio un enfermo
+    private Boolean seeSickPerson = false; //Esto nos sirve para saber si en el nodo donde está el agente vio un enfermo
     private Integer totalOfGoRealized = 0;
     private Integer totalOfMulctRealized = 0;
     private Integer totalOfSickPersonHealted = 0;
@@ -106,9 +103,9 @@ public class CovidAgentState extends SearchBasedAgentState{
         this.cutStreetsList = cutStreetsList;
     }
 
-    /*public Boolean getSeeSickPerson(){return seeSickPerson;}
+    public Boolean getSeeSickPerson(){ return seeSickPerson; }
 
-    public void setSeeSickPerson(Boolean seeSickPerson) { this.seeSickPerson = seeSickPerson; }*/
+    public void setSeeSickPerson(Boolean seeSickPerson) { this.seeSickPerson = seeSickPerson; }
 
     @Override
     public boolean equals(Object obj) {
@@ -118,7 +115,8 @@ public class CovidAgentState extends SearchBasedAgentState{
         if((this.getPosition().equals(((CovidAgentState) obj).getPosition())) && (this.getSickPersonsList().containsAll(((CovidAgentState) obj).getSickPersonsList()) &&
         this.getSickPersonsList().size()==((CovidAgentState) obj).getSickPersonsList().size()) &&
                 (this.getCutStreetsList().containsAll(((CovidAgentState) obj).getCutStreetsList()) &&
-                        this.getCutStreetsList().size()==((CovidAgentState) obj).getCutStreetsList().size()))
+                        this.getCutStreetsList().size()==((CovidAgentState) obj).getCutStreetsList().size())
+                && (this.getSeeSickPerson().equals(((CovidAgentState) obj).getSeeSickPerson())))
         {return true;}
         else{
             return false;
@@ -140,7 +138,7 @@ public class CovidAgentState extends SearchBasedAgentState{
         newState.setSickPersonsList(cloneSickPersonList);
         newState.setCutStreetsList(cloneCutStreetList);
         newState.setVisitedPositions(cloneVisitedPositions);
-        //newState.setSeeSickPerson(seeSickPerson);
+        newState.setSeeSickPerson(seeSickPerson);
         return newState;
     }
 

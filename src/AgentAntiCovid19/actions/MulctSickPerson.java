@@ -24,7 +24,7 @@ public class MulctSickPerson extends SearchAction {
         for(SickPerson p: covidAgentState.getSickPersonsList()){
             if(position.equals(p.getActualPosition())) {
                 if (!p.getActualPosition().equals(p.getHomePosition())) {
-                    //covidAgentState.setSeeSickPerson(false); //acá actualiza que el enfermo ya no está en ese nodo
+                    covidAgentState.setSeeSickPerson(false); //acá actualiza que el enfermo ya no está en ese nodo
                     if ((p.getCantMultas() + 1) > 3) {
                         covidAgentState.getSickPersonsList().remove(p);
                         covidAgentState.setTotalOfMulctRealized(covidAgentState.getTotalOfMulctRealized() + 1);

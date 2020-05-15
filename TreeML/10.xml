@@ -1,4 +1,4 @@
-<tree id="0" edgedefault="directed">
+<tree id="10" edgedefault="directed">
 <node Id="0" Action="null" Cost="0.0" Estado_Agente="Nodo: A7 Enfermos: {id:1,actualPos:C3,homePos:C5,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
 <node Id="1" Action="Go A7" Cost="1.0" Estado_Agente="Nodo: A7 Enfermos: {id:1,actualPos:C3,homePos:C5,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
 <node Id="2" Action="Go A6" Cost="2.0" Estado_Agente="Nodo: A6 Enfermos: {id:1,actualPos:C3,homePos:C5,cantMultas:3}{id:3,actualPos:C2,homePos:G9,cantMultas:3}"/>
