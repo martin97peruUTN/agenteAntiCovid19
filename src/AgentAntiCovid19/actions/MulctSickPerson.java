@@ -20,12 +20,12 @@ public class MulctSickPerson extends SearchAction {
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
         CovidAgentState covidAgentState = (CovidAgentState) s;
         String position = covidAgentState.getPosition();
-        for(SickPerson p: covidAgentState.getNewSickPersonsList()){
+        for(SickPerson p: covidAgentState.getSickPersonsList()){
             if(position.equals(p.getActualPosition())) {
                 if (p.getActualPosition().equals(position) && !p.getActualPosition().equals(p.getHomePosition())) {
                     //covidAgentState.setSeeSickPerson(false); //acá actualiza que el enfermo ya no está en ese nodo
                     if ((p.getCantMultas() + 1) > 3) {
-                        covidAgentState.getNewSickPersonsList().remove(p);
+                        covidAgentState.getSickPersonsList().remove(p);
                         covidAgentState.setTotalOfMulctRealized(covidAgentState.getTotalOfMulctRealized() + 1);
                         covidAgentState.setTotalOfSickPersonHealted(covidAgentState.getTotalOfSickPersonHealted() + 1);
                     }
@@ -43,7 +43,22 @@ public class MulctSickPerson extends SearchAction {
 
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
-        this.execute((SearchBasedAgentState) ast);
+        if(this.execute((SearchBasedAgentState) ast)!=null){
+            for(SickPerson p: ((CovidEnvironmentState) est).getEnfermos()){
+                if((p.getActualPosition().equals(((CovidEnvironmentState) est).getAgentPosition())) &&
+                        (!p.getActualPosition().equals(p.getHomePosition()))){
+                    p.setActualPosition(p.getHomePosition());
+                    if((p.getCantMultas()+1)>3){
+                        ((CovidEnvironmentState) est).getEnfermos().remove(p);
+                    }
+                    if((p.getCantMultas()+1)<=3){
+                        p.setActualPosition(p.getHomePosition());
+                        p.setCantMultas(p.getCantMultas() + 1);
+                    }
+                    return est;
+                }
+            }
+        }
         return null;
     }
 

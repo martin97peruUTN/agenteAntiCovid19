@@ -48,8 +48,9 @@ public class Go extends SearchAction {
 
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
-        this.execute((SearchBasedAgentState) ast);
-
+        if(this.execute((SearchBasedAgentState) ast)!=null){
+            ((CovidEnvironmentState) est).setAgentPosition(this.objetiveNode);
+        }
         return null;
     }
 

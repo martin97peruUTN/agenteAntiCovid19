@@ -8,23 +8,20 @@ import java.util.ArrayList;
 
 public class CovidPerception extends Perception {
     private ArrayList<TramoCalle> callesCortadas;
-    private ArrayList<SickPerson> enfermosNuevos;
-    private ArrayList<SickPerson> enfermosQueSeMovieron;
+    private ArrayList<SickPerson> enfermos;
 
     public CovidPerception() {
         this.callesCortadas = new ArrayList<TramoCalle>();
-        this.enfermosNuevos = new ArrayList<SickPerson>();
-        this.enfermosQueSeMovieron = new ArrayList<SickPerson>();
+        this.enfermos = new ArrayList<SickPerson>();
     }
 
     @Override
     public void initPerception(Agent agent, Environment environment) {
         CovidAgent covidAgent = (CovidAgent) agent;
         CovidEnvironment covidEnvironment = (CovidEnvironment) environment;
-        CovidEnvironmentState covidEnvironmentState = (CovidEnvironmentState) environment.getEnvironmentState();
-        this.callesCortadas.addAll(covidEnvironment.getCallesCortadas());
-        this.enfermosNuevos.addAll(covidEnvironment.getEnfermosNuevos());
-        this.enfermosQueSeMovieron.addAll(covidEnvironment.getEnfermosQueSeMovieron());
+        CovidEnvironmentState covidEnvironmentState = (CovidEnvironmentState) covidEnvironment.getEnvironmentState();
+        this.setCallesCortadas(covidEnvironmentState.getCortesDeCalle());
+        this.setEnfermos(covidEnvironmentState.getEnfermos());
     }
 
     public ArrayList<TramoCalle> getCallesCortadas() {
@@ -35,20 +32,12 @@ public class CovidPerception extends Perception {
         this.callesCortadas = callesCortadas;
     }
 
-    public ArrayList<SickPerson> getEnfermosNuevos() {
-        return enfermosNuevos;
+    public ArrayList<SickPerson> getEnfermos() {
+        return enfermos;
     }
 
-    public void setEnfermosNuevos(ArrayList<SickPerson> enfermosNuevos) {
-        this.enfermosNuevos = enfermosNuevos;
-    }
-
-    public ArrayList<SickPerson> getEnfermosQueSeMovieron() {
-        return enfermosQueSeMovieron;
-    }
-
-    public void setEnfermosQueSeMovieron(ArrayList<SickPerson> enfermosQueSeMovieron) {
-        this.enfermosQueSeMovieron = enfermosQueSeMovieron;
+    public void setEnfermos(ArrayList<SickPerson> enfermos) {
+        this.enfermos = enfermos;
     }
 
     @Override
@@ -59,14 +48,9 @@ public class CovidPerception extends Perception {
                 cp = cp + "La calle entre el nodo "+tc.getInitialNode()+" y el nodo "+tc.getFinalNode()+" está cortada. ";
             }
         }
-        if(!enfermosNuevos.isEmpty()){
-            for(SickPerson sp: enfermosNuevos){
-                cp = cp + "Hay un enfermo nuevo en el nodo "+sp.getActualPosition()+". ";
-            }
-        }
-        if(!enfermosNuevos.isEmpty()){
-            for(SickPerson spm: enfermosQueSeMovieron){
-                cp = cp + "El enfermo "+spm.getId()+" se ha movido al nodo "+spm.getActualPosition()+". ";
+        if(!enfermos.isEmpty()){
+            for(SickPerson sp: enfermos){
+                cp = cp + "Hay un enfermo en el nodo "+sp.getActualPosition()+". ";
             }
         }
         return cp;

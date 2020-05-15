@@ -10,9 +10,9 @@ import java.util.HashMap;
 
 public class CovidAgentState extends SearchBasedAgentState{
     private String position;
-    private ArrayList<SickPerson> newSickPersonsList = new ArrayList<SickPerson>();
+    private ArrayList<SickPerson> sickPersonsList = new ArrayList<SickPerson>();
     private ArrayList<TramoCalle> cutStreetsList = new ArrayList<TramoCalle>();
-    private ArrayList<SickPerson> sickPersonsMoveList = new ArrayList<SickPerson>();
+
 
 
 
@@ -90,12 +90,12 @@ public class CovidAgentState extends SearchBasedAgentState{
         this.visitedPositions = visitedPositions;
     }
 
-    public void setNewSickPersonsList(ArrayList<SickPerson> sickPersonsList) {
-        this.newSickPersonsList = sickPersonsList;
+    public void setSickPersonsList(ArrayList<SickPerson> sickPersonsList) {
+        this.sickPersonsList = sickPersonsList;
     }
 
-    public ArrayList<SickPerson> getNewSickPersonsList() {
-        return newSickPersonsList;
+    public ArrayList<SickPerson> getSickPersonsList() {
+        return sickPersonsList;
     }
 
     public ArrayList<TramoCalle> getCutStreetsList() {
@@ -104,14 +104,6 @@ public class CovidAgentState extends SearchBasedAgentState{
 
     public void setCutStreetsList(ArrayList<TramoCalle> cutStreetsList) {
         this.cutStreetsList = cutStreetsList;
-    }
-
-    public ArrayList<SickPerson> getSickPersonsMoveList() {
-        return sickPersonsMoveList;
-    }
-
-    public void setSickPersonsMoveList(ArrayList<SickPerson> sickPersonsMoveList) {
-        this.sickPersonsMoveList = sickPersonsMoveList;
     }
 
     /*public Boolean getSeeSickPerson(){return seeSickPerson;}
@@ -123,8 +115,8 @@ public class CovidAgentState extends SearchBasedAgentState{
         if(!(obj instanceof CovidAgentState)){
             return false;
         }
-        if((this.getPosition().equals(((CovidAgentState) obj).getPosition())) && (this.getNewSickPersonsList().containsAll(((CovidAgentState) obj).getNewSickPersonsList()) &&
-        this.getNewSickPersonsList().size()==((CovidAgentState) obj).getNewSickPersonsList().size()) &&
+        if((this.getPosition().equals(((CovidAgentState) obj).getPosition())) && (this.getSickPersonsList().containsAll(((CovidAgentState) obj).getSickPersonsList()) &&
+        this.getSickPersonsList().size()==((CovidAgentState) obj).getSickPersonsList().size()) &&
                 (this.getCutStreetsList().containsAll(((CovidAgentState) obj).getCutStreetsList()) &&
                         this.getCutStreetsList().size()==((CovidAgentState) obj).getCutStreetsList().size()))
         {return true;}
@@ -141,14 +133,12 @@ public class CovidAgentState extends SearchBasedAgentState{
         newState.setTotalOfMulctRealized(totalOfMulctRealized);
         newState.setTotalOfSickPersonHealted(totalOfSickPersonHealted);
 
-        ArrayList<SickPerson> cloneNewSickPersonList = (ArrayList<SickPerson>) newSickPersonsList.clone();
-        ArrayList<TramoCalle> clonecutStreetList = (ArrayList<TramoCalle>) cutStreetsList.clone();
-        ArrayList<SickPerson> cloneSickPersonMoveList = (ArrayList<SickPerson>) sickPersonsMoveList.clone();
+        ArrayList<SickPerson> cloneSickPersonList = (ArrayList<SickPerson>) sickPersonsList.clone();
+        ArrayList<TramoCalle> cloneCutStreetList = (ArrayList<TramoCalle>) cutStreetsList.clone();
         ArrayList<String> cloneVisitedPositions = (ArrayList<String>) visitedPositions.clone();
 
-        newState.setNewSickPersonsList(cloneNewSickPersonList);
-        newState.setCutStreetsList(clonecutStreetList);
-        newState.setSickPersonsMoveList(cloneSickPersonMoveList);
+        newState.setSickPersonsList(cloneSickPersonList);
+        newState.setCutStreetsList(cloneCutStreetList);
         newState.setVisitedPositions(cloneVisitedPositions);
         //newState.setSeeSickPerson(seeSickPerson);
         return newState;
@@ -157,33 +147,18 @@ public class CovidAgentState extends SearchBasedAgentState{
     @Override
     public void updateState(Perception p) { //Tengo que agarrar la percepción que paso y setearla.
         visitedPositions.add(position);
-        CovidPerception cp = (CovidPerception) p;
-        if((!cp.getEnfermosNuevos().isEmpty()) || (!cp.getEnfermosQueSeMovieron().isEmpty()) || (!cp.getCallesCortadas().isEmpty())) {
-            this.newSickPersonsList = cp.getEnfermosNuevos();
-            this.cutStreetsList = cp.getCallesCortadas();
-            this.sickPersonsMoveList = cp.getEnfermosQueSeMovieron();
-        }
-        /*if(!cp.getEnfermosNuevos().isEmpty()){
-            this.newSickPersonsList.addAll(cp.getEnfermosNuevos());
-        }
-
-        if(!cp.getCallesCortadas().isEmpty()){
-            this.cutStreetsList.addAll(cp.getCallesCortadas());
-            for(TramoCalle tc: cp.getCallesCortadas()){
-                knownMap.get(tc.getInitialNode()).remove(tc.getFinalNode());
+        if(p!=null) {
+            CovidPerception cp = (CovidPerception) p;
+            if (!cp.getEnfermos().isEmpty()) {
+                this.sickPersonsList = cp.getEnfermos();
             }
-        }
-
-        if(!cp.getEnfermosQueSeMovieron().isEmpty()){
-            for(SickPerson sp: cp.getEnfermosQueSeMovieron()){
-                for(SickPerson spn: newSickPersonsList){
-                    if(sp.getId().equals(spn.getId())){
-                        spn.setActualPosition(sp.getActualPosition());
-                    }
+            if (!cp.getCallesCortadas().isEmpty()) {
+                this.cutStreetsList = cp.getCallesCortadas();
+                for (TramoCalle tc : cp.getCallesCortadas()) {
+                    knownMap.get(tc.getInitialNode()).remove(tc.getFinalNode());
                 }
             }
-        }*/
-
+        }
     }
 
     public Integer getTotalOfGoRealized() {
@@ -213,7 +188,7 @@ public class CovidAgentState extends SearchBasedAgentState{
     @Override
     public String toString() {
         String str = "Nodo: " + position + " Enfermos: ";
-        for(SickPerson sp: newSickPersonsList){
+        for(SickPerson sp: sickPersonsList){
             str+="{"+"id:"+sp.getId()+","+"actualPos:"+sp.getActualPosition()+","+"homePos:"+sp.getHomePosition()+","+"cantMultas:"+sp.getCantMultas()+"}";
         }
         return str;

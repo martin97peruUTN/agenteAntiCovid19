@@ -9,7 +9,7 @@ public class CovidGoal extends GoalTest {
     @Override
     public boolean isGoalState(AgentState agentState) {
         boolean b = true;
-        for(SickPerson p: ((CovidAgentState)agentState).getNewSickPersonsList()){
+        for(SickPerson p: ((CovidAgentState)agentState).getSickPersonsList()){
             if(!p.getActualPosition().equals(p.getHomePosition())){
                 b=false;
             }
