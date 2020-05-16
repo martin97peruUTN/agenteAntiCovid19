@@ -24,16 +24,11 @@ public class MulctSickPerson extends SearchAction {
         for(SickPerson p: covidAgentState.getSickPersonsList()){
             if(position.equals(p.getActualPosition())) {
                 if (!p.getActualPosition().equals(p.getHomePosition())) {
-                    if ((p.getCantMultas() + 1) > 3) {
+                    //if ((p.getCantMultas() + 1) > 3) {
                         covidAgentState.getSickPersonsList().remove(p);
                         covidAgentState.setTotalOfMulctRealized(covidAgentState.getTotalOfMulctRealized() + 1);
                         covidAgentState.setTotalOfSickPersonHealted(covidAgentState.getTotalOfSickPersonHealted() + 1);
-                    }
-                    if ((p.getCantMultas() + 1) <= 3) {
-                        p.setActualPosition(p.getHomePosition());
-                        covidAgentState.setTotalOfMulctRealized(covidAgentState.getTotalOfMulctRealized() + 1);
-                        p.setCantMultas(p.getCantMultas() + 1);
-                    }
+                    //}
                     return covidAgentState;
                 }
             }
@@ -50,13 +45,9 @@ public class MulctSickPerson extends SearchAction {
             for(SickPerson p: ((CovidEnvironmentState) est).getEnfermos()){
                 if(position.equals(p.getActualPosition())) {
                     if (!p.getActualPosition().equals(p.getHomePosition())) {
-                        if ((p.getCantMultas() + 1) > 3) {
+                        //if ((p.getCantMultas() + 1) > 3) {
                             covidEnvironmentState.getEnfermos().remove(p);
-                        }
-                        if ((p.getCantMultas() + 1) <= 3) {
-                            p.setActualPosition(p.getHomePosition());
-                            p.setCantMultas(p.getCantMultas() + 1);
-                        }
+                        //}
                     }
                 }
                 return covidEnvironmentState;

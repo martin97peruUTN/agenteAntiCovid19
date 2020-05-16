@@ -93,7 +93,7 @@ public class CovidAgent extends SearchBasedAgent {
                 IStepCostFunction uniCostFunction = new CovidCostFunction();
                 UniformCostSearch uniCostSearch = new UniformCostSearch(uniCostFunction);
                 Search uniCostSolver = new Search(uniCostSearch);
-                uniCostSolver.setVisibleTree(Search.XML_TREE);
+                uniCostSolver.setVisibleTree(Search.PDF_TREE);
                 //Seteo el search solver
                 this.setSolver(uniCostSolver);
             break;

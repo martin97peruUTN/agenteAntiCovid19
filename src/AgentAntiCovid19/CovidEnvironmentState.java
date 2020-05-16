@@ -49,7 +49,7 @@ public class CovidEnvironmentState extends EnvironmentState {
         path = "ENFERMOS.csv";
         ArrayList<String[]>  enfermitos = converter.fileToMatrix(path);
         for(int i=0;i<enfermitos.size();i++){
-            enfermos.add(new SickPerson(Integer.valueOf(enfermitos.get(i)[0]), enfermitos.get(i)[1], enfermitos.get(i)[2], enfermitos.get(i)[3]));
+            enfermos.add(new SickPerson(Integer.valueOf(enfermitos.get(i)[0]), enfermitos.get(i)[1], enfermitos.get(i)[2]));//, enfermitos.get(i)[3]));
         }
 
         //Inicializo sin cortes de calles en el ambiente.
@@ -99,7 +99,7 @@ public class CovidEnvironmentState extends EnvironmentState {
         String path = "callecitasCortadasNuevas.csv";
         CSVToMatrix converter = new CSVToMatrix(';');
         ArrayList<String[]> cutStreets = converter.fileToMatrix(path);
-        if(iteration<cutStreets.size()){
+        if(iteration<cutStreets.size() && (cutStreets.get(iteration).length>1)){
             calleCortadaNueva.setInitialNode(cutStreets.get(iteration)[1]);
             calleCortadaNueva.setFinalNode(cutStreets.get(iteration)[2]);
             return calleCortadaNueva;
@@ -113,11 +113,11 @@ public class CovidEnvironmentState extends EnvironmentState {
         String path = "enfermitosNuevos.csv";
         CSVToMatrix converter = new CSVToMatrix(';');
         ArrayList<String[]> sickPersons = converter.fileToMatrix(path);
-        if (iteration<sickPersons.size()){
+        if (iteration<sickPersons.size() && (sickPersons.get(iteration).length>1)){
             enfermoNuevo.setId(Integer.valueOf(sickPersons.get(iteration)[0]));
             enfermoNuevo.setActualPosition(sickPersons.get(iteration)[1]);
             enfermoNuevo.setHomePosition(sickPersons.get(iteration)[2]);
-            enfermoNuevo.setCantMultas(Integer.valueOf(sickPersons.get(iteration)[3]));
+            //enfermoNuevo.setCantMultas(Integer.valueOf(sickPersons.get(iteration)[3]));
             return enfermoNuevo;
         }
         else{return null;}
@@ -129,11 +129,11 @@ public class CovidEnvironmentState extends EnvironmentState {
         String path = "enfermitosMovidos.csv";
         CSVToMatrix converter = new CSVToMatrix(';');
         ArrayList<String[]> sickPersonsMove = converter.fileToMatrix(path);
-        if(iteration<sickPersonsMove.size()) {
+        if(iteration<sickPersonsMove.size() && (sickPersonsMove.get(iteration).length>1)) {
             enfermoQueSeMovio.setId(Integer.valueOf(sickPersonsMove.get(iteration)[0]));
             enfermoQueSeMovio.setActualPosition(sickPersonsMove.get(iteration)[1]);
             enfermoQueSeMovio.setHomePosition(sickPersonsMove.get(iteration)[2]);
-            enfermoQueSeMovio.setCantMultas(Integer.valueOf(sickPersonsMove.get(iteration)[3]));
+            //enfermoQueSeMovio.setCantMultas(Integer.valueOf(sickPersonsMove.get(iteration)[3]));
             return enfermoQueSeMovio;
         }
         else{return null;}

@@ -151,10 +151,15 @@ public class CovidAgentState extends SearchBasedAgentState{
                     knownMap.get(tc.getInitialNode()).remove(tc.getFinalNode());
                 }
             }
+            /*for(SickPerson sp:this.sickPersonsList){
+                if(sp.getActualPosition().equals(this.position)){
+                    this.setSeeSickPerson(true);
+                }
+            }*/
         }
     }
 
-    public Double cantMultasQueFaltanHacer(){
+    /*public Double cantMultasQueFaltanHacer(){
         int multasParaCurarse = 0;
         for(SickPerson p: this.sickPersonsList){
             if(p.getCantMultas()<=3){
@@ -162,7 +167,7 @@ public class CovidAgentState extends SearchBasedAgentState{
             }
         }
         return Double.valueOf(multasParaCurarse);
-    }
+    }*/
 
     public Double cantEnfermosFueraDeCasa(){
         Double cantEnfermosFueraDeCasa = 0.0;
@@ -202,7 +207,7 @@ public class CovidAgentState extends SearchBasedAgentState{
     public String toString() {
         String str = "Nodo: " + position + " Enfermos: ";
         for(SickPerson sp: sickPersonsList){
-            str+="["+"id:"+sp.getId()+","+"actualPos:"+sp.getActualPosition()+","+"homePos:"+sp.getHomePosition()+","+"cantMultas:"+sp.getCantMultas()+"]";
+            str+="["+"id:"+sp.getId()+","+"actualPos:"+sp.getActualPosition()+","+"homePos:"+sp.getHomePosition()+"]";//","+"cantMultas:"+sp.getCantMultas()+"]";
         }
         return str;
     }

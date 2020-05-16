@@ -5,17 +5,17 @@ public class SickPerson {
     private Integer id; //0
     private String actualPosition; //1
     private String homePosition; //2
-    private Integer cantMultas; //3
+    //private Integer cantMultas; //3
 
     public SickPerson(){
 
     }
 
-    public SickPerson(Integer id, String actualPosition, String homePosition, String cantMultas){
+    public SickPerson(Integer id, String actualPosition, String homePosition){ //, String cantMultas){
         this.id = id;
         this.actualPosition = actualPosition;
         this.homePosition = homePosition;
-        this.cantMultas = Integer.valueOf(cantMultas);
+        //this.cantMultas = Integer.valueOf(cantMultas);
     }
 
     public String getActualPosition() {
@@ -42,13 +42,13 @@ public class SickPerson {
         this.id = id;
     }
 
-    public Integer getCantMultas() {
+    /*public Integer getCantMultas() {
         return cantMultas;
     }
 
     public void setCantMultas(Integer cantMultas) {
         this.cantMultas = cantMultas;
-    }
+    }*/
 
     @Override
     public String toString() {
