@@ -75,12 +75,12 @@ public class ApplicationController implements Initializable {
                 controller.setCantOfMucltsLbl("5");
                 controller.setTotalSPHLbl("1");*/
 
-                Scene scene = new Scene(p, 1280, 700);
+                Scene scene = new Scene(p, 1280, 720);
 
                 Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 window.setTitle("GuadalupeMap");
                 window.setWidth(1280);
-                window.setHeight(700);
+                window.setHeight(720);
                 window.setScene(scene);
                 window.show();
             }

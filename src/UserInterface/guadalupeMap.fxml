@@ -6,9 +6,9 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.web.*?>
 
-<AnchorPane prefHeight="640.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserInterface.GMapController">
+<AnchorPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserInterface.GMapController">
    <children>
-      <SplitPane dividerPositions="0.5947075208913649" orientation="VERTICAL" prefHeight="640.0" prefWidth="1280.0">
+      <SplitPane dividerPositions="0.5947075208913649" orientation="VERTICAL" prefHeight="700.0" prefWidth="1280.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
@@ -21,13 +21,13 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="1278.0">
                <children>
-                  <SplitPane dividerPositions="0.6036789297658863" prefHeight="215.0" prefWidth="1280.0">
+                  <SplitPane dividerPositions="0.6036789297658863" prefHeight="256.0" prefWidth="1280.0">
                     <items>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="100.0">
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="270.0" prefWidth="769.0">
                            <children>
-                              <ListView fx:id="nodesListView" layoutX="-1.0" layoutY="-1.0" prefHeight="213.0" prefWidth="769.0" />
+                              <ListView fx:id="nodesListView" layoutX="-1.0" layoutY="-1.0" prefHeight="270.0" prefWidth="769.0" />
                            </children></AnchorPane>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="270.0" prefWidth="500.0">
                            <children>
                               <GridPane layoutX="14.0" layoutY="14.0" prefHeight="153.0" prefWidth="503.0">
                                 <columnConstraints>

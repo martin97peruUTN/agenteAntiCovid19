@@ -9,8 +9,8 @@ public class CovidCostFunction implements IStepCostFunction {
     @Override
     public double calculateCost(NTree node) {
         if(node.getAction().getClass().equals(MulctSickPerson.class)){
-            return node.getAction().getCost()+1.0;
+            return node.getAction().getCost();
         }
-        else {return node.getAction().getCost();}
+        else {return node.getAction().getCost()+1.0;}
     }
 }
