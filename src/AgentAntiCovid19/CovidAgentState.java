@@ -33,9 +33,9 @@ public class CovidAgentState extends SearchBasedAgentState{
 
         //Inicializo la lista de nodos.
         CSVToMatrix converter = new CSVToMatrix(';');
-        String path = "NODOS-Mapa.csv";
+        String path = "mapita.csv";
         ArrayList<String[]> nodes = converter.fileToMatrix(path);
-        path = "NODOS-Sucesores.csv";
+        path = "sucesoritos.csv";
         ArrayList<String[]> nodesSuccesors = converter.fileToMatrix(path);
         //Inicializar mapa con los nodos del archivo NODOS-Mapa.csv
         for(int i=0;i<nodes.size();i++){

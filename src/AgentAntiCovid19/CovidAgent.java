@@ -38,7 +38,7 @@ public class CovidAgent extends SearchBasedAgent {
 
         // Cargo las acciones Go del archivo NODOS-Mapa.csv
         CSVToMatrix converter;
-        String path = "NODOS-Mapa.csv";
+        String path = "mapita.csv";
         converter = new CSVToMatrix(';');
         ArrayList<String[]> nodes = converter.fileToMatrix(path);
 
@@ -67,7 +67,7 @@ public class CovidAgent extends SearchBasedAgent {
                 //Método de búsqueda en profundidad
                 DepthFirstSearch depthFirstSearch = new DepthFirstSearch();
                 Search dfsSolver = new Search(depthFirstSearch);
-                dfsSolver.setVisibleTree(Search.XML_TREE);
+                dfsSolver.setVisibleTree(Search.GRAPHVIZ_TREE);
                 //Seteo el search solver
                 this.setSolver(dfsSolver);
             break;
@@ -75,7 +75,7 @@ public class CovidAgent extends SearchBasedAgent {
                 //Método de búsqueda en anchura
                 BreathFirstSearch breathFirstSearch = new BreathFirstSearch();
                 Search bfsSolver = new Search(breathFirstSearch);
-                bfsSolver.setVisibleTree(Search.XML_TREE);
+                bfsSolver.setVisibleTree(Search.GRAPHVIZ_TREE);
                 //Seteo el search solver
                 this.setSolver(bfsSolver);
             break;
@@ -85,7 +85,7 @@ public class CovidAgent extends SearchBasedAgent {
                 IEstimatedCostFunction heuristicAStar = new CovidHeuristic();
                 AStarSearch aStarSearch = new AStarSearch(aCostFunction, heuristicAStar);
                 Search sasSolver = new Search(aStarSearch);
-                sasSolver.setVisibleTree(Search.XML_TREE);
+                sasSolver.setVisibleTree(Search.GRAPHVIZ_TREE);
                 //Seteo el search solver
                 this.setSolver(sasSolver);
             case "UniformCostSearch":
@@ -93,7 +93,7 @@ public class CovidAgent extends SearchBasedAgent {
                 IStepCostFunction uniCostFunction = new CovidCostFunction();
                 UniformCostSearch uniCostSearch = new UniformCostSearch(uniCostFunction);
                 Search uniCostSolver = new Search(uniCostSearch);
-                uniCostSolver.setVisibleTree(Search.PDF_TREE);
+                uniCostSolver.setVisibleTree(Search.GRAPHVIZ_TREE);
                 //Seteo el search solver
                 this.setSolver(uniCostSolver);
             break;
@@ -102,7 +102,7 @@ public class CovidAgent extends SearchBasedAgent {
                 IEstimatedCostFunction gHeuristicFunction = new CovidHeuristic();
                 GreedySearch gSearch = new GreedySearch(gHeuristicFunction);
                 Search gsSolver = new Search(gSearch);
-                gsSolver.setVisibleTree(Search.XML_TREE);
+                gsSolver.setVisibleTree(Search.GRAPHVIZ_TREE);
                 //Seteo el search solver
                 this.setSolver(gsSolver);
             break;

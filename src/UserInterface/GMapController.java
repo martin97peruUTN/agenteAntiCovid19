@@ -92,7 +92,7 @@ public class GMapController implements Initializable {
         })));
         //Tomo los nodos del archivo .csv de nodos.
         CSVToMatrix converter = new CSVToMatrix(';');
-        String path = "NODOS-Mapa.csv";
+        String path = "mapita.csv";
         ArrayList<String[]> nodes = converter.fileToMatrix(path);
         //Tomo los nodos visitados del archivo generado .csv de nodos visitados. Este .csv se genera con la ejecución del agente.
         path = "NODOS-Visitados.csv";

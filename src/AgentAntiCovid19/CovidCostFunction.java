@@ -1,5 +1,7 @@
 package AgentAntiCovid19;
 
+import AgentAntiCovid19.actions.Go;
+import AgentAntiCovid19.actions.MulctSickPerson;
 import frsf.cidisi.faia.solver.search.IStepCostFunction;
 import frsf.cidisi.faia.solver.search.NTree;
 

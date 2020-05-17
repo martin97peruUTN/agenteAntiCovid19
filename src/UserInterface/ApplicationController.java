@@ -68,15 +68,14 @@ public class ApplicationController implements Initializable {
 
                 controller.setVisitedNodesLbl(displayInfo.get(0));
                 controller.setTotalGoLbl(displayInfo.get(1));
-                controller.setCantOfMucltsLbl(displayInfo.get(2));
-                controller.setTotalSPHLbl(displayInfo.get(3));
+                controller.setTotalSPHLbl(displayInfo.get(2));
 
                 /*controller.setVisitedNodesLbl("15");
                 controller.setTotalGoLbl("20");
                 controller.setCantOfMucltsLbl("5");
                 controller.setTotalSPHLbl("1");*/
 
-                Scene scene = new Scene(p, 1024, 700);
+                Scene scene = new Scene(p, 1280, 700);
 
                 Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 window.setTitle("GuadalupeMap");

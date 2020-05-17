@@ -26,10 +26,10 @@ public class CovidEnvironmentState extends EnvironmentState {
         agentPosition="A8";
 
         CSVToMatrix converter;
-        String path = "NODOS-Mapa.csv";
+        String path = "mapita.csv";
         converter = new CSVToMatrix(';');
         ArrayList<String[]> nodes = converter.fileToMatrix(path);
-        path = "NODOS-Sucesores.csv";
+        path = "sucesoritos.csv";
         ArrayList<String[]>  nodesSuccesors = converter.fileToMatrix(path);
         map = new HashMap<String, Collection<String>>();
 
@@ -46,7 +46,7 @@ public class CovidEnvironmentState extends EnvironmentState {
 
         //Tomo desde acá los enfermos con los que inicializo el ambiente.
         enfermos = new ArrayList<SickPerson>();
-        path = "ENFERMOS.csv";
+        path = "enfermitos.csv";
         ArrayList<String[]>  enfermitos = converter.fileToMatrix(path);
         for(int i=0;i<enfermitos.size();i++){
             enfermos.add(new SickPerson(Integer.valueOf(enfermitos.get(i)[0]), enfermitos.get(i)[1], enfermitos.get(i)[2]));//, enfermitos.get(i)[3]));
@@ -96,7 +96,7 @@ public class CovidEnvironmentState extends EnvironmentState {
     private TramoCalle getCalleCortadaNueva (){
         //Tomo las calles cortadas nuevas del csv.
         TramoCalle calleCortadaNueva = new TramoCalle();
-        String path = "callecitasCortadasNuevas.csv";
+        String path = "cortecitos.csv";
         CSVToMatrix converter = new CSVToMatrix(';');
         ArrayList<String[]> cutStreets = converter.fileToMatrix(path);
         if(iteration<cutStreets.size() && (cutStreets.get(iteration).length>1)){
