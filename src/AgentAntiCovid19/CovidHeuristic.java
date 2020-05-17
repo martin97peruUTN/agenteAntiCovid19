@@ -9,13 +9,6 @@ public class CovidHeuristic implements IEstimatedCostFunction {
     @Override
     public double getEstimatedCost(NTree node) {
         CovidAgentState agentState = (CovidAgentState) node.getAgentState();
-        ArrayList<SickPerson> sickPeople = agentState.getSickPersonsList();
-        String position = agentState.getPosition();
-        Integer distance =  agentState.getTotalOfGoRealized();
-
-        return ((Double.valueOf(sickPeople.size())*0.5)+
-                (agentState.cantEnfermosFueraDeCasa()*1));
+        return ((agentState.cantEnfermosFueraDeCasa()*2.0)+(agentState.cantEnfermosEnSensores()*1.0));
     }
 }
-
-//(agentState.cantMultasQueFaltanHacer()*0.3)+

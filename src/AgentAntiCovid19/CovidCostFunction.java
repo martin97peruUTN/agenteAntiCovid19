@@ -8,6 +8,9 @@ import frsf.cidisi.faia.solver.search.NTree;
 public class CovidCostFunction implements IStepCostFunction {
     @Override
     public double calculateCost(NTree node) {
-        return node.getAction().getCost();
+        if(node.getAction().getClass().equals(MulctSickPerson.class)){
+            return node.getAction().getCost()+1.0;
+        }
+        else {return node.getAction().getCost();}
     }
 }

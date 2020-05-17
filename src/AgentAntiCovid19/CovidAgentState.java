@@ -179,6 +179,17 @@ public class CovidAgentState extends SearchBasedAgentState{
         return cantEnfermosFueraDeCasa;
     }
 
+    public Double cantEnfermosEnSensores(){
+        Double cantEnfermosEnSensores = 0.0;
+        for(SickPerson p:this.sickPersonsList){
+            if(p.getActualPosition().equals("C10") || p.getActualPosition().equals("J12")
+                    || p.getActualPosition().equals("Q10") || p.getActualPosition().equals("I3")){
+                cantEnfermosEnSensores = cantEnfermosEnSensores + 1.0;
+            }
+        }
+        return cantEnfermosEnSensores;
+    }
+
     public Integer getTotalOfGoRealized() {
         return totalOfGoRealized;
     }
