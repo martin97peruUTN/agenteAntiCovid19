@@ -169,6 +169,31 @@ public class CovidAgentState extends SearchBasedAgentState{
         return Double.valueOf(multasParaCurarse);
     }*/
 
+    //latNodo1;longNodo1;latNodo2;longNodo2
+    public Double totalDistance() {
+        CSVToMatrix converter = new CSVToMatrix(';');
+        String path = "mapita.csv";
+        ArrayList<String[]> nodes = converter.fileToMatrix(path);
+        ArrayList<Nodo> nodosOrig = new ArrayList<Nodo>();
+        ArrayList<Nodo> nodosDest = new ArrayList<Nodo>();
+        for(int i=0;i<nodes.size();i++){
+            for(SickPerson sp:sickPersonsList) {
+                if (sp.getActualPosition().equals(nodes.get(i)[0])) {
+                    nodosOrig.add(new Nodo(Double.valueOf(nodes.get(i)[2]), Double.valueOf(nodes.get(i)[3])));
+                }
+                if (sp.getHomePosition().equals(nodes.get(i)[0])) {
+                    nodosDest.add(new Nodo(Double.valueOf(nodes.get(i)[2]), Double.valueOf(nodes.get(i)[3])));
+                }
+            }
+        }
+        Double distanciasACasa = 0.0;
+        for(int j=0;j<nodosDest.size() && nodosDest.size()==nodosOrig.size();j++){
+            distanciasACasa = distanciasACasa + (Math.sqrt(Math.pow(Math.abs(nodosDest.get(j).getLng() - nodosOrig.get(j).getLng()),2) + Math.pow(Math.abs(nodosDest.get(j).getLat() - nodosOrig.get(j).getLat()),2)));
+        }
+        return distanciasACasa;
+    }
+
+
     public Double cantEnfermosFueraDeCasa(){
         Double cantEnfermosFueraDeCasa = 0.0;
         for(SickPerson p: this.sickPersonsList){
